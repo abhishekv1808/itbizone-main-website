@@ -50,6 +50,14 @@ test_*.js
 dist/
 build/
 
+# PM2
+.pm2/
+
+# AWS Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
+
 # Misc
 *.orig
 .cache/

@@ -1,9 +1,13 @@
+require('dotenv').config();
 const express = require('express');
 const path =require('path');
 const rootDir = require('./utils/mainUtils');
 const session = require('express-session');
 const mongoose =require('mongoose');
-const mongodbURL =  'mongodb+srv://abhishekv1808:' + encodeURIComponent('Grow@$@2025') + '@aribnb.xvmlcnz.mongodb.net/itbizone?retryWrites=true&w=majority&appName=aribnb';
+
+// Use environment variable for MongoDB connection
+const mongodbURL = process.env.MONGODB_URI || 'mongodb+srv://abhishekv1808:' + encodeURIComponent('Grow@$@2025') + '@aribnb.xvmlcnz.mongodb.net/itbizone?retryWrites=true&w=majority&appName=aribnb';
+
 const userRouter = require('./routes/userRouter');
 const quotationRouter = require('./routes/quotationRouter');
 const newsletterRouter = require('./routes/newsletterRouter');
@@ -89,14 +93,32 @@ app.use(userRouter);
 app.use(quotationRouter); 
 app.use(newsletterRouter); 
 
-const port = 3000;
+// Use environment variable for port
+const port = process.env.PORT || 3000;
 
+// Health check endpoint for AWS
+app.get('/health', (req, res) => {
+    res.status(200).json({ status: 'OK', timestamp: new Date().toISOString() });
+});
+
+// 404 handler
+app.use((req, res) => {
+    res.status(404).render('user/404', { pageTitle: 'Page Not Found' });
+});
+
+// Error handler
+app.use((err, req, res, next) => {
+    console.error(err.stack);
+    res.status(500).send('Something went wrong!');
+});
 
 mongoose.connect(mongodbURL).then(()=>{
     console.log('Connected to MongoDB');
-  app.listen(port, () => {
-    console.log(`Server is running on http://localhost:${port}`);
+  app.listen(port, '0.0.0.0', () => {
+    console.log(`Server is running on port ${port}`);
+    console.log(`Environment: ${process.env.NODE_ENV || 'development'}`);
   });
 }).catch((err)=>{
-  console.log(err);
+  console.log('MongoDB connection error:', err);
+  process.exit(1);
 })
