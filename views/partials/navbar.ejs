@@ -1,0 +1,544 @@
+<!-- Tailwind CSS Navbar Component -->
+<nav class="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-100 navbar-transition" id="navbar">
+    <div class="max-w-screen-xl px-4 md:px-6 mx-auto cursor-pointer lg:px-8">
+        <div class="flex items-center justify-between h-16 md:h-18">
+            <!-- Logo Section -->
+            <div class="flex-shrink-0">
+                <a href="/" class="flex items-center space-x-2 hover-lift">
+                    <!-- Logo -->
+                    <img src="/images/itbizone-logo.svg" alt="ITBIZONE" class="w-auto h-6 md:h-8 cursor-pointer" />
+                </a>
+            </div>
+
+            <!-- Desktop Navigation -->
+            <div class="hidden md:block">
+                <div class="flex items-baseline ml-10 space-x-4 cursor-pointer">
+
+                    <a href="/"
+                        class="px-3 py-2 text-sm font-medium rounded-md cursor-pointer nav-link active bg-primary/10 text-primary navbar-transition hover-lift"
+                        data-page="home">
+                        Home
+                    </a>
+
+                    <!-- Services Dropdown -->
+                    <div class="relative group">
+
+                        <button
+                            class="flex items-center px-3 py-2 text-sm font-medium text-gray-700 rounded-md cursor-pointer nav-link hover:text-primary navbar-transition hover-lift"
+                            data-page="services" id="servicesDropdown">
+                            Services
+                            <svg class="w-4 h-4 ml-1 transition-transform duration-200 group-hover:rotate-180"
+                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+
+                        <!-- Dropdown Menu - Mega Dropdown -->
+                        <div class="absolute left-0 z-50 invisible w-full mt-2 transition-all duration-300 ease-in-out transform translate-y-2 bg-white border border-gray-100 shadow-2xl opacity-0 rounded-xl group-hover:opacity-100 group-hover:visible group-hover:translate-y-0"
+                            id="servicesDropdownMenu" style="min-width: 900px;">
+                            <div class="grid grid-cols-3 gap-6 p-8">
+                                <!-- Services Column -->
+                                <div>
+                                    <h3 class="mb-4 text-xs font-bold tracking-wider text-gray-500 uppercase">Services
+                                    </h3>
+                                    <a href="/services/website-development"
+                                        class="flex items-start px-3 py-3 mb-2 transition-all duration-200 rounded-lg hover:bg-blue-50 group/item">
+                                        <svg class="flex-shrink-0 w-5 h-5 mt-1 mr-3 text-blue-600 transition-transform duration-200 group-hover/item:scale-110"
+                                            fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                                        </svg>
+                                        <div>
+                                            <div class="text-sm font-semibold text-gray-900">Website Development</div>
+                                            <p class="mt-1 text-xs text-gray-600">Build modern, responsive websites</p>
+                                        </div>
+                                    </a>
+                                    <a href="/services/digital-marketing"
+                                        class="flex items-start px-3 py-3 mb-2 transition-all duration-200 rounded-lg hover:bg-purple-50 group/item">
+                                        <svg class="flex-shrink-0 w-5 h-5 mt-1 mr-3 text-purple-600 transition-transform duration-200 group-hover/item:scale-110"
+                                            fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+                                        </svg>
+                                        <div>
+                                            <div class="text-sm font-semibold text-gray-900">Digital Marketing</div>
+                                            <p class="mt-1 text-xs text-gray-600">Grow your online presence</p>
+                                        </div>
+                                    </a>
+                                    <a href="/services/graphic-design"
+                                        class="flex items-start px-3 py-3 mb-2 transition-all duration-200 rounded-lg hover:bg-pink-50 group/item">
+                                        <svg class="flex-shrink-0 w-5 h-5 mt-1 mr-3 text-pink-600 transition-transform duration-200 group-hover/item:scale-110"
+                                            fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17v4a2 2 0 002 2h4M15 7l-3 3">
+                                            </path>
+                                        </svg>
+                                        <div>
+                                            <div class="text-sm font-semibold text-gray-900">Graphic Design</div>
+                                            <p class="mt-1 text-xs text-gray-600">Creative visual solutions</p>
+                                        </div>
+                                    </a>
+                                    <a href="/services/ui-ux"
+                                        class="flex items-start px-3 py-3 transition-all duration-200 rounded-lg hover:bg-cyan-50 group/item">
+                                        <svg class="flex-shrink-0 w-5 h-5 mt-1 mr-3 transition-transform duration-200 text-cyan-600 group-hover/item:scale-110"
+                                            fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M14.828 14.828a4 4 0 01-5.656 0M21 12a9 9 0 11-18 0 9 9 0 0118 0zM15 12a3 3 0 11-6 0 3 3 0 016 0z">
+                                            </path>
+                                        </svg>
+                                        <div>
+                                            <div class="text-sm font-semibold text-gray-900">UI/UX Design</div>
+                                            <p class="mt-1 text-xs text-gray-600">User-centered design experiences</p>
+                                        </div>
+                                    </a>
+                                </div>
+
+                                <!-- Resources Column -->
+                                <div>
+                                    <h3 class="mb-4 text-xs font-bold tracking-wider text-gray-500 uppercase">Resources
+                                    </h3>
+                                    <a href="/portfolio"
+                                        class="flex items-start px-3 py-3 mb-2 transition-all duration-200 rounded-lg hover:bg-green-50 group/item">
+                                        <svg class="flex-shrink-0 w-5 h-5 mt-1 mr-3 text-green-600 transition-transform duration-200 group-hover/item:scale-110"
+                                            fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M4 6a2 2 0 012-2h12a2 2 0 012 2v12a2 2 0 01-2 2H6a2 2 0 01-2-2V6z">
+                                            </path>
+                                        </svg>
+                                        <div>
+                                            <div class="text-sm font-semibold text-gray-900">Portfolio</div>
+                                            <p class="mt-1 text-xs text-gray-600">View our recent projects</p>
+                                        </div>
+                                    </a>
+                                    <a href="/case-studies"
+                                        class="flex items-start px-3 py-3 mb-2 transition-all duration-200 rounded-lg hover:bg-indigo-50 group/item">
+                                        <svg class="flex-shrink-0 w-5 h-5 mt-1 mr-3 text-indigo-600 transition-transform duration-200 group-hover/item:scale-110"
+                                            fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                                        </svg>
+                                        <div>
+                                            <div class="text-sm font-semibold text-gray-900">Case Studies</div>
+                                            <p class="mt-1 text-xs text-gray-600">Success stories & results</p>
+                                        </div>
+                                    </a>
+                                    <a href="/about"
+                                        class="flex items-start px-3 py-3 mb-2 transition-all duration-200 rounded-lg hover:bg-orange-50 group/item">
+                                        <svg class="flex-shrink-0 w-5 h-5 mt-1 mr-3 text-orange-600 transition-transform duration-200 group-hover/item:scale-110"
+                                            fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                        </svg>
+                                        <div>
+                                            <div class="text-sm font-semibold text-gray-900">About Us</div>
+                                            <p class="mt-1 text-xs text-gray-600">Learn about our team</p>
+                                        </div>
+                                    </a>
+                                    <a href="/contact"
+                                        class="flex items-start px-3 py-3 transition-all duration-200 rounded-lg hover:bg-red-50 group/item">
+                                        <svg class="flex-shrink-0 w-5 h-5 mt-1 mr-3 text-red-600 transition-transform duration-200 group-hover/item:scale-110"
+                                            fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                                            </path>
+                                        </svg>
+                                        <div>
+                                            <div class="text-sm font-semibold text-gray-900">Contact Us</div>
+                                            <p class="mt-1 text-xs text-gray-600">Get in touch with us</p>
+                                        </div>
+                                    </a>
+                                </div>
+
+                                <!-- Company Column -->
+                                <div>
+                                    <h3 class="mb-4 text-xs font-bold tracking-wider text-gray-500 uppercase">Company
+                                    </h3>
+                                    <a href="/"
+                                        class="flex items-start px-3 py-3 mb-2 transition-all duration-200 rounded-lg hover:bg-indigo-50 group/item">
+                                        <svg class="flex-shrink-0 w-5 h-5 mt-1 mr-3 text-indigo-600 transition-transform duration-200 group-hover/item:scale-110"
+                                            fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4">
+                                            </path>
+                                        </svg>
+                                        <div>
+                                            <div class="text-sm font-semibold text-gray-900">Home</div>
+                                            <p class="mt-1 text-xs text-gray-600">Back to homepage</p>
+                                        </div>
+                                    </a>
+                                    <div class="pt-3 mt-3 border-t border-gray-100">
+                                        <a href="#reachUs"
+                                            class="inline-flex items-center px-4 py-2 text-sm font-semibold text-white transition-all duration-200 rounded-lg shadow-md hover:shadow-lg hover:scale-105 bg-main">
+                                            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                                <path
+                                                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                                                </path>
+                                            </svg>
+                                            Get in Touch
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="/portfolio"
+                        class="px-3 py-2 text-sm font-medium text-gray-700 rounded-md nav-link hover:text-primary navbar-transition hover-lift"
+                        data-page="portfolio">
+                        Portfolio
+                    </a>
+                    <a href="/pricing"
+                        class="px-3 py-2 text-sm font-medium text-gray-700 rounded-md nav-link hover:text-primary navbar-transition hover-lift"
+                        data-page="portfolio">
+                        Pricing
+                    </a>
+                    <a href="/about"
+                        class="px-3 py-2 text-sm font-medium text-gray-700 rounded-md nav-link hover:text-primary navbar-transition hover-lift"
+                        data-page="about">
+                        About Us
+                    </a>
+                    <a href="/contact"
+                        class="px-3 py-2 text-sm font-medium text-gray-700 rounded-md nav-link hover:text-primary navbar-transition hover-lift"
+                        data-page="about">
+                        Contact Us
+                    </a>
+
+                    <a href="#reachUs"
+                        class="px-6 py-2 ml-4 text-sm font-semibold text-white rounded-full shadow-lg contact-cta bg-main hover:shadow-xl navbar-transition hover-lift hover:scale-105"
+                        data-page="contact">
+                        Reach Us
+                    </a>
+
+                </div>
+
+
+
+            </div>
+
+            <!-- Theme Toggle & Mobile Menu Container -->
+            <div class="flex items-center">
+                <!-- Theme Toggle Button -->
+                 
+                <!-- Mobile Menu Button -->
+                <button id="mobileToggle"
+                    class="relative flex flex-col items-center justify-center w-10 h-8 md:hidden bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg border-1 border-blue-200 p-1 hover:border-blue-400 hover:shadow-lg transition-all duration-300 group overflow-hidden"
+                    aria-label="Toggle mobile menu">
+
+                    <!-- Animated background glow -->
+                    <div
+                        class="absolute inset-0 bg-gradient-to-br from-blue-400/0 to-cyan-400/0 group-hover:from-blue-400/20 group-hover:to-cyan-400/20 transition-all duration-300">
+                    </div>
+
+                    <!-- Hamburger lines with gradient -->
+                    <span
+                        class="hamburger-line relative block w-5 h-0.5 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-full transition-all duration-300 ease-in-out shadow-sm">
+                    </span>
+                    <span
+                        class="hamburger-line relative block w-5 h-0.5 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-full transition-all duration-300 ease-in-out mt-1.5 shadow-sm">
+                    </span>
+                    <span
+                        class="hamburger-line relative block w-5 h-0.5 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-full transition-all duration-300 ease-in-out mt-1.5 shadow-sm">
+                    </span>
+                    <!-- Hamburger lines with gradient -->
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile Navigation Menu -->
+    <div id="navbarMenu"
+        class="fixed left-0 right-0 z-40 overflow-y-auto transition-all duration-300 ease-in-out shadow-2xl bg-gradient-to-b from-white via-gray-50 to-gray-100 md:hidden backdrop-blur-md border-t-2 border-gray-200"
+        style="top: 64px; max-height: calc(100vh - 64px); transform: translateY(100%); opacity: 0; visibility: hidden;">
+        <div class="px-4 pt-6 pb-8 space-y-2">
+            <!-- Home Link -->
+            <a href="/"
+                class="flex items-center px-4 py-3.5 text-sm font-semibold transition-all duration-200 border-2 border-blue-300 rounded-xl mobile-nav-link text-primary bg-gradient-to-r from-blue-50 to-blue-100 hover:shadow-lg hover:scale-[1.02]"
+                data-page="home">
+                <svg class="w-5 h-5 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M3 12l2-3m0 0l7-4 7 4M5 9v10a1 1 0 001 1h12a1 1 0 001-1V9m-9 5h4"></path>
+                </svg>
+                <span>Home</span>
+            </a>
+
+            <!-- Mobile Services Dropdown -->
+            <div class="mobile-dropdown">
+                <button
+                    class="flex items-center justify-between w-full px-4 py-3.5 text-sm font-semibold text-left text-gray-800 transition-all duration-200 border-2 border-gray-200 rounded-xl mobile-services-toggle hover:bg-blue-50 hover:border-blue-300 hover:shadow-md"
+                    data-page="services" id="mobileServicesToggle">
+                    <div class="flex items-center">
+                        <svg class="w-5 h-5 mr-3 text-blue-600 flex-shrink-0" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
+                        <span>Services</span>
+                    </div>
+                    <svg class="w-5 h-5 text-blue-600 transition-transform duration-200 flex-shrink-0"
+                        id="mobileServicesIcon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+
+                <!-- Mobile Dropdown Items -->
+                <div class="mt-2 ml-2 space-y-1.5 overflow-hidden transition-all duration-300 ease-in-out mobile-dropdown-content max-h-0"
+                    id="mobileServicesContent">
+                    <a href="/services/website-development"
+                        class="flex items-center px-4 py-3 text-xs font-medium text-gray-700 transition-all duration-200 border-l-4 border-transparent rounded-lg bg-white hover:bg-blue-50 hover:text-blue-700 hover:border-blue-600 hover:translate-x-1 hover:shadow-sm">
+                        <svg class="w-4 h-4 mr-2 text-blue-600 flex-shrink-0" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                        </svg>
+                        <span>Website Development</span>
+                    </a>
+                    <a href="/services/digital-marketing"
+                        class="flex items-center px-4 py-3 text-xs font-medium text-gray-700 transition-all duration-200 border-l-4 border-transparent rounded-lg bg-white hover:bg-purple-50 hover:text-purple-700 hover:border-purple-600 hover:translate-x-1 hover:shadow-sm">
+                        <svg class="w-4 h-4 mr-2 text-purple-600 flex-shrink-0" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+                        </svg>
+                        <span>Digital Marketing</span>
+                    </a>
+                    <a href="/services/graphic-design"
+                        class="flex items-center px-4 py-3 text-xs font-medium text-gray-700 transition-all duration-200 border-l-4 border-transparent rounded-lg bg-white hover:bg-pink-50 hover:text-pink-700 hover:border-pink-600 hover:translate-x-1 hover:shadow-sm">
+                        <svg class="w-4 h-4 mr-2 text-pink-600 flex-shrink-0" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17v4a2 2 0 002 2h4M15 7l-3 3">
+                            </path>
+                        </svg>
+                        <span>Graphic Design</span>
+                    </a>
+                    <a href="/services/ui-ux"
+                        class="flex items-center px-4 py-3 text-xs font-medium text-gray-700 transition-all duration-200 border-l-4 border-transparent rounded-lg bg-white hover:bg-cyan-50 hover:text-cyan-700 hover:border-cyan-600 hover:translate-x-1 hover:shadow-sm">
+                        <svg class="w-4 h-4 mr-2 text-cyan-600 flex-shrink-0" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M14.828 14.828a4 4 0 01-5.656 0M21 12a9 9 0 11-18 0 9 9 0 0118 0zM15 12a3 3 0 11-6 0 3 3 0 016 0z">
+                            </path>
+                        </svg>
+                        <span>UI/UX Design</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Portfolio Link -->
+            <a href="/portfolio"
+                class="flex items-center px-4 py-3.5 text-sm font-semibold text-gray-800 transition-all duration-200 border-2 border-gray-200 rounded-xl mobile-nav-link hover:bg-green-50 hover:text-green-700 hover:border-green-300 hover:shadow-md hover:scale-[1.02]"
+                data-page="portfolio">
+                <svg class="w-5 h-5 mr-3 text-green-600 flex-shrink-0" fill="none" stroke="currentColor"
+                    viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M4 6a2 2 0 012-2h12a2 2 0 012 2v12a2 2 0 01-2 2H6a2 2 0 01-2-2V6z"></path>
+                </svg>
+                <span>Portfolio</span>
+            </a>
+
+            <!-- Pricing Link -->
+            <a href="/pricing"
+                class="flex items-center px-4 py-3.5 text-sm font-semibold text-gray-800 transition-all duration-200 border-2 border-gray-200 rounded-xl mobile-nav-link hover:bg-indigo-50 hover:text-indigo-700 hover:border-indigo-300 hover:shadow-md hover:scale-[1.02]"
+                data-page="pricing">
+                <svg class="w-5 h-5 mr-3 text-indigo-600 flex-shrink-0" fill="none" stroke="currentColor"
+                    viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z">
+                    </path>
+                </svg>
+                <span>Pricing</span>
+            </a>
+
+            <!-- Case Studies Link -->
+            <a href="/case-studies"
+                class="flex items-center px-4 py-3.5 text-sm font-semibold text-gray-800 transition-all duration-200 border-2 border-gray-200 rounded-xl mobile-nav-link hover:bg-purple-50 hover:text-purple-700 hover:border-purple-300 hover:shadow-md hover:scale-[1.02]"
+                data-page="case-studies">
+                <svg class="w-5 h-5 mr-3 text-purple-600 flex-shrink-0" fill="none" stroke="currentColor"
+                    viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z">
+                    </path>
+                </svg>
+                <span>Case Studies</span>
+            </a>
+
+            <!-- About Us Link -->
+            <a href="/about"
+                class="flex items-center px-4 py-3.5 text-sm font-semibold text-gray-800 transition-all duration-200 border-2 border-gray-200 rounded-xl mobile-nav-link hover:bg-orange-50 hover:text-orange-700 hover:border-orange-300 hover:shadow-md hover:scale-[1.02]"
+                data-page="about">
+                <svg class="w-5 h-5 mr-3 text-orange-600 flex-shrink-0" fill="none" stroke="currentColor"
+                    viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+                <span>About Us</span>
+            </a>
+
+            <!-- Divider -->
+            <div class="my-4 border-t-2 border-gray-200"></div>
+
+            <!-- Contact Us Button -->
+            <div class="grid grid-cols-2 gap-2">
+                <a href="/contact"
+                    class="flex items-center justify-center px-3 py-3.5 text-xs font-bold text-white transition-all duration-200 rounded-xl shadow-lg mobile-nav-link hover:shadow-xl hover:scale-105 bg-gradient-to-r from-blue-600 to-blue-700"
+                    data-page="contact">
+                    <svg class="w-4 h-4 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                        </path>
+                    </svg>
+                    <span>Contact Us</span>
+                </a>
+
+                <!-- Call Button -->
+                <a href="tel:+919535111129"
+                    class="flex items-center justify-center px-3 py-3.5 text-xs font-bold text-blue-600 transition-all duration-200 border-2 border-blue-600 rounded-xl mobile-nav-link hover:bg-blue-50 hover:shadow-md hover:scale-105"
+                    data-page="call">
+                    <svg class="w-4 h-4 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z">
+                        </path>
+                    </svg>
+                    <span>Call Us</span>
+                </a>
+            </div>
+
+        </div>
+    </div>
+</nav>
+
+<script>
+    // Navbar JavaScript functionality
+    document.addEventListener('DOMContentLoaded', function () {
+        // Mobile menu toggle
+        const mobileToggle = document.getElementById('mobileToggle');
+        const navbarMenu = document.getElementById('navbarMenu');
+        const hamburgerLines = mobileToggle.querySelectorAll('.hamburger-line');
+
+        mobileToggle.addEventListener('click', function () {
+            // Toggle mobile menu
+            const isActive = navbarMenu.classList.contains('active');
+
+            if (isActive) {
+                // Close menu
+                navbarMenu.classList.remove('active');
+                navbarMenu.style.transform = 'translateY(100%)';
+                navbarMenu.style.opacity = '0';
+                navbarMenu.style.visibility = 'hidden';
+                document.body.classList.remove('overflow-hidden');
+
+                // Reset hamburger animation
+                hamburgerLines[0].classList.remove('rotate-45', 'translate-y-[8px]', 'scale-110');
+                hamburgerLines[1].classList.remove('opacity-0', 'scale-0');
+                hamburgerLines[2].classList.remove('-rotate-45', '-translate-y-[8px]', 'scale-110');
+            } else {
+                // Open menu
+                navbarMenu.classList.add('active');
+                navbarMenu.style.transform = 'translateY(0)';
+                navbarMenu.style.opacity = '1';
+                navbarMenu.style.visibility = 'visible';
+                document.body.classList.add('overflow-hidden');
+
+                // Animate hamburger to X
+                hamburgerLines[0].classList.add('rotate-45', 'translate-y-[8px]', 'scale-110');
+                hamburgerLines[1].classList.add('opacity-0', 'scale-0');
+                hamburgerLines[2].classList.add('-rotate-45', '-translate-y-[8px]', 'scale-110');
+            }
+        });
+
+        // Mobile services dropdown functionality
+        const mobileServicesToggle = document.getElementById('mobileServicesToggle');
+        const mobileServicesContent = document.getElementById('mobileServicesContent');
+        const mobileServicesIcon = document.getElementById('mobileServicesIcon');
+
+        if (mobileServicesToggle && mobileServicesContent) {
+            mobileServicesToggle.addEventListener('click', function (e) {
+                e.preventDefault();
+                const isOpen = mobileServicesContent.style.maxHeight && mobileServicesContent.style.maxHeight !== '0px';
+
+                if (isOpen) {
+                    // Close dropdown
+                    mobileServicesContent.style.maxHeight = '0px';
+                    mobileServicesIcon.classList.remove('rotate-180');
+                } else {
+                    // Open dropdown
+                    mobileServicesContent.style.maxHeight = mobileServicesContent.scrollHeight + 'px';
+                    mobileServicesIcon.classList.add('rotate-180');
+                }
+            });
+        }
+
+        // Close mobile menu when clicking on a link
+        const allNavLinks = document.querySelectorAll('.nav-link, .mobile-nav-link');
+        allNavLinks.forEach(link => {
+            link.addEventListener('click', function () {
+                if (navbarMenu.classList.contains('active')) {
+                    mobileToggle.click(); // Trigger the toggle to close menu
+                }
+            });
+        });
+
+        // Force light theme only - no theme toggle
+        document.documentElement.classList.remove('dark');
+        document.documentElement.setAttribute('data-theme', 'light');
+        localStorage.setItem('theme', 'light');
+
+        // Active link highlighting
+        function setActiveLink() {
+            const currentPath = window.location.pathname;
+            const navLinks = document.querySelectorAll('.nav-link');
+            const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+            [...navLinks, ...mobileNavLinks].forEach(link => {
+                link.classList.remove('active', 'bg-primary/10', 'text-primary');
+                link.classList.add('text-gray-700');
+
+                if (link.getAttribute('href') === currentPath ||
+                    (currentPath === '/' && link.getAttribute('href') === '/')) {
+                    link.classList.add('active', 'bg-primary/10', 'text-primary');
+                    link.classList.remove('text-gray-700');
+                }
+            });
+        }
+
+        setActiveLink();
+
+        // Navbar scroll effect - Keep navbar fixed at top
+        const navbar = document.getElementById('navbar');
+        navbar.style.transform = 'translateY(0)';  // Always show navbar
+
+        window.addEventListener('scroll', function () {
+            // Add shadow when scrolling for depth
+            if (window.scrollY > 0) {
+                navbar.classList.add('shadow-md');
+            } else {
+                navbar.classList.remove('shadow-md');
+            }
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function (event) {
+            const isClickInsideNav = navbarMenu.contains(event.target) ||
+                mobileToggle.contains(event.target);
+
+            if (!isClickInsideNav && navbarMenu.classList.contains('active')) {
+                mobileToggle.click(); // Close the menu
+            }
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    });
+</script>

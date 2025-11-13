@@ -1,0 +1,2441 @@
+<%- include('../partials/head.ejs') %>
+
+    <body>
+
+        <%- include('../partials/navbar.ejs') %>
+
+            <!-- Main content with proper top margin for fixed navbar -->
+            <main>
+
+                <!-- Hero Section with Parallax -->
+                <section class="relative flex items-center justify-center min-h-screen overflow-hidden bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900 pt-10 parallax-container parallax-scene" id="heroSection">
+                    <!-- 3D Canvas Background - Fixed (no parallax for stability) -->
+                    <canvas id="hero-canvas" class="absolute inset-0 w-full h-full" style="position: fixed; top: 0; left: 0; right: 0; bottom: 0; z-index: 0;"></canvas>
+
+                    <!-- Subtle Animated Gradient Blobs - Very Subtle Parallax -->
+                    <div class="absolute inset-0" style="position: fixed; top: 0; left: 0; right: 0; bottom: 0; z-index: 1;">
+                        <div
+                            class="absolute bg-purple-600 rounded-full top-1/4 left-1/4 w-72 h-72 mix-blend-multiply filter blur-3xl opacity-20 animate-blob">
+                        </div>
+                        <div
+                            class="absolute bg-blue-600 rounded-full top-1/3 right-1/4 w-72 h-72 mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000">
+                        </div>
+                        <div
+                            class="absolute rounded-full bg-cyan-600 bottom-1/4 left-1/2 w-72 h-72 mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-4000">
+                        </div>
+                    </div>
+
+
+                    <!-- Content - No Parallax for Stability -->
+                    <div class="relative z-10 max-w-5xl px-4 mx-auto text-center sm:px-6 lg:px-8">
+                        <!-- Badge -->
+                        <div
+                            class="inline-flex items-center gap-2 px-4 py-2 mb-8 border rounded-full bg-gradient-to-r from-blue-500/20 to-cyan-500/20 border-blue-500/30 backdrop-blur-sm">
+                            <span class="w-2 h-2 bg-blue-400 rounded-full"></span>
+                            <span class="text-xs font-medium text-gray-300 md:text-sm">BEST IT SERVICES</span>
+                        </div>
+
+                        <!-- Main Heading -->
+                        <h1 class="mb-2 text-3xl font-bold leading-tight text-white md:mb-6 md:text-7xl animate-fade-in-up">
+                            Double Your Digital Performance <br>
+                            <span
+                                class="text-transparent bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-400 bg-clip-text">
+                                With Strategic IT Solutions
+                            </span>
+                        </h1>
+
+                        <!-- Description -->
+                        <p class="max-w-2xl mx-auto mb-10 text-xs font-light leading-relaxed text-gray-300 md:text-lg">
+                            Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative
+                            approaches bring table survival with strategic IT solutions built for growth.
+                        </p>
+
+                        <!-- CTA Buttons -->
+                        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                            <a href="/pricing"
+                                class="group relative px-4 py-3 md:px-8 md:py-4 text-xs md:text-sm font-bold text-white transition-all duration-300 rounded-lg bg-gradient-to-r from-blue-600 to-cyan-600 hover:shadow-2xl hover:shadow-blue-500/50 hover:scale-105 overflow-hidden">
+                                <span class="relative z-10 flex items-center gap-2">
+                                    <svg class="w-4 h-4 md:w-5 md:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                                    </svg>
+                                    Get Free Quote in 60 Seconds
+                                    <svg class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                    </svg>
+                                </span>
+                                <div class="absolute inset-0 bg-gradient-to-r from-cyan-600 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                            </a>
+                            <a href="/contact"
+                                class="group px-4 py-3 md:px-8 md:py-4 text-xs md:text-sm font-semibold text-white transition-all duration-300 border-2 border-white/50 rounded-lg hover:border-white hover:bg-white hover:text-blue-600 flex items-center gap-2">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+                                </svg>
+                                Book Free Consultation
+                            </a>
+                        </div>
+
+                        <!-- Scroll Indicator -->
+                        <div class="flex justify-center mt-12">
+                            <div class="scroll-indicator">
+                                <div class="dot"></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Why Choose Us Section -->
+                <section class="py-10  md:py-10 md:mt-0 bg-gray-50">
+                    <div class="max-w-screen-xl px-4 mx-auto sm:px-6 lg:px-8">
+                        <!-- Main Content Grid -->
+                        <div class="grid items-center md:gap-16 gap-8 md:mb-16 mb-10 lg:grid-cols-2">
+
+                            <!-- Left Side - Team Image -->
+                            <div class="relative">
+                                <div class="overflow-hidden shadow-2xl rounded-2xl">
+                                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80"
+                                        alt="Professional Team Working" class="object-cover w-full h-96">
+                                </div>
+                            </div>
+
+                            <!-- Right Side - Content -->
+                            <div class="md:space-y-4 space-y-3">
+                                <!-- Section Badge -->
+                                <div
+                                    class="inline-flex items-center px-4 py-2 md:text-sm text-xs font-medium text-gray-700 bg-white border border-gray-200 rounded-full">
+                                    <div class="w-2 h-2 mr-3 rounded-full bg-main"></div>
+                                    <span>Why Choose Us</span>
+                                </div>
+
+                                <!-- Main Heading -->
+                                <h2 class="text-2xl font-bold leading-tight text-gray-900 md:text-4xl lg:text-4xl">
+                                    IT Solutions Designed to <span class=" primary"><br> Drive Results</span>
+                                </h2>
+
+                                <!-- Description -->
+                                <p class="text-xs leading-relaxed text-gray-600 md:text-lg xl:text-md">
+                                    Monotonectally synergize granular markets and front market. Collaboratively
+                                    visualize strategic intermediaries after based models. Synergistically task state of
+                                    the art infrastructures.
+                                </p>
+
+                                <!-- Team Image 2 -->
+                                <div class="overflow-hidden shadow-lg rounded-xl">
+                                    <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=600&q=80"
+                                        alt="Team Collaboration" class="object-cover w-full h-48">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Feature Cards -->
+                        <div class="grid md:gap-8 gap-4 md:grid-cols-3">
+
+                            <!-- Our Mission -->
+                            <div
+                                class="p-3 transition-all duration-300 bg-white border border-gray-200 shadow-lg md:p-8 rounded-2xl hover:shadow-xl">
+                                <div class="flex items-start space-x-4">
+                                    <div
+                                        class="flex items-center justify-center flex-shrink-0 w-12 h-12 bg-blue-100 rounded-xl">
+                                        <svg class="w-6 h-6 primary" fill="none" stroke="currentColor"
+                                            viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h3 class="mb-3 text-lg font-bold text-gray-900 md:text-xl">Our Mission
+                                        </h3>
+                                        <p class="text-xs leading-relaxed text-gray-600 md:text-sm">
+                                            Our mission is push engage boundaries, engage audiences, and drive engage
+                                            innovation through innovation
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Our Vision -->
+                            <div
+                                class="p-3 transition-all duration-300 bg-white border border-gray-200 shadow-lg md:p-8 rounded-2xl hover:shadow-xl">
+                                <div class="flex items-start space-x-4">
+                                    <div
+                                        class="flex items-center justify-center flex-shrink-0 w-12 h-12 bg-blue-100 rounded-xl">
+                                        <svg class="w-6 h-6 primary" fill="none" stroke="currentColor"
+                                            viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z">
+                                            </path>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h3 class="mb-3 text-lg font-bold text-gray-900 md:text-xl">Our Vision</h3>
+                                        <p class="text-xs leading-relaxed text-gray-600 md:text-sm">
+                                            Our mission is push engage boundaries, engage audiences, and drive engage
+                                            innovation through innovation
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Our Awards -->
+                            <div
+                                class="p-3 transition-all duration-300 bg-white border border-gray-200 shadow-lg md:p-8 rounded-2xl hover:shadow-xl">
+                                <div class="flex items-start space-x-4">
+                                    <div
+                                        class="flex items-center justify-center flex-shrink-0 w-12 h-12 bg-blue-100 rounded-xl">
+                                        <svg class="w-6 h-6 primary" fill="none" stroke="currentColor"
+                                            viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 0 1 4.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 01 3.138-3.138z">
+                                            </path>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h3 class="mb-3 text-lg font-bold text-gray-900 md:text-xl">Our Awards</h3>
+                                        <p class="text-xs leading-relaxed text-gray-600 md:text-sm">
+                                            Our mission is push engage boundaries, engage audiences, and drive engage
+                                            innovation through innovation
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Services Section -->
+                <section class="py-5 md:py-20 bg-gray-50">
+                    <div class="max-w-screen-xl px-4 mx-auto sm:px-6 lg:px-8">
+                        <!-- Section Header -->
+                        <div class="mb-8 text-center md:mb-12">
+                            <div
+                                class="inline-flex items-center px-4 py-2 mb-6 text-xs font-medium text-gray-600 border border-blue-200 rounded-full md:text-sm gb-gray-600 ">
+                                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4">
+                                    </path>
+                                </svg>
+                                Our Services
+                            </div>
+                            <h2 class="px-4 mb-2 text-xl font-bold text-gray-900 md:mb-6 md:text-4xl md:px-0 ">
+                                Smart Solutions for a <span class="primary">Digital World</span>
+                            </h2>
+                            <p class="max-w-3xl mx-auto text-xs text-gray-600 md:text-lg">
+                                From stunning websites to powerful marketing strategies, we provide end-to-end digital
+                                services that help your business thrive in the modern marketplace.
+                            </p>
+                        </div>
+
+                        <!-- Services Grid -->
+                        <div class="grid gap-2 md:mb-12 mb-6 md:gap-4 md:grid-cols-2 lg:grid-cols-4">
+
+                            <!-- Web Development Service -->
+                            <div
+                                class="p-4 text-center transition-all duration-300 bg-white border border-gray-200 shadow-lg md:p-8 rounded-2xl hover:shadow-xl group hover:border-blue-300 ">
+                                <!-- Service Icon -->
+                                <div
+                                    class="flex items-center justify-center w-12 h-12 mx-auto mb-3 transition-all duration-300 bg-blue-100 md:w-16 md:h-16 md:mb-6 rounded-2xl group-hover:bg-blue-200">
+                                    <svg class="w-4 h-4 text-blue-600 md:w-8 md:h-8 " fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                                    </svg>
+                                </div>
+
+                                <h3 class="mb-2 text-xs font-bold text-gray-900 md:mb-4 md:text-xl">Web Development</h3>
+                                <p class="mb-3 text-xs leading-snug text-gray-600 md:mb-6 md:text-sm md:leading-relaxed">
+                                    Build responsive, scalable websites with modern technologies that deliver exceptional user experiences.
+                                </p>
+
+                                <a href="/web-development"
+                                    class="inline-flex items-center text-xs font-semibold transition-colors duration-300 md:text-sm primary hover:text-blue-700 group">
+                                    Read More
+                                    <svg class="w-4 h-4 ml-2 transition-transform duration-300 group-hover:translate-x-1"
+                                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                    </svg>
+                                </a>
+                            </div>
+
+                            <!-- Graphic Design Service -->
+                            <div
+                                class="p-4 text-center transition-all duration-300 bg-white border border-gray-200 shadow-lg md:p-8 rounded-2xl hover:shadow-xl group hover:border-purple-300 ">
+                                <!-- Service Icon -->
+                                <div
+                                    class="flex items-center justify-center w-12 h-12 mx-auto mb-3 transition-all duration-300 bg-purple-100 md:w-16 md:h-16 md:mb-6 rounded-2xl group-hover:bg-purple-200">
+                                    <svg class="w-4 h-4 text-purple-600 md:w-8 md:h-8 " fill="none"
+                                        stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17v4a2 2 0 002 2h4M15 7l-3 3">
+                                        </path>
+                                    </svg>
+                                </div>
+
+                                <h3 class="mb-2 text-xs font-bold text-gray-900 md:mb-4 md:text-xl">Graphic Design</h3>
+                                <p class="mb-3 text-xs leading-snug text-gray-600 md:mb-6 md:text-sm md:leading-relaxed">
+                                    Create stunning visual identities and designs that captivate audiences and elevate your brand presence.
+                                </p>
+
+                                <a href="/graphic-design"
+                                    class="inline-flex items-center text-xs font-semibold transition-colors duration-300 md:text-sm primary hover:text-blue-700 group">
+                                    Read More
+                                    <svg class="w-4 h-4 ml-2 transition-transform duration-300 group-hover:translate-x-1"
+                                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                    </svg>
+                                </a>
+                            </div>
+
+                            <!-- Digital Marketing Service -->
+                            <div
+                                class="p-4 text-center transition-all duration-300 bg-white border border-gray-200 shadow-lg md:p-8 rounded-2xl hover:shadow-xl group hover:border-green-300 ">
+                                <!-- Service Icon -->
+                                <div
+                                    class="flex items-center justify-center w-12 h-12 mx-auto mb-3 transition-all duration-300 bg-green-100 md:w-16 md:h-16 md:mb-6 rounded-2xl group-hover:bg-green-200">
+                                    <svg class="w-4 h-4 text-green-600 md:w-8 md:h-8" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+                                    </svg>
+                                </div>
+
+                                <h3 class="mb-2 text-xs font-bold text-gray-900 md:mb-4 md:text-xl">Digital Marketing</h3>
+                                <p class="mb-3 text-xs leading-snug text-gray-600 md:mb-6 md:text-sm md:leading-relaxed">
+                                    Drive growth with data-driven strategies that boost your online presence and customer engagement.
+                                </p>
+
+                                <a href="/digital-marketing"
+                                    class="inline-flex items-center text-xs font-semibold transition-colors duration-300 primary hover:text-blue-700 group md:text-sm">
+                                    Read More
+                                    <svg class="w-4 h-4 ml-2 transition-transform duration-300 group-hover:translate-x-1"
+                                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                    </svg>
+                                </a>
+                            </div>
+
+                            <!-- Data Security Service -->
+                            <div
+                                class="p-4 text-center transition-all duration-300 bg-white border border-gray-200 shadow-lg md:p-8 rounded-2xl hover:shadow-xl group hover:border-red-300 ">
+                                <!-- Service Icon -->
+                                <div
+                                    class="flex items-center justify-center w-12 h-12 mx-auto mb-3 transition-all duration-300 bg-red-100 md:w-16 md:h-16 md:mb-6 rounded-2xl group-hover:bg-red-200">
+                                    <svg class="w-4 h-4 text-red-600 md:w-8 md:h-8" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z">
+                                        </path>
+                                    </svg>
+                                </div>
+
+                                <h3 class="mb-2 text-xs font-bold text-gray-900 md:mb-4 md:text-xl">Data Security</h3>
+                                <p class="mb-3 text-xs leading-snug text-gray-600 md:mb-6 md:text-sm md:leading-relaxed">
+                                    Protect your business with robust security solutions that safeguard data and ensure compliance.
+                                </p>
+
+                                <a href="/data-security"
+                                    class="inline-flex items-center text-xs font-semibold transition-colors duration-300 primary hover:text-blue-700 group md:text-sm">
+                                    Read More
+                                    <svg class="w-4 h-4 ml-2 transition-transform duration-300 group-hover:translate-x-1"
+                                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                    </svg>
+                                </a>
+                            </div>
+
+                        </div>
+
+                        <!-- Consultant Service Call-to-Action -->
+                        <div class="px-3 text-xs text-center md:text-sm md:px-0">
+                            <p class="text-gray-600 ">
+                                You can also find our Consultant Service to
+                                <a href="/contact" class="font-semibold primary hover:text-blue-700">Contact</a>
+                                for the consulting
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Our Process Section -->
+                <section class="py-5 md:pt-10 md:pb-15 bg-gray-50">
+                    <div class="max-w-screen-xl px-4 mx-auto sm:px-6 lg:px-8">
+
+                        <!-- Section Header -->
+                        <div class="mb-10 text-center md:mb-16">
+                            <div
+                                class="inline-flex items-center px-4 py-2 mb-6 md:text-sm text-xs font-medium text-blue-600 border border-blue-200 rounded-full bg-blue-50 ">
+                                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 5l7 7-7 7"></path>
+                                </svg>
+                                Our Process
+                            </div>
+                            <h2 class="mb-2 text-xl font-bold text-gray-900 md:mb-6 md:text-4xl sm:px-8">
+                                Features That Simplify The <span class="primary">Ticketing Process</span>
+                            </h2>
+                            <p class="max-w-3xl mx-auto text-xs text-gray-600 md:text-lg">
+                                We are architects innovation trailblazers of technological advancement, transforming
+                                ideas into digital reality through our streamlined development process.
+                            </p>
+                        </div>
+
+                        <!-- Process Steps -->
+                        <div class="grid gap-8 md:grid-cols-3 lg:gap-12">
+
+                            <!-- Step 1: Initiation & Planning -->
+                            <div class="text-center group">
+                                <div class="relative mb-8">
+                                    <!-- Process Image -->
+                                    <div class="relative w-full max-w-sm mx-auto mb-6">
+                                        <div
+                                            class="flex items-center justify-center h-64 p-8 bg-gradient-to-br from-blue-50 to-indigo-100 rounded-3xl">
+                                            <img src="/images/process-1-1.png" alt="Initiation & Planning Process"
+                                                class="object-contain w-full h-full max-w-xs transition-transform duration-300 group-hover:scale-105">
+                                        </div>
+                                    </div>
+
+                                    <!-- Step Badge -->
+                                    <div class="absolute z-10 transform -translate-x-1/2 -bottom-4 left-1/2">
+                                        <span
+                                            class="px-4 py-2 text-sm font-semibold text-white bg-blue-600 rounded-full shadow-lg">
+                                            STEP - 01
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <h3 class="mt-8 mb-2 text-xl font-bold text-gray-900 md:mb-4">
+                                    Initiation & Planning
+                                </h3>
+                                <p class="px-4 text-xs leading-relaxed text-gray-600 md:text-sm md:px-0">
+                                    We are architects innovation trailblazers of technological advancement
+                                </p>
+                            </div>
+
+                            <!-- Step 2: Execution & Development -->
+                            <div class="text-center group">
+                                <div class="relative mb-8">
+                                    <!-- Process Image -->
+                                    <div class="relative w-full max-w-sm mx-auto mb-6">
+                                        <div
+                                            class="flex items-center justify-center h-64 p-8 bg-gradient-to-br from-purple-50 to-pink-100 rounded-3xl">
+                                            <img src="/images/process-1-2.png" alt="Execution & Development Process"
+                                                class="object-contain w-full h-full max-w-xs transition-transform duration-300 group-hover:scale-105">
+                                        </div>
+                                    </div>
+
+                                    <!-- Step Badge -->
+                                    <div class="absolute z-10 transform -translate-x-1/2 -bottom-4 left-1/2">
+                                        <span
+                                            class="px-4 py-2 text-sm font-semibold text-white bg-purple-600 rounded-full shadow-lg">
+                                            STEP - 02
+                                        </span>
+                                    </div>
+                                </div>
+                                <h3 class="mt-8 mb-2 text-xl font-bold text-gray-900 md:mb-4">
+                                    Execution & Development
+                                </h3>
+                                <p class="px-4 text-xs leading-relaxed text-gray-600 md:text-sm md:px-0">
+                                    We are architects innovation trailblazers of technological advancement
+                                </p>
+                            </div>
+
+                            <!-- Step 3: Testing & Maintenance -->
+                            <div class="text-center group">
+                                <div class="relative mb-8">
+                                    <!-- Process Image -->
+                                    <div class="relative w-full max-w-sm mx-auto mb-6">
+                                        <div
+                                            class="flex items-center justify-center h-64 p-8 bg-gradient-to-br from-green-50 to-emerald-100 rounded-3xl">
+                                            <img src="/images/process-1-3.png" alt="Testing & Maintenance Process"
+                                                class="object-contain w-full h-full max-w-xs transition-transform duration-300 group-hover:scale-105">
+                                        </div>
+                                    </div>
+
+                                    <!-- Step Badge -->
+                                    <div class="absolute z-10 transform -translate-x-1/2 -bottom-4 left-1/2">
+                                        <span
+                                            class="px-4 py-2 text-sm font-semibold text-white bg-green-600 rounded-full shadow-lg">
+                                            STEP - 03
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <h3 class="mt-8 mb-2 text-xl font-bold text-gray-900 md:mb-4">
+                                    Testing & Maintenance
+                                </h3>
+                                <p class="px-4 text-xs leading-relaxed text-gray-600 md:text-sm md:px-0">
+                                    We are architects innovation trailblazers of technological advancement
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+
+                <!--Digital Services Section -->
+                <section class="py-8 bg-black md:py-20" id="digital-clients">
+                    <div class="container px-6 mx-auto md:px-4 ">
+                        <div class="flex flex-wrap items-center max-w-screen-xl mx-auto space-y-4">
+                            <!-- Text Column -->
+                            <div class="flex flex-col justify-center w-full mb-5 text-white lg:w-1/2 md:mb-0">
+                                <h1 class="mb-4 text-2xl font-bold text-white md:mb-8 md:text-4xl lg:text-5xl">
+                                    We Help Your Business To <span
+                                        class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">Become
+                                        Stronger</span>
+                                </h1>
+                                <p class="mb-5 text-xs font-light text-white md:mb-10 md:text-lg">
+                                    Our extensive knowledge of the digital marketing sector and our thoroughness in
+                                    finding the best
+                                    solution for your business is at the heart of our agency.
+                                </p>
+                                <a href="/services/digital-marketing"
+                                    class="px-3 py-3 text-xs font-semibold text-center text-white transition-opacity duration-300 rounded-lg md:text-sm md:px-4 bg-main hover:opacity-90 md:w-50 w-30"
+                                    id="free-btn">
+                                    Explore now
+                                </a>
+                            </div>
+
+                            <!-- Image Column -->
+                            <div class="flex justify-center w-full mt-5 lg:w-1/2 md:mt-0">
+                                <img src="images/digital-happy-clients.png" alt="Digital Happy Clients"
+                                    class="h-auto md:min-w-100 w-70 ">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Video Testimonials Section -->
+                <section class="py-8 md:py-20 bg-white">
+                    <div class="max-w-screen-xl px-4 mx-auto sm:px-6 lg:px-8">
+                        
+                        <!-- Section Header -->
+                        <div class="mb-8 text-center md:mb-16">
+                            <div class="inline-flex items-center px-4 py-2 mb-6 text-xs font-medium text-gray-700 border border-blue-200 rounded-full md:text-sm bg-blue-50">
+                                <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M2 6a2 2 0 012-2h6a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V6zM14.553 7.106A1 1 0 0014 8v4a1 1 0 00.553.894l2 1A1 1 0 0018 13V7a1 1 0 00-1.447-.894l-2 1z"/>
+                                </svg>
+                                <span>Video Testimonials</span>
+                            </div>
+                            <h2 class="mb-4 text-xl font-bold leading-tight text-gray-900 md:text-4xl lg:text-4xl">
+                                Hear From Our <span class="primary">Happy Clients</span>
+                            </h2>
+                            <p class="max-w-2xl mx-auto text-xs text-gray-600 md:text-base">
+                                Real stories from real clients who transformed their business with ITBIZONE
+                            </p>
+                        </div>
+
+                        <!-- Video Grid -->
+                        <div class="grid gap-6 md:gap-8 md:grid-cols-2 lg:grid-cols-3">
+                            
+                            <!-- Video Testimonial 1 -->
+                            <div class="overflow-hidden transition-transform duration-300 bg-white border border-gray-200 shadow-lg group rounded-2xl hover:shadow-2xl hover:scale-105">
+                                <div class="relative aspect-video bg-gradient-to-br from-blue-500 to-cyan-500 cursor-pointer" onclick="openVideoModal('https://www.youtube.com/embed/dQw4w9WgXcQ')">
+                                    <!-- Thumbnail Image - Replace with actual client video thumbnail -->
+                                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=600&q=80" 
+                                         alt="Video Testimonial" 
+                                         class="object-cover w-full h-full opacity-70 group-hover:opacity-50 transition-opacity">
+                                    
+                                    <!-- Play Button Overlay -->
+                                    <div class="absolute inset-0 flex items-center justify-center">
+                                        <div class="flex items-center justify-center w-16 h-16 transition-all duration-300 bg-white rounded-full md:w-20 md:h-20 group-hover:scale-110 shadow-2xl">
+                                            <svg class="w-6 h-6 ml-1 text-blue-600 md:w-8 md:h-8" fill="currentColor" viewBox="0 0 20 20">
+                                                <path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z"/>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Duration Badge -->
+                                    <div class="absolute px-2 py-1 text-xs font-semibold text-white bg-black/70 rounded-lg bottom-3 right-3">
+                                        2:45
+                                    </div>
+                                </div>
+                                
+                                <div class="p-4 md:p-6">
+                                    <div class="flex items-start gap-3 mb-3">
+                                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&q=80" 
+                                             alt="Client" 
+                                             class="object-cover w-10 h-10 rounded-full md:w-12 md:h-12">
+                                        <div>
+                                            <h4 class="text-sm font-bold text-gray-900 md:text-base">Rajesh Kumar</h4>
+                                            <p class="text-xs text-gray-600">CEO, TechStart Bangalore</p>
+                                        </div>
+                                    </div>
+                                    <p class="text-xs leading-relaxed text-gray-600 md:text-sm">
+                                        "ITBIZONE transformed our digital presence completely. 200% increase in leads!"
+                                    </p>
+                                    <div class="flex mt-4 space-x-1">
+                                        <svg class="w-4 h-4 text-yellow-500" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                                        <svg class="w-4 h-4 text-yellow-500" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                                        <svg class="w-4 h-4 text-yellow-500" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                                        <svg class="w-4 h-4 text-yellow-500" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                                        <svg class="w-4 h-4 text-yellow-500" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Video Testimonial 2 -->
+                            <div class="overflow-hidden transition-transform duration-300 bg-white border border-gray-200 shadow-lg group rounded-2xl hover:shadow-2xl hover:scale-105">
+                                <div class="relative aspect-video bg-gradient-to-br from-purple-500 to-pink-500 cursor-pointer" onclick="openVideoModal('https://www.youtube.com/embed/dQw4w9WgXcQ')">
+                                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80" 
+                                         alt="Video Testimonial" 
+                                         class="object-cover w-full h-full opacity-70 group-hover:opacity-50 transition-opacity">
+                                    <div class="absolute inset-0 flex items-center justify-center">
+                                        <div class="flex items-center justify-center w-16 h-16 transition-all duration-300 bg-white rounded-full md:w-20 md:h-20 group-hover:scale-110 shadow-2xl">
+                                            <svg class="w-6 h-6 ml-1 text-purple-600 md:w-8 md:h-8" fill="currentColor" viewBox="0 0 20 20">
+                                                <path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z"/>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="absolute px-2 py-1 text-xs font-semibold text-white bg-black/70 rounded-lg bottom-3 right-3">
+                                        3:20
+                                    </div>
+                                </div>
+                                <div class="p-4 md:p-6">
+                                    <div class="flex items-start gap-3 mb-3">
+                                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=100&q=80" 
+                                             alt="Client" 
+                                             class="object-cover w-10 h-10 rounded-full md:w-12 md:h-12">
+                                        <div>
+                                            <h4 class="text-sm font-bold text-gray-900 md:text-base">Priya Sharma</h4>
+                                            <p class="text-xs text-gray-600">Founder, E-Store Mumbai</p>
+                                        </div>
+                                    </div>
+                                    <p class="text-xs leading-relaxed text-gray-600 md:text-sm">
+                                        "Their e-commerce solution boosted our sales by 350%. Absolutely fantastic work!"
+                                    </p>
+                                    <div class="flex mt-4 space-x-1">
+                                        <svg class="w-4 h-4 text-yellow-500" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                                        <svg class="w-4 h-4 text-yellow-500" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                                        <svg class="w-4 h-4 text-yellow-500" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                                        <svg class="w-4 h-4 text-yellow-500" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                                        <svg class="w-4 h-4 text-yellow-500" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Video Testimonial 3 -->
+                            <div class="overflow-hidden transition-transform duration-300 bg-white border border-gray-200 shadow-lg group rounded-2xl hover:shadow-2xl hover:scale-105">
+                                <div class="relative aspect-video bg-gradient-to-br from-green-500 to-teal-500 cursor-pointer" onclick="openVideoModal('https://www.youtube.com/embed/dQw4w9WgXcQ')">
+                                    <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=600&q=80" 
+                                         alt="Video Testimonial" 
+                                         class="object-cover w-full h-full opacity-70 group-hover:opacity-50 transition-opacity">
+                                    <div class="absolute inset-0 flex items-center justify-center">
+                                        <div class="flex items-center justify-center w-16 h-16 transition-all duration-300 bg-white rounded-full md:w-20 md:h-20 group-hover:scale-110 shadow-2xl">
+                                            <svg class="w-6 h-6 ml-1 text-green-600 md:w-8 md:h-8" fill="currentColor" viewBox="0 0 20 20">
+                                                <path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z"/>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="absolute px-2 py-1 text-xs font-semibold text-white bg-black/70 rounded-lg bottom-3 right-3">
+                                        2:15
+                                    </div>
+                                </div>
+                                <div class="p-4 md:p-6">
+                                    <div class="flex items-start gap-3 mb-3">
+                                        <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=100&q=80" 
+                                             alt="Client" 
+                                             class="object-cover w-10 h-10 rounded-full md:w-12 md:h-12">
+                                        <div>
+                                            <h4 class="text-sm font-bold text-gray-900 md:text-base">Amit Patel</h4>
+                                            <p class="text-xs text-gray-600">Director, FinTech Solutions</p>
+                                        </div>
+                                    </div>
+                                    <p class="text-xs leading-relaxed text-gray-600 md:text-sm">
+                                        "Professional, timely, and exceeded expectations. Our ROI tripled in 6 months!"
+                                    </p>
+                                    <div class="flex mt-4 space-x-1">
+                                        <svg class="w-4 h-4 text-yellow-500" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                                        <svg class="w-4 h-4 text-yellow-500" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                                        <svg class="w-4 h-4 text-yellow-500" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                                        <svg class="w-4 h-4 text-yellow-500" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                                        <svg class="w-4 h-4 text-yellow-500" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- CTA -->
+                        <div class="mt-8 text-center md:mt-12">
+                            <a href="/portfolio" class="inline-flex items-center gap-2 px-6 py-3 text-sm font-semibold text-white transition-all duration-300 rounded-lg bg-gradient-to-r from-blue-600 to-cyan-600 hover:shadow-xl hover:shadow-blue-500/50 hover:scale-105">
+                                View All Success Stories
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Testimonials Section -->
+                <section class="py-8 md:py-20 bg-gray-50">
+                    <div class="max-w-screen-xl px-4 mx-auto sm:px-6 lg:px-8">
+
+                        <!-- Section Header -->
+                        <div class="mb-8 text-center md:mb-16">
+                            <div
+                                class="inline-flex items-center px-4 py-2 mb-6 text-xs font-medium text-gray-700 border border-blue-200 rounded-full md:text-sm bg-blue-50 ">
+                                <span>Testimonial</span>
+                            </div>
+                            <h2 class="mb-4 text-xl font-bold leading-tight text-gray-900 md:text-4xl lg:text-4xl">
+                                What Our Clients Say<br>
+                                About <span class="primary">ITBIZONE</span>
+                            </h2>
+                        </div>
+
+                        <!-- Auto-Scrolling Testimonials Carousel -->
+                        <div class="relative overflow-hidden">
+                            <div class="flex transition-transform duration-500 ease-in-out testimonial-carousel"
+                                id="testimonialCarousel">
+
+                                <!-- Testimonial 1 -->
+                                <div class="flex-shrink-0 w-full px-4 md:w-1/3">
+                                    <div
+                                        class="h-full p-6 bg-white border border-gray-200 shadow-lg md:p-8 rounded-2xl">
+                                        <!-- 5-Star Rating -->
+                                        <div class="flex items-center mb-4 md:mb-6">
+                                            <div class="flex space-x-1">
+                                                <svg class="w-5 h-5 text-yellow-500" fill="currentColor"
+                                                    viewBox="0 0 24 24">
+                                                    <path
+                                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                                </svg>
+                                                <svg class="w-5 h-5 text-yellow-500" fill="currentColor"
+                                                    viewBox="0 0 24 24">
+                                                    <path
+                                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                                </svg>
+                                                <svg class="w-5 h-5 text-yellow-500" fill="currentColor"
+                                                    viewBox="0 0 24 24">
+                                                    <path
+                                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                                </svg>
+                                                <svg class="w-5 h-5 text-yellow-500" fill="currentColor"
+                                                    viewBox="0 0 24 24">
+                                                    <path
+                                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                                </svg>
+                                                <svg class="w-5 h-5 text-yellow-500" fill="currentColor"
+                                                    viewBox="0 0 24 24">
+                                                    <path
+                                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <!-- Testimonial Text -->
+                                        <p class="mb-6 text-xs leading-relaxed text-gray-600 md:mb-8 md:text-sm">
+                                            "ITBIZONE delivered an outstanding website for our startup. Their team
+                                            understood our vision perfectly and created a modern, responsive design that
+                                            increased our leads by 200%. Highly recommended!"
+                                        </p>
+                                        <!-- Client Info -->
+                                        <div class="flex items-center justify-between">
+                                            <div class="flex items-center space-x-3">
+                                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&q=80"
+                                                    alt="Rajesh Kumar"
+                                                    class="object-cover w-8 h-8 rounded-full md:w-12 md:h-12">
+                                                <div>
+                                                    <div class="text-sm font-semibold text-gray-900">Rajesh
+                                                        Kumar</div>
+                                                    <div class="text-xs text-gray-600 md:text-sm">CEO, TechStart
+                                                        Bangalore</div>
+                                                </div>
+                                            </div>
+                                            <div
+                                                class="flex items-center justify-center w-6 h-6 bg-blue-600 rounded-full md:w-10 md:h-10">
+                                                <span class="text-xs font-bold text-white md:text-sm">RK</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Testimonial 2 -->
+                                <div class="flex-shrink-0 w-full px-4 md:w-1/3">
+                                    <div
+                                        class="h-full p-6 bg-white border border-gray-200 shadow-lg md:p-8 rounded-2xl">
+                                        <div class="flex items-center mb-4 md:mb-6">
+                                            <div class="flex space-x-1">
+                                                <svg class="w-5 h-5 text-yellow-500" fill="currentColor"
+                                                    viewBox="0 0 24 24">
+                                                    <path
+                                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                                </svg>
+                                                <svg class="w-5 h-5 text-yellow-500" fill="currentColor"
+                                                    viewBox="0 0 24 24">
+                                                    <path
+                                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                                </svg>
+                                                <svg class="w-5 h-5 text-yellow-500" fill="currentColor"
+                                                    viewBox="0 0 24 24">
+                                                    <path
+                                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                                </svg>
+                                                <svg class="w-5 h-5 text-yellow-500" fill="currentColor"
+                                                    viewBox="0 0 24 24">
+                                                    <path
+                                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                                </svg>
+                                                <svg class="w-5 h-5 text-yellow-500" fill="currentColor"
+                                                    viewBox="0 0 24 24">
+                                                    <path
+                                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <p class="mb-6 text-xs leading-relaxed text-gray-600 md:mb-8 md:text-sm">
+                                            "Exceptional digital marketing services! ITBIZONE helped us reach our target
+                                            audience effectively. Our online presence in Bangalore market improved
+                                            significantly with their strategic approach."
+                                        </p>
+                                        <div class="flex items-center justify-between">
+                                            <div class="flex items-center space-x-3">
+                                                <img src="https://images.unsplash.com/photo-1494790108755-2616b612b287?auto=format&fit=crop&w=100&q=80"
+                                                    alt="Priya Sharma"
+                                                    class="object-cover w-8 h-8 rounded-full md:w-12 md:h-12">
+                                                <div>
+                                                    <div class="text-sm font-semibold text-gray-900">Priya
+                                                        Sharma</div>
+                                                    <div class="text-xs text-gray-600 md:text-sm">Marketing
+                                                        Head, Fashion Hub</div>
+                                                </div>
+                                            </div>
+                                            <div
+                                                class="flex items-center justify-center w-6 h-6 bg-blue-600 rounded-full md:w-10 md:h-10">
+                                                <span class="text-xs font-bold text-white md:text-sm">PS</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Testimonial 3 -->
+                                <div class="flex-shrink-0 w-full px-4 md:w-1/3">
+                                    <div
+                                        class="h-full p-6 bg-white border border-gray-200 shadow-lg md:p-8 rounded-2xl">
+                                        <div class="flex items-center mb-4 md:mb-6">
+                                            <div class="flex space-x-1">
+                                                <svg class="w-5 h-5 text-yellow-500" fill="currentColor"
+                                                    viewBox="0 0 24 24">
+                                                    <path
+                                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                                </svg>
+                                                <svg class="w-5 h-5 text-yellow-500" fill="currentColor"
+                                                    viewBox="0 0 24 24">
+                                                    <path
+                                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                                </svg>
+                                                <svg class="w-5 h-5 text-yellow-500" fill="currentColor"
+                                                    viewBox="0 0 24 24">
+                                                    <path
+                                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                                </svg>
+                                                <svg class="w-5 h-5 text-yellow-500" fill="currentColor"
+                                                    viewBox="0 0 24 24">
+                                                    <path
+                                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                                </svg>
+                                                <svg class="w-5 h-5 text-yellow-500" fill="currentColor"
+                                                    viewBox="0 0 24 24">
+                                                    <path
+                                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <p class="mb-6 text-xs leading-relaxed text-gray-600 md:mb-8 md:text-sm">
+                                            "Amazing web development team! They created a beautiful e-commerce platform
+                                            for our business. The technical expertise and support from ITBIZONE team is
+                                            outstanding."
+                                        </p>
+                                        <div class="flex items-center justify-between">
+                                            <div class="flex items-center space-x-3">
+                                                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=100&q=80"
+                                                    alt="Ankit Agarwal"
+                                                    class="object-cover w-8 h-8 rounded-full md:w-12 md:h-12">
+                                                <div>
+                                                    <div class="text-sm font-semibold text-gray-900">Ankit
+                                                        Agarwal</div>
+                                                    <div class="text-xs text-gray-600 md:text-sm">Founder,
+                                                        E-Commerce Plus</div>
+                                                </div>
+                                            </div>
+                                            <div
+                                                class="flex items-center justify-center w-6 h-6 bg-blue-600 rounded-full md:w-10 md:h-10">
+                                                <span class="text-xs font-bold text-white md:text-sm">AA</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Testimonial 4 -->
+                                <div class="flex-shrink-0 w-full px-4 md:w-1/3">
+                                    <div
+                                        class="h-full p-6 bg-white border border-gray-200 shadow-lg md:p-8 rounded-2xl">
+                                        <div class="flex items-center mb-4 md:mb-6">
+                                            <div class="flex space-x-1">
+                                                <svg class="w-5 h-5 text-yellow-500" fill="currentColor"
+                                                    viewBox="0 0 24 24">
+                                                    <path
+                                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                                </svg>
+                                                <svg class="w-5 h-5 text-yellow-500" fill="currentColor"
+                                                    viewBox="0 0 24 24">
+                                                    <path
+                                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                                </svg>
+                                                <svg class="w-5 h-5 text-yellow-500" fill="currentColor"
+                                                    viewBox="0 0 24 24">
+                                                    <path
+                                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                                </svg>
+                                                <svg class="w-5 h-5 text-yellow-500" fill="currentColor"
+                                                    viewBox="0 0 24 24">
+                                                    <path
+                                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                                </svg>
+                                                <svg class="w-5 h-5 text-yellow-500" fill="currentColor"
+                                                    viewBox="0 0 24 24">
+                                                    <path
+                                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <p class="mb-6 text-xs leading-relaxed text-gray-600 md:mb-8 md:text-sm">
+                                            "Professional graphic design services that elevated our brand identity.
+                                            ITBIZONE understood our vision and delivered creative solutions that
+                                            perfectly represent our company values."
+                                        </p>
+                                        <div class="flex items-center justify-between">
+                                            <div class="flex items-center space-x-3">
+                                                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=100&q=80"
+                                                    alt="Sneha Reddy"
+                                                    class="object-cover w-8 h-8 rounded-full md:w-12 md:h-12">
+                                                <div>
+                                                    <div class="text-sm font-semibold text-gray-900">Sneha Reddy
+                                                    </div>
+                                                    <div class="text-xs text-gray-600 md:text-sm">Creative
+                                                        Director, Design Studio</div>
+                                                </div>
+                                            </div>
+                                            <div
+                                                class="flex items-center justify-center w-6 h-6 bg-blue-600 rounded-full md:w-10 md:h-10">
+                                                <span class="text-xs font-bold text-white md:text-sm">SR</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Testimonial 5 -->
+                                <div class="flex-shrink-0 w-full px-4 md:w-1/3">
+                                    <div
+                                        class="h-full p-6 bg-white border border-gray-200 shadow-lg md:p-8 rounded-2xl">
+                                        <div class="flex items-center mb-4 md:mb-6">
+                                            <div class="flex space-x-1">
+                                                <svg class="w-5 h-5 text-yellow-500" fill="currentColor"
+                                                    viewBox="0 0 24 24">
+                                                    <path
+                                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                                </svg>
+                                                <svg class="w-5 h-5 text-yellow-500" fill="currentColor"
+                                                    viewBox="0 0 24 24">
+                                                    <path
+                                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                                </svg>
+                                                <svg class="w-5 h-5 text-yellow-500" fill="currentColor"
+                                                    viewBox="0 0 24 24">
+                                                    <path
+                                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                                </svg>
+                                                <svg class="w-5 h-5 text-yellow-500" fill="currentColor"
+                                                    viewBox="0 0 24 24">
+                                                    <path
+                                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                                </svg>
+                                                <svg class="w-5 h-5 text-yellow-500" fill="currentColor"
+                                                    viewBox="0 0 24 24">
+                                                    <path
+                                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <p class="mb-6 text-xs leading-relaxed text-gray-600 md:mb-8 md:text-sm">
+                                            "Outstanding cybersecurity solutions for our fintech startup. ITBIZONE
+                                            provided comprehensive data protection strategies that gave us confidence to
+                                            scale our operations in Bangalore."
+                                        </p>
+                                        <div class="flex items-center justify-between">
+                                            <div class="flex items-center space-x-3">
+                                                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=100&q=80"
+                                                    alt="Vikram Malhotra"
+                                                    class="object-cover w-8 h-8 rounded-full md:w-12 md:h-12">
+                                                <div>
+                                                    <div class="text-sm font-semibold text-gray-900">Vikram
+                                                        Malhotra</div>
+                                                    <div class="text-xs text-gray-600 md:text-sm">CTO,
+                                                        SecureFintech</div>
+                                                </div>
+                                            </div>
+                                            <div
+                                                class="flex items-center justify-center w-6 h-6 bg-blue-600 rounded-full md:w-10 md:h-10">
+                                                <span class="text-xs font-bold text-white md:text-sm">VM</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Testimonial 6 -->
+                                <div class="flex-shrink-0 w-full px-4 md:w-1/3">
+                                    <div
+                                        class="h-full p-6 bg-white border border-gray-200 shadow-lg md:p-8 rounded-2xl">
+                                        <div class="flex items-center mb-4 md:mb-6">
+                                            <div class="flex space-x-1">
+                                                <svg class="w-5 h-5 text-yellow-500" fill="currentColor"
+                                                    viewBox="0 0 24 24">
+                                                    <path
+                                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                                </svg>
+                                                <svg class="w-5 h-5 text-yellow-500" fill="currentColor"
+                                                    viewBox="0 0 24 24">
+                                                    <path
+                                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                                </svg>
+                                                <svg class="w-5 h-5 text-yellow-500" fill="currentColor"
+                                                    viewBox="0 0 24 24">
+                                                    <path
+                                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                                </svg>
+                                                <svg class="w-5 h-5 text-yellow-500" fill="currentColor"
+                                                    viewBox="0 0 24 24">
+                                                    <path
+                                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                                </svg>
+                                                <svg class="w-5 h-5 text-yellow-500" fill="currentColor"
+                                                    viewBox="0 0 24 24">
+                                                    <path
+                                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <p class="mb-6 text-xs leading-relaxed text-gray-600 md:mb-8 md:text-sm">
+                                            "Incredible mobile app development services! ITBIZONE created a
+                                            user-friendly app that our customers love. The development process was
+                                            smooth and professional throughout."
+                                        </p>
+                                        <div class="flex items-center justify-between">
+                                            <div class="flex items-center space-x-3">
+                                                <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=100&q=80"
+                                                    alt="Kavya Nair"
+                                                    class="object-cover w-8 h-8 rounded-full md:w-12 md:h-12">
+                                                <div>
+                                                    <div class="text-sm font-semibold text-gray-900">Kavya Nair
+                                                    </div>
+                                                    <div class="text-xs text-gray-600 md:text-sm">Product
+                                                        Manager, AppSolutions</div>
+                                                </div>
+                                            </div>
+                                            <div
+                                                class="flex items-center justify-center w-6 h-6 bg-blue-600 rounded-full md:w-10 md:h-10">
+                                                <span class="text-xs font-bold text-white md:text-sm">KN</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Testimonial 7 -->
+                                <div class="flex-shrink-0 w-full px-4 md:w-1/3">
+                                    <div
+                                        class="h-full p-6 bg-white border border-gray-200 shadow-lg md:p-8 rounded-2xl">
+                                        <div class="flex items-center mb-4 md:mb-6">
+                                            <div class="flex space-x-1">
+                                                <svg class="w-5 h-5 text-yellow-500" fill="currentColor"
+                                                    viewBox="0 0 24 24">
+                                                    <path
+                                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                                </svg>
+                                                <svg class="w-5 h-5 text-yellow-500" fill="currentColor"
+                                                    viewBox="0 0 24 24">
+                                                    <path
+                                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                                </svg>
+                                                <svg class="w-5 h-5 text-yellow-500" fill="currentColor"
+                                                    viewBox="0 0 24 24">
+                                                    <path
+                                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                                </svg>
+                                                <svg class="w-5 h-5 text-yellow-500" fill="currentColor"
+                                                    viewBox="0 0 24 24">
+                                                    <path
+                                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                                </svg>
+                                                <svg class="w-5 h-5 text-yellow-500" fill="currentColor"
+                                                    viewBox="0 0 24 24">
+                                                    <path
+                                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <p class="mb-6 text-xs leading-relaxed text-gray-600 md:mb-8 md:text-sm">
+                                            "Excellent SEO and content marketing services. ITBIZONE helped our
+                                            restaurant chain rank #1 on Google for local searches in Bangalore. Our foot
+                                            traffic increased by 150%!"
+                                        </p>
+                                        <div class="flex items-center justify-between">
+                                            <div class="flex items-center space-x-3">
+                                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&q=80"
+                                                    alt="Arjun Patel"
+                                                    class="object-cover w-8 h-8 rounded-full md:w-12 md:h-12">
+                                                <div>
+                                                    <div class="text-sm font-semibold text-gray-900">Arjun Patel
+                                                    </div>
+                                                    <div class="text-xs text-gray-600 md:text-sm">Owner, Foodie
+                                                        Paradise Chain</div>
+                                                </div>
+                                            </div>
+                                            <div
+                                                class="flex items-center justify-center w-6 h-6 bg-blue-600 rounded-full md:w-10 md:h-10">
+                                                <span class="text-xs font-bold text-white md:text-sm">AP</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Testimonial 8 -->
+                                <div class="flex-shrink-0 w-full px-4 md:w-1/3">
+                                    <div
+                                        class="h-full p-6 bg-white border border-gray-200 shadow-lg md:p-8 rounded-2xl">
+                                        <div class="flex items-center mb-4 md:mb-6">
+                                            <div class="flex space-x-1">
+                                                <svg class="w-5 h-5 text-yellow-500" fill="currentColor"
+                                                    viewBox="0 0 24 24">
+                                                    <path
+                                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                                </svg>
+                                                <svg class="w-5 h-5 text-yellow-500" fill="currentColor"
+                                                    viewBox="0 0 24 24">
+                                                    <path
+                                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                                </svg>
+                                                <svg class="w-5 h-5 text-yellow-500" fill="currentColor"
+                                                    viewBox="0 0 24 24">
+                                                    <path
+                                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                                </svg>
+                                                <svg class="w-5 h-5 text-yellow-500" fill="currentColor"
+                                                    viewBox="0 0 24 24">
+                                                    <path
+                                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                                </svg>
+                                                <svg class="w-5 h-5 text-yellow-500" fill="currentColor"
+                                                    viewBox="0 0 24 24">
+                                                    <path
+                                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <p class="mb-6 text-xs leading-relaxed text-gray-600 md:mb-8 md:text-sm">
+                                            "Top-notch consulting services for our digital transformation. ITBIZONE team
+                                            provided strategic guidance that helped us modernize our healthcare systems
+                                            efficiently."
+                                        </p>
+                                        <div class="flex items-center justify-between">
+                                            <div class="flex items-center space-x-3">
+                                                <img src="https://images.unsplash.com/photo-1494790108755-2616b612b287?auto=format&fit=crop&w=100&q=80"
+                                                    alt="Deepika Singh"
+                                                    class="object-cover w-8 h-8 rounded-full md:w-12 md:h-12">
+                                                <div>
+                                                    <div class="text-sm font-semibold text-gray-900">Deepika
+                                                        Singh</div>
+                                                    <div class="text-xs text-gray-600 md:text-sm">Director,
+                                                        HealthTech Solutions</div>
+                                                </div>
+                                            </div>
+                                            <div
+                                                class="flex items-center justify-center w-6 h-6 bg-blue-600 rounded-full md:w-10 md:h-10">
+                                                <span class="text-xs font-bold text-white md:text-sm">DS</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Testimonial 9 -->
+                                <div class="flex-shrink-0 w-full px-4 md:w-1/3">
+                                    <div
+                                        class="h-full p-6 bg-white border border-gray-200 shadow-lg md:p-8 rounded-2xl">
+                                        <div class="flex items-center mb-4 md:mb-6">
+                                            <div class="flex space-x-1">
+                                                <svg class="w-5 h-5 text-yellow-500" fill="currentColor"
+                                                    viewBox="0 0 24 24">
+                                                    <path
+                                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                                </svg>
+                                                <svg class="w-5 h-5 text-yellow-500" fill="currentColor"
+                                                    viewBox="0 0 24 24">
+                                                    <path
+                                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                                </svg>
+                                                <svg class="w-5 h-5 text-yellow-500" fill="currentColor"
+                                                    viewBox="0 0 24 24">
+                                                    <path
+                                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                                </svg>
+                                                <svg class="w-5 h-5 text-yellow-500" fill="currentColor"
+                                                    viewBox="0 0 24 24">
+                                                    <path
+                                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                                </svg>
+                                                <svg class="w-5 h-5 text-yellow-500" fill="currentColor"
+                                                    viewBox="0 0 24 24">
+                                                    <path
+                                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <p class="mb-6 text-xs leading-relaxed text-gray-600 md:mb-8 md:text-sm">
+                                            "Fantastic cloud solutions implementation! ITBIZONE migrated our entire
+                                            infrastructure to cloud seamlessly. The performance improvement and cost
+                                            savings exceeded our expectations."
+                                        </p>
+                                        <div class="flex items-center justify-between">
+                                            <div class="flex items-center space-x-3">
+                                                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=100&q=80"
+                                                    alt="Rohit Gupta"
+                                                    class="object-cover w-8 h-8 rounded-full md:w-12 md:h-12">
+                                                <div>
+                                                    <div class="text-sm font-semibold text-gray-900">Rohit Gupta
+                                                    </div>
+                                                    <div class="text-xs text-gray-600 md:text-sm">IT Head,
+                                                        Manufacturing Corp</div>
+                                                </div>
+                                            </div>
+                                            <div
+                                                class="flex items-center justify-center w-10 h-10 bg-blue-600 rounded-full">
+                                                <span class="text-sm font-bold text-white">RG</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Testimonial 10 -->
+                                <div class="flex-shrink-0 w-full px-4 md:w-1/3">
+                                    <div
+                                        class="h-full p-6 bg-white border border-gray-200 shadow-lg md:p-8 rounded-2xl">
+                                        <div class="flex items-center mb-4 md:mb-6">
+                                            <div class="flex space-x-1">
+                                                <svg class="w-5 h-5 text-yellow-500" fill="currentColor"
+                                                    viewBox="0 0 24 24">
+                                                    <path
+                                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                                </svg>
+                                                <svg class="w-5 h-5 text-yellow-500" fill="currentColor"
+                                                    viewBox="0 0 24 24">
+                                                    <path
+                                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                                </svg>
+                                                <svg class="w-5 h-5 text-yellow-500" fill="currentColor"
+                                                    viewBox="0 0 24 24">
+                                                    <path
+                                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                                </svg>
+                                                <svg class="w-5 h-5 text-yellow-500" fill="currentColor"
+                                                    viewBox="0 0 24 24">
+                                                    <path
+                                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                                </svg>
+                                                <svg class="w-5 h-5 text-yellow-500" fill="currentColor"
+                                                    viewBox="0 0 24 24">
+                                                    <path
+                                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <p class="mb-6 text-xs leading-relaxed text-gray-600 md:mb-8 md:text-sm">
+                                            "Remarkable AI and machine learning solutions for our EdTech platform.
+                                            ITBIZONE developed intelligent features that personalized learning
+                                            experiences for our students across Karnataka."
+                                        </p>
+                                        <div class="flex items-center justify-between">
+                                            <div class="flex items-center space-x-3">
+                                                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=100&q=80"
+                                                    alt="Meera Krishnan"
+                                                    class="object-cover w-8 h-8 rounded-full md:w-12 md:h-12">
+                                                <div>
+                                                    <div class="text-sm font-semibold text-gray-900">Meera
+                                                        Krishnan</div>
+                                                    <div class="text-xs text-gray-600 md:text-sm">CEO, EduTech
+                                                        Innovations</div>
+                                                </div>
+                                            </div>
+                                            <div
+                                                class="flex items-center justify-center w-6 h-6 bg-blue-600 rounded-full md:w-10 md:h-10">
+                                                <span class="text-xs font-bold text-white md:text-sm">MK</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <!-- Navigation Dots -->
+                            <div class="flex justify-center mt-8 space-x-2" id="carouselDots">
+                                <button class="w-3 h-3 transition-all duration-300 bg-blue-600 rounded-full"
+                                    data-slide="0"></button>
+                                <button class="w-3 h-3 transition-all duration-300 bg-gray-300 rounded-full"
+                                    data-slide="1"></button>
+                                <button class="w-3 h-3 transition-all duration-300 bg-gray-300 rounded-full"
+                                    data-slide="2"></button>
+                                <button class="w-3 h-3 transition-all duration-300 bg-gray-300 rounded-full"
+                                    data-slide="3"></button>
+                                <button class="w-3 h-3 transition-all duration-300 bg-gray-300 rounded-full"
+                                    data-slide="4"></button>
+                                <button class="w-3 h-3 transition-all duration-300 bg-gray-300 rounded-full"
+                                    data-slide="5"></button>
+                                <button class="w-3 h-3 transition-all duration-300 bg-gray-300 rounded-full"
+                                    data-slide="6"></button>
+                                <button class="w-3 h-3 transition-all duration-300 bg-gray-300 rounded-full"
+                                    data-slide="7"></button>
+                            </div>
+
+                            <!-- Navigation Arrows -->
+                            <div class="flex justify-end mt-4 space-x-2">
+                                <button id="prevTestimonial"
+                                    class="flex items-center justify-center w-10 h-10 transition-all duration-300 bg-white border border-gray-200 rounded-lg shadow-sm hover:shadow-md group">
+                                    <svg class="w-5 h-5 text-gray-600 transition-colors duration-300 group-hover:text-blue-600"
+                                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M15 19l-7-7 7-7"></path>
+                                    </svg>
+                                </button>
+                                <button id="nextTestimonial"
+                                    class="flex items-center justify-center w-10 h-10 transition-all duration-300 bg-white border border-gray-200 rounded-lg shadow-sm hover:shadow-md group">
+                                    <svg class="w-5 h-5 text-gray-600 transition-colors duration-300 group-hover:text-blue-600"
+                                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M9 5l7 7-7 7"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Auto-Scroll JavaScript -->
+                        <script>
+                            document.addEventListener('DOMContentLoaded', function () {
+                                const carousel = document.getElementById('testimonialCarousel');
+                                const dots = document.querySelectorAll('#carouselDots button');
+                                const prevBtn = document.getElementById('prevTestimonial');
+                                const nextBtn = document.getElementById('nextTestimonial');
+
+                                let currentIndex = 0;
+                                let totalSlides = 8; // Number of slide groups (10 testimonials, 3 per group = ~8 slides)
+                                let autoScrollInterval;
+
+                                function updateCarousel() {
+                                    const slideWidth = carousel.children[0].offsetWidth;
+                                    const offset = -currentIndex * slideWidth;
+                                    carousel.style.transform = `translateX(${offset}px)`;
+
+                                    // Update dots
+                                    dots.forEach((dot, index) => {
+                                        if (index === currentIndex) {
+                                            dot.classList.add('bg-blue-600');
+                                            dot.classList.remove('bg-gray-300');
+                                        } else {
+                                            dot.classList.add('bg-gray-300');
+                                            dot.classList.remove('bg-blue-600');
+                                        }
+                                    });
+                                }
+
+                                function nextSlide() {
+                                    currentIndex = (currentIndex + 1) % totalSlides;
+                                    updateCarousel();
+                                }
+
+                                function prevSlide() {
+                                    currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+                                    updateCarousel();
+                                }
+
+                                function goToSlide(index) {
+                                    currentIndex = index;
+                                    updateCarousel();
+                                }
+
+                                // Auto-scroll every 4 seconds
+                                function startAutoScroll() {
+                                    autoScrollInterval = setInterval(nextSlide, 4000);
+                                }
+
+                                function stopAutoScroll() {
+                                    clearInterval(autoScrollInterval);
+                                }
+
+                                // Event listeners
+                                nextBtn.addEventListener('click', () => {
+                                    stopAutoScroll();
+                                    nextSlide();
+                                    startAutoScroll();
+                                });
+
+                                prevBtn.addEventListener('click', () => {
+                                    stopAutoScroll();
+                                    prevSlide();
+                                    startAutoScroll();
+                                });
+
+                                dots.forEach((dot, index) => {
+                                    dot.addEventListener('click', () => {
+                                        stopAutoScroll();
+                                        goToSlide(index);
+                                        startAutoScroll();
+                                    });
+                                });
+
+                                // Pause on hover
+                                carousel.addEventListener('mouseenter', stopAutoScroll);
+                                carousel.addEventListener('mouseleave', startAutoScroll);
+
+                                // Start auto-scroll
+                                startAutoScroll();
+                                updateCarousel();
+                            });
+                        </script>
+
+
+                    </div>
+                </section>
+
+                <!-- Technologies Section -->
+                <section class="py-8 bg-white md:py-20">
+
+                    <div class="max-w-screen-xl px-4 mx-auto sm:px-6 lg:px-8">
+                        <!-- Section Header -->
+                        <div class="mb-8 text-center md:mb-16">
+                            <h2 class="mb-2 text-3xl font-bold text-gray-900 md:mb-4 md:text-4xl px-6 md:px-0">
+                                <span class="primary">Technologies</span> We Work With
+                            </h2>
+                            <p class="max-w-4xl mx-auto text-xs text-gray-600 md:text-lg">
+                                We stay at the forefront of technology to deliver cutting-edge solutions. Our
+                                expertise spans across modern frameworks, programming languages, and innovative tools
+                                that
+                                power today's digital landscape.
+                            </p>
+                        </div>
+
+                        <!-- Technology Tabs -->
+                        <div class="flex flex-wrap justify-center gap-4 mb-8 md:mb-12">
+                            <button
+                                class="inline-flex items-center px-4 py-1 text-xs font-medium text-white transition-all duration-300 bg-gray-800 rounded-full cursor-pointer md:px-6 md:py-3 tech-tab active md:text-sm"
+                                data-category="frontend">
+                                <svg class="w-4 h-4 mr-2 md:w-5 md:h-5" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                                </svg>
+                                Frontend
+                            </button>
+                            <button
+                                class="inline-flex items-center px-4 py-1 text-xs font-medium text-gray-600 transition-all duration-300 bg-gray-100 rounded-full cursor-pointer md:px-6 md:py-3 tech-tab hover:bg-gray-200 md:text-sm"
+                                data-category="backend">
+                                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2">
+                                    </path>
+                                </svg>
+                                Backend
+                            </button>
+                            <button
+                                class="inline-flex items-center px-4 py-1 text-xs font-medium text-gray-600 transition-all duration-300 bg-gray-100 rounded-full cursor-pointer md:px-6 md:py-3 tech-tab hover:bg-gray-200 md:text-sm"
+                                data-category="mobile">
+                                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M12 18h.01M8 21h8a1 1 0 001-1V4a1 1 0 00-1-1H8a1 1 0 00-1 1v16a1 1 0 001 1z">
+                                    </path>
+                                </svg>
+                                Mobile Development
+                            </button>
+                            <button
+                                class="inline-flex items-center px-4 py-1 text-xs font-medium text-gray-600 transition-all duration-300 bg-gray-100 rounded-full cursor-pointer md:px-6 md:py-3 tech-tab hover:bg-gray-200 md:text-sm"
+                                data-category="ai">
+                                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z">
+                                    </path>
+                                </svg>
+                                Gen AI
+                            </button>
+                            <button
+                                class="inline-flex items-center px-4 py-1 text-xs font-medium text-gray-600 transition-all duration-300 bg-gray-100 rounded-full cursor-pointer md:px-6 md:py-3 tech-tab hover:bg-gray-200 md:text-sm"
+                                data-category="devops">
+                                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M9 19l3 3m0 0l3-3m-3 3V10">
+                                    </path>
+                                </svg>
+                                DevOps & Cloud
+                            </button>
+                            <button
+                                class="inline-flex items-center px-4 py-1 text-xs font-medium text-gray-600 transition-all duration-300 bg-gray-100 rounded-full cursor-pointer md:px-6 md:py-3 tech-tab hover:bg-gray-200 md:text-sm"
+                                data-category="database">
+                                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4">
+                                    </path>
+                                </svg>
+                                Database
+                            </button>
+                        </div>
+
+                        <!-- Technology Grid -->
+                        <div class="tech-content">
+
+                            <!-- Frontend Technologies -->
+                            <div class="grid grid-cols-4 gap-4 md:gap-8 tech-grid md:grid-cols-6 lg:grid-cols-9"
+                                data-category="frontend">
+
+
+                                <div
+                                    class="flex flex-col items-center p-2 transition-all duration-300 md:p-4 tech-item bg-gray-50 rounded-xl hover:shadow-lg group">
+                                    <div
+                                        class="flex items-center justify-center w-8 h-8 mb-3 transition-transform duration-300 bg-white md:w-16 md:h-16 rounded-xl group-hover:scale-110">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg"
+                                            alt="Angular" class="w-5 h-5 md:w-10 md:h-10">
+                                    </div>
+                                    <span class="text-xs font-medium text-gray-700 md:text-sm ">Angular</span>
+                                </div>
+
+
+
+                                <div
+                                    class="flex flex-col items-center p-2 transition-all duration-300 md:p-4 tech-item bg-gray-50 rounded-xl hover:shadow-lg group">
+                                    <div
+                                        class="flex items-center justify-center w-8 h-8 mb-3 transition-transform duration-300 bg-white md:w-16 md:h-16 rounded-xl group-hover:scale-110">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+                                            alt="React" class="w-5 h-5 md:w-10 md:h-10">
+                                    </div>
+                                    <span class="text-xs font-medium text-gray-700 md:text-sm ">React</span>
+                                </div>
+
+                                <div
+                                    class="flex flex-col items-center p-2 transition-all duration-300 md:p-4 tech-item bg-gray-50 rounded-xl hover:shadow-lg group">
+                                    <div
+                                        class="flex items-center justify-center w-8 h-8 mb-3 transition-transform duration-300 bg-white md:w-16 md:h-16 rounded-xl group-hover:scale-110">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg"
+                                            alt="Vue.js" class="w-5 h-5 md:w-10 md:h-10">
+                                    </div>
+                                    <span class="text-xs font-medium text-gray-700 md:text-sm ">Vue.js</span>
+                                </div>
+
+                                <div
+                                    class="flex flex-col items-center p-2 transition-all duration-300 md:p-4 tech-item bg-gray-50 rounded-xl hover:shadow-lg group">
+                                    <div
+                                        class="flex items-center justify-center w-8 h-8 mb-3 transition-transform duration-300 bg-white md:w-16 md:h-16 rounded-xl group-hover:scale-110">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                                            alt="JavaScript" class="w-5 h-5 md:w-10 md:h-10">
+                                    </div>
+                                    <span class="text-xs font-medium text-gray-700 md:text-sm ">JavaScript</span>
+                                </div>
+
+                                <div
+                                    class="flex flex-col items-center p-2 transition-all duration-300 md:p-4 tech-item bg-gray-50 rounded-xl hover:shadow-lg group">
+                                    <div
+                                        class="flex items-center justify-center w-8 h-8 mb-3 transition-transform duration-300 bg-white md:w-16 md:h-16 rounded-xl group-hover:scale-110">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+                                            alt="HTML5" class="w-5 h-5 md:w-10 md:h-10">
+                                    </div>
+                                    <span class="text-xs font-medium text-gray-700 md:text-sm ">HTML</span>
+                                </div>
+
+                                <div
+                                    class="flex flex-col items-center p-2 transition-all duration-300 md:p-4 tech-item bg-gray-50 rounded-xl hover:shadow-lg group">
+                                    <div
+                                        class="flex items-center justify-center w-8 h-8 mb-3 transition-transform duration-300 bg-white md:w-16 md:h-16 rounded-xl group-hover:scale-110">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+                                            alt="CSS3" class="w-5 h-5 md:w-10 md:h-10">
+                                    </div>
+                                    <span class="text-xs font-medium text-gray-700 md:text-sm ">CSS</span>
+                                </div>
+
+                                <div
+                                    class="flex flex-col items-center p-2 transition-all duration-300 md:p-4 tech-item bg-gray-50 rounded-xl hover:shadow-lg group">
+                                    <div
+                                        class="flex items-center justify-center w-8 h-8 mb-3 transition-transform duration-300 bg-white md:w-16 md:h-16 rounded-xl group-hover:scale-110">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg"
+                                            alt="Bootstrap" class="w-5 h-5 md:w-10 md:h-10">
+                                    </div>
+                                    <span class="text-xs font-medium text-gray-700 md:text-sm ">Bootstrap</span>
+                                </div>
+
+                                <div
+                                    class="flex flex-col items-center p-2 transition-all duration-300 md:p-4 tech-item bg-gray-50 rounded-xl hover:shadow-lg group">
+                                    <div
+                                        class="flex items-center justify-center w-8 h-8 mb-3 transition-transform duration-300 bg-white md:w-16 md:h-16 rounded-xl group-hover:scale-110">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg"
+                                            alt="Tailwind" class="w-5 h-5 md:w-10 md:h-10">
+                                    </div>
+                                    <span class="text-xs font-medium text-gray-700 md:text-sm ">Tailwind</span>
+                                </div>
+
+                                <div
+                                    class="flex flex-col items-center p-2 transition-all duration-300 md:p-4 tech-item bg-gray-50 rounded-xl hover:shadow-lg group">
+                                    <div
+                                        class="flex items-center justify-center w-8 h-8 mb-3 transition-transform duration-300 bg-white md:w-16 md:h-16 rounded-xl group-hover:scale-110">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg"
+                                            alt="Next.js" class="w-5 h-5 md:w-10 md:h-10">
+                                    </div>
+                                    <span class="text-xs font-medium text-gray-700 md:text-sm ">Next JS</span>
+                                </div>
+                            </div>
+
+                            <!-- Backend Technologies -->
+                            <div class="grid hidden grid-cols-3 gap-8 tech-grid md:grid-cols-6 lg:grid-cols-9"
+                                data-category="backend">
+                                <div
+                                    class="flex flex-col items-center p-2 transition-all duration-300 md:p-4 tech-item bg-gray-50 rounded-xl hover:shadow-lg group">
+                                    <div
+                                        class="flex items-center justify-center w-8 h-8 mb-3 transition-transform duration-300 bg-white md:w-16 md:h-16 rounded-xl group-hover:scale-110">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+                                            alt="Node.js" class="w-5 h-5 md:w-10 md:h-10">
+                                    </div>
+                                    <span class="text-gray-700 md:text-sm text-xsfont-medium ">Node.js</span>
+                                </div>
+
+                                <div
+                                    class="flex flex-col items-center p-2 transition-all duration-300 md:p-4 tech-item bg-gray-50 rounded-xl hover:shadow-lg group">
+                                    <div
+                                        class="flex items-center justify-center w-8 h-8 mb-3 transition-transform duration-300 bg-white md:w-16 md:h-16 rounded-xl group-hover:scale-110">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+                                            alt="Python" class="w-5 h-5 md:w-10 md:h-10">
+                                    </div>
+                                    <span class="text-xs font-medium text-gray-700 md:text-sm ">Python</span>
+                                </div>
+
+                                <div
+                                    class="flex flex-col items-center p-2 transition-all duration-300 md:p-4 tech-item bg-gray-50 rounded-xl hover:shadow-lg group">
+                                    <div
+                                        class="flex items-center justify-center w-8 h-8 mb-3 transition-transform duration-300 bg-white md:w-16 md:h-16 rounded-xl group-hover:scale-110">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"
+                                            alt="Java" class="w-5 h-5 md:w-10 md:h-10">
+                                    </div>
+                                    <span class="text-xs font-medium text-gray-700 md:text-sm ">Java</span>
+                                </div>
+
+                                <div
+                                    class="flex flex-col items-center p-2 transition-all duration-300 md:p-4 tech-item bg-gray-50 rounded-xl hover:shadow-lg group">
+                                    <div
+                                        class="flex items-center justify-center w-8 h-8 mb-3 transition-transform duration-300 bg-white md:w-16 md:h-16 rounded-xl group-hover:scale-110">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg"
+                                            alt="Express.js" class="w-5 h-5 md:w-10 md:h-10">
+                                    </div>
+                                    <span class="text-xs font-medium text-gray-700 md:text-sm ">Express.js</span>
+                                </div>
+
+                                <div
+                                    class="flex flex-col items-center p-2 transition-all duration-300 md:p-4 tech-item bg-gray-50 rounded-xl hover:shadow-lg group">
+                                    <div
+                                        class="flex items-center justify-center w-8 h-8 mb-3 transition-transform duration-300 bg-white md:w-16 md:h-16 rounded-xl group-hover:scale-110">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg"
+                                            alt="PHP" class="w-10 h-10">
+                                    </div>
+                                    <span class="text-gray-700 md:text-sm text-xsfont-medium ">PHP</span>
+                                </div>
+
+                                <div
+                                    class="flex flex-col items-center p-2 transition-all duration-300 md:p-4 tech-item bg-gray-50 rounded-xl hover:shadow-lg group">
+                                    <div
+                                        class="flex items-center justify-center w-8 h-8 mb-3 transition-transform duration-300 bg-white md:w-16 md:h-16 rounded-xl group-hover:scale-110">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-plain.svg"
+                                            alt="Laravel" class="w-5 h-5 md:w-10 md:h-10">
+                                    </div>
+                                    <span class="text-xs font-medium text-gray-700 md:text-sm ">Laravel</span>
+                                </div>
+                            </div>
+
+                            <!-- Mobile Development -->
+                            <div class="grid hidden grid-cols-3 gap-8 tech-grid md:grid-cols-6 lg:grid-cols-9"
+                                data-category="mobile">
+                                <div
+                                    class="flex flex-col items-center p-2 transition-all duration-300 md:p-4 tech-item bg-gray-50 rounded-xl hover:shadow-lg group">
+                                    <div
+                                        class="flex items-center justify-center w-8 h-8 mb-3 transition-transform duration-300 bg-white md:w-16 md:h-16 rounded-xl group-hover:scale-110">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg"
+                                            alt="Flutter" class="w-5 h-5 md:w-10 md:h-10">
+                                    </div>
+                                    <span class="text-xs font-medium text-gray-700 md:text-sm ">Flutter</span>
+                                </div>
+
+                                <div
+                                    class="flex flex-col items-center p-2 transition-all duration-300 md:p-4 tech-item bg-gray-50 rounded-xl hover:shadow-lg group">
+                                    <div
+                                        class="flex items-center justify-center w-8 h-8 mb-3 transition-transform duration-300 bg-white md:w-16 md:h-16 rounded-xl group-hover:scale-110">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+                                            alt="React Native" class="w-5 h-5 md:w-10 md:h-10">
+                                    </div>
+                                    <span class="text-xs font-medium text-gray-700 md:text-sm ">React
+                                        Native</span>
+                                </div>
+
+                                <div
+                                    class="flex flex-col items-center p-2 transition-all duration-300 md:p-4 tech-item bg-gray-50 rounded-xl hover:shadow-lg group">
+                                    <div
+                                        class="flex items-center justify-center w-8 h-8 mb-3 transition-transform duration-300 bg-white md:w-16 md:h-16 rounded-xl group-hover:scale-110">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg"
+                                            alt="Kotlin" class="w-5 h-5 md:w-10 md:h-10">
+                                    </div>
+                                    <span class="text-xs font-medium text-gray-700 md:text-sm ">Kotlin</span>
+                                </div>
+
+                                <div
+                                    class="flex flex-col items-center p-2 transition-all duration-300 md:p-4 tech-item bg-gray-50 rounded-xl hover:shadow-lg group">
+                                    <div
+                                        class="flex items-center justify-center w-8 h-8 mb-3 transition-transform duration-300 bg-white md:w-16 md:h-16 rounded-xl group-hover:scale-110">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/swift/swift-original.svg"
+                                            alt="Swift" class="w-5 h-5 md:w-10 md:h-10">
+                                    </div>
+                                    <span class="text-xs font-medium text-gray-700 md:text-sm ">Swift</span>
+                                </div>
+                            </div>
+
+                            <!-- AI Technologies -->
+                            <div class="grid hidden grid-cols-3 gap-8 tech-grid md:grid-cols-6 lg:grid-cols-9"
+                                data-category="ai">
+                                <div
+                                    class="flex flex-col items-center p-2 transition-all duration-300 md:p-4 tech-item bg-gray-50 rounded-xl hover:shadow-lg group">
+                                    <div
+                                        class="flex items-center justify-center w-8 h-8 mb-3 transition-transform duration-300 bg-white md:w-16 md:h-16 rounded-xl group-hover:scale-110">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg"
+                                            alt="TensorFlow" class="w-5 h-5 md:w-10 md:h-10">
+                                    </div>
+                                    <span class="text-xs font-medium text-gray-700 md:text-sm ">TensorFlow</span>
+                                </div>
+
+                                <div
+                                    class="flex flex-col items-center p-2 transition-all duration-300 md:p-4 tech-item bg-gray-50 rounded-xl hover:shadow-lg group">
+                                    <div
+                                        class="flex items-center justify-center w-8 h-8 mb-3 transition-transform duration-300 bg-white md:w-16 md:h-16 rounded-xl group-hover:scale-110">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg"
+                                            alt="PyTorch" class="w-5 h-5 md:w-10 md:h-10">
+                                    </div>
+                                    <span class="text-xs font-medium text-gray-700 md:text-sm ">PyTorch</span>
+                                </div>
+
+                                <div
+                                    class="flex flex-col items-center p-2 transition-all duration-300 md:p-4 tech-item bg-gray-50 rounded-xl hover:shadow-lg group">
+                                    <div
+                                        class="flex items-center justify-center w-8 h-8 mb-3 transition-transform duration-300 bg-white md:w-16 md:h-16 rounded-xl group-hover:scale-110">
+                                        <svg class="w-10 h-10 text-gray-700 " fill="currentColor" viewBox="0 0 24 24">
+                                            <path
+                                                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+                                        </svg>
+                                    </div>
+                                    <span class="text-gray-700 md:text-sm text-xsfont-medium ">OpenAI</span>
+                                </div>
+
+                                <div
+                                    class="flex flex-col items-center p-2 transition-all duration-300 md:p-4 tech-item bg-gray-50 rounded-xl hover:shadow-lg group">
+                                    <div
+                                        class="flex items-center justify-center w-8 h-8 mb-3 transition-transform duration-300 bg-white md:w-16 md:h-16 rounded-xl group-hover:scale-110">
+                                        <svg class="w-10 h-10 text-gray-700 " fill="currentColor" viewBox="0 0 24 24">
+                                            <path
+                                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                                        </svg>
+                                    </div>
+                                    <span class="text-xs font-medium text-gray-700 md:text-sm ">LangChain</span>
+                                </div>
+                            </div>
+
+                            <!-- DevOps & Cloud -->
+                            <div class="grid hidden grid-cols-3 gap-8 tech-grid md:grid-cols-6 lg:grid-cols-9"
+                                data-category="devops">
+                                <div
+                                    class="flex flex-col items-center p-2 transition-all duration-300 md:p-4 tech-item bg-gray-50 rounded-xl hover:shadow-lg group">
+                                    <div
+                                        class="flex items-center justify-center w-8 h-8 mb-3 transition-transform duration-300 bg-white md:w-16 md:h-16 rounded-xl group-hover:scale-110">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"
+                                            alt="Docker" class="w-5 h-5 md:w-10 md:h-10">
+                                    </div>
+                                    <span class="text-xs font-medium text-gray-700 md:text-sm ">Docker</span>
+                                </div>
+
+                                <div
+                                    class="flex flex-col items-center p-2 transition-all duration-300 md:p-4 tech-item bg-gray-50 rounded-xl hover:shadow-lg group">
+                                    <div
+                                        class="flex items-center justify-center w-8 h-8 mb-3 transition-transform duration-300 bg-white md:w-16 md:h-16 rounded-xl group-hover:scale-110">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg"
+                                            alt="AWS" class="w-5 h-5 md:w-10 md:h-10">
+                                    </div>
+                                    <span class="text-xs font-medium text-gray-700 md:text-sm ">AWS</span>
+                                </div>
+
+                                <div
+                                    class="flex flex-col items-center p-2 transition-all duration-300 md:p-4 tech-item bg-gray-50 rounded-xl hover:shadow-lg group">
+                                    <div
+                                        class="flex items-center justify-center w-8 h-8 mb-3 transition-transform duration-300 bg-white md:w-16 md:h-16 rounded-xl group-hover:scale-110">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg"
+                                            alt="Google Cloud" class="w-5 h-5 md:w-10 md:h-10">
+                                    </div>
+                                    <span class="text-xs font-medium text-gray-700 md:text-sm ">Google
+                                        Cloud</span>
+                                </div>
+
+                                <div
+                                    class="flex flex-col items-center p-2 transition-all duration-300 md:p-4 tech-item bg-gray-50 rounded-xl hover:shadow-lg group">
+                                    <div
+                                        class="flex items-center justify-center w-8 h-8 mb-3 transition-transform duration-300 bg-white md:w-16 md:h-16 rounded-xl group-hover:scale-110">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg"
+                                            alt="Kubernetes" class="w-5 h-5 md:w-10 md:h-10">
+                                    </div>
+                                    <span class="text-xs font-medium text-gray-700 md:text-sm ">Kubernetes</span>
+                                </div>
+                            </div>
+
+                            <!-- Database -->
+                            <div class="grid hidden grid-cols-3 gap-8 tech-grid md:grid-cols-6 lg:grid-cols-9"
+                                data-category="database">
+                                <div
+                                    class="flex flex-col items-center p-2 transition-all duration-300 md:p-4 tech-item bg-gray-50 rounded-xl hover:shadow-lg group">
+                                    <div
+                                        class="flex items-center justify-center w-8 h-8 mb-3 transition-transform duration-300 bg-white md:w-16 md:h-16 rounded-xl group-hover:scale-110">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
+                                            alt="MongoDB" class="w-5 h-5 md:w-10 md:h-10">
+                                    </div>
+                                    <span class="text-xs font-medium text-gray-700 md:text-sm ">MongoDB</span>
+                                </div>
+
+                                <div
+                                    class="flex flex-col items-center p-2 transition-all duration-300 md:p-4 tech-item bg-gray-50 rounded-xl hover:shadow-lg group">
+                                    <div
+                                        class="flex items-center justify-center w-8 h-8 mb-3 transition-transform duration-300 bg-white md:w-16 md:h-16 rounded-xl group-hover:scale-110">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
+                                            alt="MySQL" class="w-5 h-5 md:w-10 md:h-10">
+                                    </div>
+                                    <span class="text-xs font-medium text-gray-700 md:text-sm ">MySQL</span>
+                                </div>
+
+                                <div
+                                    class="flex flex-col items-center p-2 transition-all duration-300 md:p-4 tech-item bg-gray-50 rounded-xl hover:shadow-lg group">
+                                    <div
+                                        class="flex items-center justify-center w-8 h-8 mb-3 transition-transform duration-300 bg-white md:w-16 md:h-16 rounded-xl group-hover:scale-110">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
+                                            alt="PostgreSQL" class="w-5 h-5 md:w-10 md:h-10">
+                                    </div>
+                                    <span class="text-xs font-medium text-gray-700 md:text-sm ">PostgreSQL</span>
+                                </div>
+
+                                <div
+                                    class="flex flex-col items-center p-2 transition-all duration-300 md:p-4 tech-item bg-gray-50 rounded-xl hover:shadow-lg group">
+                                    <div
+                                        class="flex items-center justify-center w-8 h-8 mb-3 transition-transform duration-300 bg-white md:w-16 md:h-16 rounded-xl group-hover:scale-110">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg"
+                                            alt="Redis" class="w-5 h-5 md:w-10 md:h-10">
+                                    </div>
+                                    <span class="text-xs font-medium text-gray-700 md:text-sm ">Redis</span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Team & Development in Action Section -->
+                <section class="py-10 md:py-20 bg-gray-50">
+                    <div class="max-w-screen-xl px-4 mx-auto sm:px-6 lg:px-8">
+                        <!-- Section Header -->
+                        <div class="mb-8 text-center md:mb-16">
+                            <h2 class="mb-3 text-xl font-bold text-gray-900 md:mb-6 md:text-4xl px-6 md:px-0">
+                                Our Team & Development in Action
+                            </h2>
+                            <p class="max-w-3xl mx-auto text-xs text-gray-600 md:text-lg">
+                                Meet our talented professionals and see how we bring innovative digital solutions to
+                                life through collaboration, expertise, and cutting-edge technology.
+                            </p>
+                        </div>
+
+                        <!-- Images Grid -->
+                        <div class="grid grid-cols-1 gap-8 mb-12 md:grid-cols-2 lg:grid-cols-3">
+                            <!-- Team Collaboration -->
+                            <div class="relative overflow-hidden shadow-lg group rounded-2xl">
+                                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80"
+                                    alt="Team Collaboration"
+                                    class="object-cover w-full h-64 transition-transform duration-500 group-hover:scale-105">
+                                <div
+                                    class="absolute inset-0 transition-opacity duration-300 opacity-0 bg-gradient-to-t from-black/60 to-transparent group-hover:opacity-100">
+                                </div>
+                                <div
+                                    class="absolute text-white transition-opacity duration-300 opacity-0 bottom-4 left-4 group-hover:opacity-100">
+                                    <h3 class="mb-1 text-lg font-semibold">Team Collaboration</h3>
+                                    <p class="text-sm">Working together to deliver excellence</p>
+                                </div>
+                            </div>
+
+                            <!-- Development Work -->
+                            <div class="relative overflow-hidden shadow-lg group rounded-2xl">
+                                <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=800&q=80"
+                                    alt="Development Work"
+                                    class="object-cover w-full h-64 transition-transform duration-500 group-hover:scale-105">
+                                <div
+                                    class="absolute inset-0 transition-opacity duration-300 opacity-0 bg-gradient-to-t from-black/60 to-transparent group-hover:opacity-100">
+                                </div>
+                                <div
+                                    class="absolute text-white transition-opacity duration-300 opacity-0 bottom-4 left-4 group-hover:opacity-100">
+                                    <h3 class="mb-1 text-lg font-semibold">Code Development</h3>
+                                    <p class="text-sm">Building robust digital solutions</p>
+                                </div>
+                            </div>
+
+                            <!-- Design Process -->
+                            <div class="relative overflow-hidden shadow-lg group rounded-2xl">
+                                <img src="https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?auto=format&fit=crop&w=800&q=80"
+                                    alt="Design Process"
+                                    class="object-cover w-full h-64 transition-transform duration-500 group-hover:scale-105">
+                                <div
+                                    class="absolute inset-0 transition-opacity duration-300 opacity-0 bg-gradient-to-t from-black/60 to-transparent group-hover:opacity-100">
+                                </div>
+                                <div
+                                    class="absolute text-white transition-opacity duration-300 opacity-0 bottom-4 left-4 group-hover:opacity-100">
+                                    <h3 class="mb-1 text-lg font-semibold">Creative Design</h3>
+                                    <p class="text-sm">Crafting beautiful user experiences</p>
+                                </div>
+                            </div>
+
+                            <!-- Team Meeting -->
+                            <div class="relative overflow-hidden shadow-lg group rounded-2xl">
+                                <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=800&q=80"
+                                    alt="Team Meeting"
+                                    class="object-cover w-full h-64 transition-transform duration-500 group-hover:scale-105">
+                                <div
+                                    class="absolute inset-0 transition-opacity duration-300 opacity-0 bg-gradient-to-t from-black/60 to-transparent group-hover:opacity-100">
+                                </div>
+                                <div
+                                    class="absolute text-white transition-opacity duration-300 opacity-0 bottom-4 left-4 group-hover:opacity-100">
+                                    <h3 class="mb-1 text-lg font-semibold">Strategic Planning</h3>
+                                    <p class="text-sm">Planning for project success</p>
+                                </div>
+                            </div>
+
+                            <!-- Mobile Development -->
+                            <div class="relative overflow-hidden shadow-lg group rounded-2xl">
+                                <img src="https://images.unsplash.com/photo-1512486130939-2c4f79935e4f?auto=format&fit=crop&w=800&q=80"
+                                    alt="Mobile Development"
+                                    class="object-cover w-full h-64 transition-transform duration-500 group-hover:scale-105">
+                                <div
+                                    class="absolute inset-0 transition-opacity duration-300 opacity-0 bg-gradient-to-t from-black/60 to-transparent group-hover:opacity-100">
+                                </div>
+                                <div
+                                    class="absolute text-white transition-opacity duration-300 opacity-0 bottom-4 left-4 group-hover:opacity-100">
+                                    <h3 class="mb-1 text-lg font-semibold">Mobile Solutions</h3>
+                                    <p class="text-sm">Creating responsive mobile apps</p>
+                                </div>
+                            </div>
+
+                            <!-- Data Analysis -->
+                            <div class="relative overflow-hidden shadow-lg group rounded-2xl">
+                                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80"
+                                    alt="Data Analysis"
+                                    class="object-cover w-full h-64 transition-transform duration-500 group-hover:scale-105">
+                                <div
+                                    class="absolute inset-0 transition-opacity duration-300 opacity-0 bg-gradient-to-t from-black/60 to-transparent group-hover:opacity-100">
+                                </div>
+                                <div
+                                    class="absolute text-white transition-opacity duration-300 opacity-0 bottom-4 left-4 group-hover:opacity-100">
+                                    <h3 class="mb-1 text-lg font-semibold">Data Analytics</h3>
+                                    <p class="text-sm">Driving insights through data</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Team Stats -->
+                        <div
+                            class="grid grid-cols-2 gap-8 pt-12 text-sm border-t border-gray-200 md:grid-cols-4 md:text-md">
+                            <div class="text-center">
+                                <div class="mb-2 text-3xl font-bold text-gray-900">15+</div>
+                                <div class="text-sm text-gray-600 ">Expert Developers</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="mb-2 text-3xl font-bold text-gray-900">8+</div>
+                                <div class="text-sm text-gray-600 ">Creative Designers</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="mb-2 text-3xl font-bold text-gray-900">5+</div>
+                                <div class="text-sm text-gray-600 ">Project Managers</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="mb-2 text-3xl font-bold text-gray-900">24/7</div>
+                                <div class="text-sm text-gray-600 ">Support Team</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Reach Us Section -->
+                <section class="relative py-10 overflow-hidden bg-gray-900 md:py-20" id="reachUs">
+                    <!-- Background Video/Image -->
+                    <div class="absolute inset-0 z-0">
+                        <img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1920&q=80"
+                            alt="Team Collaboration" class="object-cover w-full h-full opacity-60">
+                        <div class="absolute inset-0 bg-gradient-to-r from-gray-900/80 to-gray-900/60"></div>
+                    </div>
+
+
+
+                    <div class="relative z-20 px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+                        <div class="grid items-center gap-12 lg:grid-cols-2">
+
+                            <!-- Left Side - Video/Content Area -->
+                            <div class="space-y-6">
+                                <div class="text-white">
+                                    <h2 class="mb-3 text-xl font-bold leading-tight md:mb-6 md:text-4xl lg:text-5xl">
+                                        Ready to Start Your Digital Journey?
+                                    </h2>
+                                    <p class="mb-4 text-xs leading-relaxed text-gray-300 md:mb-8 md:text-xl">
+                                        Watch how we transform businesses through innovative digital solutions.
+                                        Let's discuss your project and bring your vision to life.
+                                    </p>
+
+                                    <!-- Features List -->
+                                    <div class="space-y-4 text-xs md:text-sm">
+                                        <div class="flex items-center space-x-3">
+                                            <div class="flex items-center justify-center w-6 h-6 rounded-full bg-main">
+                                                <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                                    <path fill-rule="evenodd"
+                                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                        clip-rule="evenodd" />
+                                                </svg>
+                                            </div>
+                                            <span class="text-gray-300">Free consultation and project analysis</span>
+                                        </div>
+                                        <div class="flex items-center space-x-3">
+                                            <div class="flex items-center justify-center w-6 h-6 rounded-full bg-main">
+                                                <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                                    <path fill-rule="evenodd"
+                                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                        clip-rule="evenodd" />
+                                                </svg>
+                                            </div>
+                                            <span class="text-gray-300">24/7 dedicated support team</span>
+                                        </div>
+                                        <div class="flex items-center space-x-3">
+                                            <div class="flex items-center justify-center w-6 h-6 rounded-full bg-main">
+                                                <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                                    <path fill-rule="evenodd"
+                                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                        clip-rule="evenodd" />
+                                                </svg>
+                                            </div>
+                                            <span class="text-gray-300">No spam policy - we respect your privacy</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Right Side - Contact Form -->
+                            <div class="p-5 bg-white shadow-2xl md:p-8 rounded-2xl">
+                                <div class="mb-8 text-center">
+                                    <h3 class="mb-2 text-xl font-bold text-gray-900 md:text-2xl">Make an Appointment
+                                    </h3>
+                                    <p class="text-xs text-gray-600 md:text-sm">Feel free to contact with us, we don't
+                                        spam your email</p>
+                                </div>
+
+                                <form class="space-y-4 md:space-y-6" id="appointmentForm">
+                                    <!-- Full Name -->
+                                    <div>
+                                        <label for="fullName"
+                                            class="block mb-2 text-xs font-medium text-gray-700 md:text-sm">
+                                            Full Name <span class="text-red-500">*</span>
+                                        </label>
+                                        <input type="text" id="fullName" name="fullName" required
+                                            class="w-full px-3 py-2 text-xs transition-colors duration-300 border border-gray-300 rounded-lg md:px-4 md:py-3 md:text-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                                            placeholder="Enter your full name">
+                                    </div>
+
+                                    <!-- Email -->
+                                    <div>
+                                        <label for="email"
+                                            class="block mb-2 text-xs font-medium text-gray-700 md:text-sm">
+                                            Email<span class="text-red-500">*</span>
+                                        </label>
+                                        <input type="email" id="email" name="email" required
+                                            class="w-full px-3 py-2 text-xs transition-colors duration-300 border border-gray-300 rounded-lg md:px-4 md:py-3 md:text-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                                            placeholder="Enter your email address">
+                                    </div>
+
+                                    <!-- Service Selection -->
+                                    <div>
+                                        <label for="service"
+                                            class="block mb-2 text-xs font-medium text-gray-700 md:text-sm">
+                                            Select An Option <span class="text-red-500">*</span>
+                                        </label>
+                                        <select id="service" name="service" required
+                                            class="w-full px-3 py-2 text-xs transition-colors duration-300 bg-white border border-gray-300 rounded-lg appearance-none md:px-4 md:py-3 md:text-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                                            <option value="">Choose a service...</option>
+                                            <option value="web-development">Web Development</option>
+                                            <option value="graphic-design">Graphic Design</option>
+                                            <option value="digital-marketing">Digital Marketing</option>
+                                            <option value="data-security">Data Security</option>
+                                            <option value="mobile-development">Mobile Development</option>
+                                            <option value="consulting">IT Consulting</option>
+                                            <option value="other">Other</option>
+                                        </select>
+                                    </div>
+
+                                    <!-- Message -->
+                                    <div>
+                                        <label for="message"
+                                            class="block mb-2 text-xs font-medium text-gray-700 md:text-sm">
+                                            Your Message <span class="text-red-500">*</span>
+                                        </label>
+                                        <textarea id="message" name="message" rows="4" required
+                                            class="w-full px-3 py-2 text-xs transition-colors duration-300 border border-gray-300 rounded-lg md:px-4 md:py-3 md:text-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500 resize-vertical"
+                                            placeholder="Tell us about your project requirements..."></textarea>
+                                    </div>
+
+                                    <!-- Submit Button -->
+                                    <button type="submit"
+                                        class="w-full px-6 md:py-4 py-3 md:text-sm text-xs font-semibold text-white transition-all duration-300 rounded-lg shadow-lg cursor-pointer bg-main hover:bg-blue-700 focus:ring-4 focus:ring-blue-500/20 hover:shadow-xl">
+                                        Submit Message
+                                    </button>
+                                </form>
+
+                                <!-- Contact Info -->
+                                <div class="pt-6 mt-8 border-t border-gray-200">
+                                    <div class="grid grid-cols-1 gap-4 text-sm text-gray-600 sm:grid-cols-2">
+                                        <div class="flex items-center space-x-2">
+                                            <svg class="w-4 h-4 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                                                <path
+                                                    d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                                                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+                                            </svg>
+                                            <span>info@itbizone.com</span>
+                                        </div>
+                                        <div class="flex items-center space-x-2">
+                                            <svg class="w-4 h-4 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                                                <path
+                                                    d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+                                            </svg>
+                                            <span>+91 9535111129</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- CTA Section -->
+                <section
+                    class="flex items-center justify-start md:min-h-screen p-8 sm:p-16 py-10 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+                    <div class="max-w-4xl mx-auto">
+                        <h1 class="mb-4 text-5xl font-extrabold leading-tight text-white md:text-8xl">
+                            Got a Project in<br>
+                            Mind?
+                            <span class="inline-flex items-center avatar-stack">
+                                <img class="avatar"
+                                    src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                    alt="Avatar 1">
+                                <img class="avatar"
+                                    src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                    alt="Avatar 2">
+                                <img class="avatar"
+                                    src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                    alt="Avatar 3">
+                            </span>
+                        </h1>
+                        <h2
+                            class="relative inline-block pb-2 text-5xl font-extrabold leading-tight text-transparent md:text-8xl bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
+                            Let's Talk!
+                            <span class="absolute bottom-0 left-0 w-2/3 h-1 bg-accent-pink"></span>
+                        </h2>
+
+                        <div class="flex items-center mt-2 space-x-3 text-lg md:mt-12">
+                            <i class="text-white fa-regular fa-envelope"></i>
+                            <a href="mailto:hello@designstudiouiux.com"
+                                class="text-white hover:text-accent-pink hover:underline">contact@itbizone.com</a>
+                        </div>
+                    </div>
+                </section>
+
+            </main>
+
+            <!-- Technologies Tab Functionality -->
+            <script>
+                // 3D Hero Canvas Background
+                const initializeHeroCanvas = () => {
+                    const canvas = document.getElementById('hero-canvas');
+                    if (!canvas) return;
+
+                    const ctx = canvas.getContext('2d');
+                    canvas.width = window.innerWidth;
+                    canvas.height = window.innerHeight;
+
+                    let particles = [];
+                    const particleCount = 60;
+
+                    class Particle {
+                        constructor() {
+                            this.x = Math.random() * canvas.width;
+                            this.y = Math.random() * canvas.height;
+                            this.z = Math.random() * 100;
+                            this.vx = (Math.random() - 0.5) * 0.5;
+                            this.vy = (Math.random() - 0.5) * 0.5;
+                            this.vz = (Math.random() - 0.5) * 0.3;
+                            this.size = Math.random() * 2 + 1;
+                            this.opacity = Math.random() * 0.5 + 0.2;
+                            this.color = ['#a78bfa', '#3b82f6', '#06b6d4'][Math.floor(Math.random() * 3)];
+                        }
+
+                        update() {
+                            this.x += this.vx;
+                            this.y += this.vy;
+                            this.z += this.vz;
+
+                            // Wrap around
+                            if (this.x < 0) this.x = canvas.width;
+                            if (this.x > canvas.width) this.x = 0;
+                            if (this.y < 0) this.y = canvas.height;
+                            if (this.y > canvas.height) this.y = 0;
+                            if (this.z < 0 || this.z > 100) {
+                                this.z = this.z < 0 ? 100 : 0;
+                            }
+                        }
+
+                        draw() {
+                            const scale = (this.z + 50) / 150;
+                            const size = this.size * scale;
+                            const opacity = this.opacity * (this.z / 100);
+
+                            ctx.fillStyle = this.color;
+                            ctx.globalAlpha = opacity;
+                            ctx.beginPath();
+                            ctx.arc(this.x, this.y, size, 0, Math.PI * 2);
+                            ctx.fill();
+                        }
+                    }
+
+                    // Initialize particles
+                    for (let i = 0; i < particleCount; i++) {
+                        particles.push(new Particle());
+                    }
+
+                    function animate() {
+                        ctx.globalAlpha = 1;
+                        ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+                        ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+                        particles.forEach(particle => {
+                            particle.update();
+                            particle.draw();
+                        });
+
+                        requestAnimationFrame(animate);
+                    }
+
+                    // Sort particles by z-depth and draw
+                    function sortAndDraw() {
+                        particles.sort((a, b) => a.z - b.z);
+                        animate();
+                    }
+
+                    // Handle window resize
+                    window.addEventListener('resize', () => {
+                        canvas.width = window.innerWidth;
+                        canvas.height = window.innerHeight;
+                    });
+
+                    sortAndDraw();
+                };
+
+                document.addEventListener('DOMContentLoaded', function () {
+                    // Initialize 3D canvas
+                    initializeHeroCanvas();
+
+                    // Initialize Lenis for smooth scrolling
+                    if (typeof Lenis !== 'undefined') {
+                        const lenis = new Lenis({
+                            duration: 1.2,
+                            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+                            direction: 'vertical',
+                            gestureDirection: 'vertical',
+                            smooth: true,
+                            smoothTouch: false,
+                            touchMultiplier: 2,
+                        });
+
+                        function raf(time) {
+                            lenis.raf(time);
+                            requestAnimationFrame(raf);
+                        }
+
+                        requestAnimationFrame(raf);
+                    }
+
+                    // Technologies Tab Functionality
+                    const tabs = document.querySelectorAll('.tech-tab');
+                    const grids = document.querySelectorAll('.tech-grid');
+
+                    // Function to show a specific category
+                    function showCategory(categoryToShow) {
+                        // Remove active class from all tabs
+                        tabs.forEach(tab => {
+                            tab.classList.remove('active', 'bg-gray-800', 'text-white');
+                            tab.classList.add('bg-gray-100', 'text-gray-600');
+                        });
+
+                        // Add active class to the selected tab
+                        const activeTab = document.querySelector(`[data-category="${categoryToShow}"]`);
+                        if (activeTab && activeTab.classList.contains('tech-tab')) {
+                            activeTab.classList.add('active', 'bg-gray-800', 'text-white');
+                            activeTab.classList.remove('bg-gray-100', 'text-gray-600');
+                        }
+
+                        // Hide all grids
+                        grids.forEach(grid => {
+                            grid.classList.add('hidden');
+                        });
+
+                        // Show selected grid
+                        const selectedGrid = document.querySelector(`.tech-grid[data-category="${categoryToShow}"]`);
+                        if (selectedGrid) {
+                            selectedGrid.classList.remove('hidden');
+                        }
+                    }
+
+                    // Add click event listeners to tabs
+                    tabs.forEach(tab => {
+                        tab.addEventListener('click', function () {
+                            const category = this.getAttribute('data-category');
+                            showCategory(category);
+                        });
+                    });
+
+                    // Initialize with frontend category
+                    showCategory('frontend');
+
+                    // Testimonials Carousel Functionality
+                    const track = document.getElementById('testimonialTrack');
+                    const prevBtn = document.getElementById('prevBtn');
+                    const nextBtn = document.getElementById('nextBtn');
+                    const dots = document.querySelectorAll('.dot');
+
+                    if (track && prevBtn && nextBtn) {
+                        let currentSlide = 0;
+                        const totalSlides = document.querySelectorAll('.testimonial-slide').length;
+
+                        function updateCarousel() {
+                            const translateX = -currentSlide * 100;
+                            track.style.transform = `translateX(${translateX}%)`;
+
+                            // Update dots
+                            dots.forEach((dot, index) => {
+                                if (index === currentSlide) {
+                                    dot.classList.remove('bg-gray-300');
+                                    dot.classList.add('bg-gray-900', 'active');
+                                } else {
+                                    dot.classList.remove('bg-gray-900', 'active');
+                                    dot.classList.add('bg-gray-300');
+                                }
+                            });
+                        }
+
+                        function nextSlide() {
+                            currentSlide = (currentSlide + 1) % totalSlides;
+                            updateCarousel();
+                        }
+
+                        function prevSlide() {
+                            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+                            updateCarousel();
+                        }
+
+                        // Event listeners
+                        nextBtn.addEventListener('click', nextSlide);
+                        prevBtn.addEventListener('click', prevSlide);
+
+                        // Dot navigation
+                        dots.forEach((dot, index) => {
+                            dot.addEventListener('click', () => {
+                                currentSlide = index;
+                                updateCarousel();
+                            });
+                        });
+
+                        // Auto-advance carousel every 6 seconds
+                        setInterval(nextSlide, 6000);
+
+                        // Touch/swipe support for mobile
+                        let startX = 0;
+                        let endX = 0;
+
+                        track.addEventListener('touchstart', (e) => {
+                            startX = e.touches[0].clientX;
+                        });
+
+                        track.addEventListener('touchmove', (e) => {
+                            endX = e.touches[0].clientX;
+                        });
+
+                        track.addEventListener('touchend', () => {
+                            const threshold = 50; // minimum distance for swipe
+                            const diff = startX - endX;
+
+                            if (Math.abs(diff) > threshold) {
+                                if (diff > 0) {
+                                    nextSlide(); // swipe left
+                                } else {
+                                    prevSlide(); // swipe right
+                                }
+                            }
+                        });
+
+                        // Initialize carousel
+                        updateCarousel();
+                    }
+
+                    // Contact Form Functionality
+                    const appointmentForm = document.getElementById('appointmentForm');
+                    if (appointmentForm) {
+                        appointmentForm.addEventListener('submit', function (e) {
+                            e.preventDefault();
+
+                            // Get form data
+                            const formData = new FormData(this);
+                            const formObject = {};
+                            formData.forEach((value, key) => {
+                                formObject[key] = value;
+                            });
+
+                            // Simple validation
+                            if (!formObject.fullName || !formObject.email || !formObject.service || !formObject.message) {
+                                alert('Please fill in all required fields.');
+                                return;
+                            }
+
+                            // Email validation
+                            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                            if (!emailRegex.test(formObject.email)) {
+                                alert('Please enter a valid email address.');
+                                return;
+                            }
+
+                            // Show loading state
+                            const submitBtn = this.querySelector('button[type="submit"]');
+                            const originalText = submitBtn.textContent;
+                            submitBtn.textContent = 'Sending...';
+                            submitBtn.disabled = true;
+
+                            // Simulate form submission (replace with actual endpoint)
+                            setTimeout(() => {
+                                alert('Thank you for your message! We will contact you within 24 hours.');
+                                this.reset();
+                                submitBtn.textContent = originalText;
+                                submitBtn.disabled = false;
+                            }, 2000);
+                        });
+                    }
+                });
+            </script>
+
+            <%- include('../partials/footer.ejs') %>
+
+    </body>
+
+    </html>

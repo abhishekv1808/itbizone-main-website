@@ -1,0 +1,221 @@
+<%- include('../partials/head.ejs') %>
+
+<body class="bg-gray-50">
+    <%- include('../partials/navbar.ejs') %>
+
+    <main class="pt-16">
+        
+        <!-- Hero Section -->
+        <section class="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-20 md:py-32 relative overflow-hidden">
+            <!-- Animated Background -->
+            <div class="absolute inset-0">
+                <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl animate-pulse"></div>
+                <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-pulse" style="animation-delay: 2s;"></div>
+            </div>
+
+            <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="text-center">
+                    <div class="inline-flex items-center px-4 py-2 bg-blue-500/10 border border-blue-500/20 rounded-full mb-6">
+                        <span class="w-2 h-2 bg-blue-500 rounded-full mr-2 animate-ping"></span>
+                        <span class="text-blue-400 text-sm font-medium">Success Stories</span>
+                    </div>
+                    <h1 class="text-4xl md:text-6xl font-bold text-white mb-6">
+                        Our <span class="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Case Studies</span>
+                    </h1>
+                    <p class="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+                        Explore how we've helped world-class brands create exceptional digital experiences that drive results and transform businesses.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Case Studies Grid -->
+        <section class="py-20 bg-gray-50">
+            <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="grid md:grid-cols-2 gap-8">
+                    
+                    <!-- Airbnb Case Study -->
+                    <a href="/case-studies/airbnb" class="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+                        <div class="relative h-64 bg-gradient-to-br from-pink-500 to-red-500 overflow-hidden">
+                            <div class="absolute inset-0 bg-black/20"></div>
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <svg class="w-32 h-32 text-white opacity-90" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.6 0 12 0zm0 22C6.5 22 2 17.5 2 12S6.5 2 12 2s10 4.5 10 10-4.5 10-10 10zm0-18c-4.4 0-8 3.6-8 8s3.6 8 8 8 8-3.6 8-8-3.6-8-8-8zm0 14c-3.3 0-6-2.7-6-6s2.7-6 6-6 6 2.7 6 6-2.7 6-6 6z"/>
+                                </svg>
+                            </div>
+                            <div class="absolute top-4 right-4">
+                                <span class="px-3 py-1 bg-white/20 backdrop-blur-sm rounded-full text-white text-sm font-medium">Global Platform</span>
+                            </div>
+                        </div>
+                        <div class="p-8">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-3 group-hover:text-pink-600 transition-colors">Airbnb</h3>
+                            <p class="text-gray-600 mb-4">Revolutionizing global hospitality with a user-friendly booking platform connecting millions of travelers with unique stays.</p>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="px-3 py-1 bg-pink-100 text-pink-700 rounded-full text-xs font-medium">User Experience</span>
+                                <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-medium">Global Scale</span>
+                                <span class="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-xs font-medium">Trust & Security</span>
+                            </div>
+                            <div class="grid grid-cols-3 gap-4 pt-4 border-t">
+                                <div>
+                                    <div class="text-2xl font-bold text-pink-600">2x</div>
+                                    <div class="text-xs text-gray-600">Faster Booking</div>
+                                </div>
+                                <div>
+                                    <div class="text-2xl font-bold text-pink-600">30%</div>
+                                    <div class="text-xs text-gray-600">More Engagement</div>
+                                </div>
+                                <div>
+                                    <div class="text-2xl font-bold text-pink-600">99.99%</div>
+                                    <div class="text-xs text-gray-600">Uptime</div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Spotify Case Study -->
+                    <a href="/case-studies/spotify" class="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+                        <div class="relative h-64 bg-gradient-to-br from-green-500 to-emerald-600 overflow-hidden">
+                            <div class="absolute inset-0 bg-black/20"></div>
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <svg class="w-32 h-32 text-white opacity-90" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/>
+                                </svg>
+                            </div>
+                            <div class="absolute top-4 right-4">
+                                <span class="px-3 py-1 bg-white/20 backdrop-blur-sm rounded-full text-white text-sm font-medium">Music Streaming</span>
+                            </div>
+                        </div>
+                        <div class="p-8">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-3 group-hover:text-green-600 transition-colors">Spotify</h3>
+                            <p class="text-gray-600 mb-4">Leading music streaming service with personalized discovery and seamless cross-platform experience for 350M+ users.</p>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="px-3 py-1 bg-green-100 text-green-700 rounded-full text-xs font-medium">Personalization</span>
+                                <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-medium">Streaming</span>
+                                <span class="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-xs font-medium">AI Discovery</span>
+                            </div>
+                            <div class="grid grid-cols-3 gap-4 pt-4 border-t">
+                                <div>
+                                    <div class="text-2xl font-bold text-green-600">25%</div>
+                                    <div class="text-xs text-gray-600">More Listening</div>
+                                </div>
+                                <div>
+                                    <div class="text-2xl font-bold text-green-600">350M+</div>
+                                    <div class="text-xs text-gray-600">Users</div>
+                                </div>
+                                <div>
+                                    <div class="text-2xl font-bold text-green-600">Zero</div>
+                                    <div class="text-xs text-gray-600">Interruptions</div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Zomato Case Study -->
+                    <a href="/case-studies/zomato" class="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+                        <div class="relative h-64 bg-gradient-to-br from-red-500 to-rose-600 overflow-hidden">
+                            <div class="absolute inset-0 bg-black/20"></div>
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <svg class="w-32 h-32 text-white opacity-90" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/>
+                                </svg>
+                            </div>
+                            <div class="absolute top-4 right-4">
+                                <span class="px-3 py-1 bg-white/20 backdrop-blur-sm rounded-full text-white text-sm font-medium">Food Delivery</span>
+                            </div>
+                        </div>
+                        <div class="p-8">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-3 group-hover:text-red-600 transition-colors">Zomato</h3>
+                            <p class="text-gray-600 mb-4">India's leading food discovery and delivery platform with real-time tracking and personalized restaurant recommendations.</p>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="px-3 py-1 bg-red-100 text-red-700 rounded-full text-xs font-medium">Real-Time Tracking</span>
+                                <span class="px-3 py-1 bg-orange-100 text-orange-700 rounded-full text-xs font-medium">Food Tech</span>
+                                <span class="px-3 py-1 bg-yellow-100 text-yellow-700 rounded-full text-xs font-medium">Smart Delivery</span>
+                            </div>
+                            <div class="grid grid-cols-3 gap-4 pt-4 border-t">
+                                <div>
+                                    <div class="text-2xl font-bold text-red-600">40%</div>
+                                    <div class="text-xs text-gray-600">Faster Delivery</div>
+                                </div>
+                                <div>
+                                    <div class="text-2xl font-bold text-red-600">25%</div>
+                                    <div class="text-xs text-gray-600">Higher Conversion</div>
+                                </div>
+                                <div>
+                                    <div class="text-2xl font-bold text-red-600">Millions</div>
+                                    <div class="text-xs text-gray-600">Daily Orders</div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Amazon Case Study -->
+                    <a href="/case-studies/amazon" class="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+                        <div class="relative h-64 bg-gradient-to-br from-orange-500 to-yellow-500 overflow-hidden">
+                            <div class="absolute inset-0 bg-black/20"></div>
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <svg class="w-32 h-32 text-white opacity-90" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M.045 18.02c.072-.116.187-.124.348-.022 3.636 2.11 7.594 3.166 11.87 3.166 2.852 0 5.668-.533 8.447-1.595l.315-.14c.138-.06.234-.1.293-.13.226-.088.39-.046.525.13.12.174.09.336-.12.48-.256.19-.6.41-1.006.654-1.244.743-2.64 1.316-4.185 1.726-1.53.406-3.045.608-4.516.608-2.04 0-3.96-.37-5.785-1.096-1.822-.724-3.44-1.73-4.856-3.02-.095-.117-.104-.223-.03-.332l.7-.93zm23.452-5.355c-.502-.724-1.678-.992-2.508-.984-.28 0-.562.054-.84.164-.586.232-.9.78-.795 1.39.106.61.56 1.035 1.14 1.215.448.14.91.18 1.375.11.645-.098 1.177-.44 1.52-1.005.168-.278.236-.58.174-.89h-.066zm-.784 3.435c-2.11 1.545-4.53 2.318-7.285 2.318-3.454 0-6.56-1.278-9.317-3.835-.183-.167-.314-.24-.524-.095-.21.146-.182.37-.013.585 2.844 3.106 6.328 4.66 10.45 4.66 3.146 0 5.956-.97 8.432-2.91.42-.33.504-.61.233-.978-.27-.37-.61-.407-.976-.13v.385z"/>
+                                </svg>
+                            </div>
+                            <div class="absolute top-4 right-4">
+                                <span class="px-3 py-1 bg-white/20 backdrop-blur-sm rounded-full text-white text-sm font-medium">E-Commerce</span>
+                            </div>
+                        </div>
+                        <div class="p-8">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-3 group-hover:text-orange-600 transition-colors">Amazon</h3>
+                            <p class="text-gray-600 mb-4">World's largest e-commerce platform delivering exceptional shopping experience with personalized recommendations and one-click checkout.</p>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="px-3 py-1 bg-orange-100 text-orange-700 rounded-full text-xs font-medium">E-Commerce</span>
+                                <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-medium">Personalization</span>
+                                <span class="px-3 py-1 bg-green-100 text-green-700 rounded-full text-xs font-medium">Global Logistics</span>
+                            </div>
+                            <div class="grid grid-cols-3 gap-4 pt-4 border-t">
+                                <div>
+                                    <div class="text-2xl font-bold text-orange-600">35%</div>
+                                    <div class="text-xs text-gray-600">Repeat Customers</div>
+                                </div>
+                                <div>
+                                    <div class="text-2xl font-bold text-orange-600">20%</div>
+                                    <div class="text-xs text-gray-600">Higher Purchase</div>
+                                </div>
+                                <div>
+                                    <div class="text-2xl font-bold text-orange-600">Millions</div>
+                                    <div class="text-xs text-gray-600">Products</div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-20">
+            <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-3xl md:text-5xl font-bold text-white mb-6">
+                    Ready to Create Your Success Story?
+                </h2>
+                <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+                    Let's build something amazing together. Get in touch to discuss your project.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="/quotation" class="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl font-semibold hover:shadow-lg hover:shadow-blue-500/50 transition-all duration-300 hover:-translate-y-1">
+                        Get Started
+                        <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                        </svg>
+                    </a>
+                    <a href="/contact" class="inline-flex items-center justify-center px-8 py-4 bg-transparent border-2 border-white text-white rounded-xl font-semibold hover:bg-white hover:text-slate-900 transition-all duration-300">
+                        Contact Us
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <%- include('../partials/footer.ejs') %>
+</body>
+</html>

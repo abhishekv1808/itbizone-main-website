@@ -1,0 +1,29 @@
+<%- include('./partials/head.ejs') %>
+
+    <body class="bg-white dark:bg-dark-charcoal text-gray-900 dark:text-white transition-colors duration-300">
+
+        <!-- Page Loader -->
+        <div class="page-loader">
+            <div class="spinner"></div>
+            <div class="loading-text">Loading...</div>
+        </div>
+
+        <%- include('./partials/navbar.ejs') %>
+
+            <!-- Main content with proper top margin for fixed navbar -->
+            <main class="pt-16 page-transition">
+                <%- body %>
+            </main>
+
+            <!-- Footer can be added here -->
+            <footer class="bg-gray-50 dark:bg-gray-900 py-12 mt-20">
+                <div class="max-w-6xl mx-auto px-4 text-center">
+                    <p class="text-gray-600 dark:text-gray-400">
+                        © 2025 ITBIZONE. All rights reserved.
+                    </p>
+                </div>
+            </footer>
+
+    </body>
+
+    </html>

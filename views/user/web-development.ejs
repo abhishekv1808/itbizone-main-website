@@ -1,0 +1,1383 @@
+<%- include('../partials/head.ejs') %>
+
+    <body class="">
+
+        <%- include('../partials/navbar.ejs') %>
+
+            <!-- Main content with proper top margin for fixed navbar -->
+            <main class="pt-16 bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900">
+
+                <!-- Hero Section with Parallax -->
+                <section class="relative py-10 md:py-20 bg-center bg-no-repeat bg-cover parallax-container parallax-scene" id="webDevHero">
+                    <div class="absolute inset-0 parallax-layer parallax-item" data-speed="0.3"
+                        style="filter: blur(3px); background-image: url('/images/website-development.png'); background-size: cover;background-position: center;">
+                    </div>
+
+                    <div class="relative z-10 max-w-screen-xl px-4 mx-auto sm:px-6 lg:px-8 parallax-item" data-speed="0.7">
+                        <div class="grid items-center gap-12 lg:grid-cols-2">
+                            <!-- Content -->
+                            <div class="space-y-4 md:space-y-6">
+                                <div>
+                                    <div
+                                        class="inline-flex items-center px-3 py-2 md:px-4 mb-2 md:mb-6 text-xs md:text-sm font-light text-white border border-white rounded-full bg-blue-500/20 backdrop-blur-sm">
+                                        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                                        </svg>
+                                        Website Development
+                                    </div>
+                                    <h1 class="mb-2 md:mb-6 text-3xl md:text-7xl font-bold leading-tight text-white">
+                                        Build Exceptional Web Experiences
+                                    </h1>
+                                    <p class="mb-2 md:mb-8 leading-relaxed text-gray-200 text-xs md:text-lg">
+                                        We create cutting-edge websites and web applications that combine stunning
+                                        design with powerful functionality, delivering digital solutions that drive
+                                        business growth and user engagement.
+                                    </p>
+                                </div>
+
+                                <div class="flex flex-col gap-2 md:gap-4 sm:flex-row">
+                                    <a href="#expertise"
+                                        class="px-3 py-3 md:px-8 font-semibold text-xs md:text-sm text-center text-white transition-colors duration-300 rounded-lg shadow-lg bg-main hover:bg-blue-700">
+                                        Explore Our Expertise
+                                    </a>
+                                    <a href="/contact"
+                                        class="px-3 py-3 md:px-8 font-semibold text-xs md:text-sm text-center text-white transition-all duration-300 border-2 border-white rounded-lg hover:bg-gray-700 hover:text-white backdrop-blur-sm">
+                                        Start Your Project
+                                    </a>
+                                </div>
+
+                                <!-- Quick Stats -->
+                                <div class="grid grid-cols-3 gap-2 md:gap-6 pt-4 md:pt-8 border-t border-gray-300/30">
+                                    <div class="text-center">
+                                        <div class="mb-1 text-xl md:text-2xl font-bold text-white">150+</div>
+                                        <div class="text-xs md:text-sm text-gray-300">Websites Built</div>
+                                    </div>
+                                    <div class="text-center">
+                                        <div class="mb-1 text-xl md:text-2xl font-bold text-white">99%</div>
+                                        <div class="text-xs md:text-sm text-gray-300">Client Satisfaction</div>
+                                    </div>
+                                    <div class="text-center">
+                                        <div class="mb-1 text-xl md:text-2xl font-bold text-white">24/7</div>
+                                        <div class="text-xs md:text-sm text-gray-300">Support</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Visual Element -->
+                            <div class="relative">
+                                <img src="/images/webdev image.png" alt="" class="w-auto h-full mx-auto">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Custom Website Development Section -->
+                <section class="py-10 md:py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+                                    <div class="max-w-screen-xl px-4 mx-auto sm:px-6 lg:px-8">
+                                
+                                        <!-- Section Header -->
+                                        <div class="mb-8 md:mb-16 text-center">
+                                            <h2 class="mb-2 md:mb-6 text-xl md:text-5xl font-bold leading-tight text-white">
+                                                Custom Website Development<br> Tailored for Your Business
+                                            </h2>
+                                            <p class="max-w-3xl mx-auto text-xs md:text-lg text-gray-400">
+                                                We craft high-performance, user-friendly websites that align with your business goals. Whether you need
+                                                a custom-built website, a CMS-powered platform, or an eCommerce store, our development solutions ensure
+                                                speed, scalability, and SEO optimization.
+                                            </p>
+                                        </div>
+                                
+                                        <!-- Services Grid - 2x2 -->
+                                        <div class="grid gap-2 md:gap-8 md:grid-cols-2">
+                                
+                                            <!-- Service 1: Custom Web Development -->
+                                            <div
+                                                class="relative p-4 md:p-8 overflow-hidden transition-all duration-300 border group bg-slate-800/50 border-slate-700 rounded-2xl hover:border-blue-500/50 hover:shadow-lg hover:shadow-blue-500/10">
+                                                <!-- Background Glow -->
+                                                <div
+                                                    class="absolute inset-0 transition-all duration-300 bg-gradient-to-br from-blue-600/0 to-blue-600/0 group-hover:from-blue-600/10 group-hover:to-blue-600/5">
+                                                </div>
+                                
+                                                <!-- Icon -->
+                                                <div class="relative flex items-center mb-2 md:mb-6">
+                                                    <div
+                                                        class="flex items-center justify-center w-12 h-12 md:w-16 md:h-16 transition-all duration-300 border rounded-2xl bg-slate-700/50 border-slate-600 group-hover:border-blue-500/50">
+                                                        <svg class="w-6 h-6 md:w-8 md:h-8 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                                d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z">
+                                                            </path>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                
+                                                <!-- Content -->
+                                                <h3 class="relative mb-2 md:mb-3 text-lg md:text-xl font-bold text-white">Custom Web Development</h3>
+                                                <p class="relative text-xs md:text-sm leading-relaxed text-gray-400">
+                                                    Tailor-made websites <span class="font-semibold text-blue-300">designed for scalability,
+                                                        responsiveness, and high performance</span>, ensuring a seamless user experience across all
+                                                    devices.
+                                                </p>
+                                            </div>
+                                
+                                            <!-- Service 2: CMS-Based Websites -->
+                                            <div
+                                                class="relative p-4 md:p-8 overflow-hidden transition-all duration-300 border group bg-slate-800/50 border-slate-700 rounded-2xl hover:border-purple-500/50 hover:shadow-lg hover:shadow-purple-500/10">
+                                                <!-- Background Glow -->
+                                                <div
+                                                    class="absolute inset-0 transition-all duration-300 bg-gradient-to-br from-purple-600/0 to-purple-600/0 group-hover:from-purple-600/10 group-hover:to-purple-600/5">
+                                                </div>
+                                
+                                                <!-- Icon -->
+                                                <div class="relative flex items-center mb-2 md:mb-6">
+                                                    <div
+                                                        class="flex items-center justify-center w-12 h-12 md:w-16 md:h-16 transition-all duration-300 border rounded-2xl bg-slate-700/50 border-slate-600 group-hover:border-purple-500/50">
+                                                        <svg class="w-6 h-6 md:w-8 md:h-8 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                                d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4">
+                                                            </path>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                
+                                                <!-- Content -->
+                                                <h3 class="relative mb-2 md:mb-3 text-lg md:text-xl font-bold text-white">CMS-Based Websites</h3>
+                                                <p class="relative text-xs md:text-sm leading-relaxed text-gray-400">
+                                                    We specialize in <span class="font-semibold text-purple-300">WordPress, Shopify, and Webflow</span>,
+                                                    empowering you with easy-to-manage, dynamic websites for businesses of all sizes.
+                                                </p>
+                                            </div>
+                                
+                                            <!-- Service 3: E-commerce Development -->
+                                            <div
+                                                class="relative p-4 md:p-8 overflow-hidden transition-all duration-300 border group bg-slate-800/50 border-slate-700 rounded-2xl hover:border-pink-500/50 hover:shadow-lg hover:shadow-pink-500/10">
+                                                <!-- Background Glow -->
+                                                <div
+                                                    class="absolute inset-0 transition-all duration-300 bg-gradient-to-br from-pink-600/0 to-pink-600/0 group-hover:from-pink-600/10 group-hover:to-pink-600/5">
+                                                </div>
+                                
+                                                <!-- Icon -->
+                                                <div class="relative flex items-center mb-2 md:mb-6">
+                                                    <div
+                                                        class="flex items-center justify-center w-12 h-12 md:w-16 md:h-16 transition-all duration-300 border rounded-2xl bg-slate-700/50 border-slate-600 group-hover:border-pink-500/50">
+                                                        <svg class="w-6 h-6 md:w-8 md:h-8 text-pink-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                                d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                
+                                                <!-- Content -->
+                                                <h3 class="relative mb-2 md:mb-3 text-lg md:text-xl font-bold text-white">E-commerce Development</h3>
+                                                <p class="relative text-xs md:text-sm leading-relaxed text-gray-400">
+                                                    Build powerful online stores with <span class="font-semibold text-pink-300">Shopify, WooCommerce,
+                                                        and Magento</span>, offering secure transactions, intuitive navigation, and optimized checkout
+                                                    experiences.
+                                                </p>
+                                            </div>
+                                
+                                            <!-- Service 4: SEO-Optimized Websites -->
+                                            <div
+                                                class="relative p-4 md:p-8 overflow-hidden transition-all duration-300 border group bg-slate-800/50 border-slate-700 rounded-2xl hover:border-cyan-500/50 hover:shadow-lg hover:shadow-cyan-500/10">
+                                                <!-- Background Glow -->
+                                                <div
+                                                    class="absolute inset-0 transition-all duration-300 bg-gradient-to-br from-cyan-600/0 to-cyan-600/0 group-hover:from-cyan-600/10 group-hover:to-cyan-600/5">
+                                                </div>
+                                
+                                                <!-- Icon -->
+                                                <div class="relative flex items-center mb-2 md:mb-6">
+                                                    <div
+                                                        class="flex items-center justify-center w-12 h-12 md:w-16 md:h-16 transition-all duration-300 border rounded-2xl bg-slate-700/50 border-slate-600 group-hover:border-cyan-500/50">
+                                                        <svg class="w-6 h-6 md:w-8 md:h-8 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                                d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                
+                                                <!-- Content -->
+                                                <h3 class="relative mb-2 md:mb-3 text-lg md:text-xl font-bold text-white">SEO-Optimized Websites</h3>
+                                                <p class="relative text-xs md:text-sm leading-relaxed text-gray-400">
+                                                    Our websites are <span class="font-semibold text-cyan-300">designed for speed, mobile-friendliness,
+                                                        and search engine rankings</span>, helping you gain better visibility and higher conversions.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                </section>
+                <!-- Why Choose Us Section -->
+
+                <!-- Advanteages of website developement-->
+                <section class="p-4 md:p-8 mx-auto text-white max-w-7xl sm:p-8 md:p-16">
+            
+                <h1 class="mb-2 md:mb-8 text-2xl md:text-5xl font-bold leading-tight">
+                    Advantages of Custom<br>
+                    Website Design &<br>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">Development</span>
+                </h1>
+            
+                <div class="max-w-4xl mb-8 md:mb-16 space-y-4 md:space-y-6 text-xs md:text-lg font-light">
+                    <p class = "font-light">
+                        In a crowded online marketplace, standing out is essential. Merely having a good product or service no longer guarantees visibility or growth.
+                        Companies need websites that communicate their unique advantages and engage the right audience. At ITBIZONE, we help businesses turn their strategic value
+                        into meaningful digital experiences — starting with a clear understanding of <a href="#" class="font-semibold text-accent-red hover:underline">why thoughtful web design matters</a>
+                        and how it impacts user trust and conversions. Our solutions suit everyone from early-stage startups to established enterprises.
+                    </p>
+                    <p class = "font-light md:block hidden">
+                        Our design leads create more than attractive pages — they build intentional experiences that reflect your brand’s personality and objectives.
+                        Picture a site that speaks your brand language, strengthens customer relationships, and guides visitors toward action. With ITBIZONE’s custom web design services,
+                        you get a tailored website focused on clarity, performance, and measurable results.
+                    </p>
+                </div>
+            
+                <div class="items-start lg:grid lg:grid-cols-2 gap-4 md:gap-16">
+            
+                    <div class="mb-8 md:mb-12 space-y-2 md:space-y-6 lg:mb-0">
+            
+                        <div class="flex items-center space-x-2 md:space-x-4">
+                            <i class="flex-shrink-0 w-4 md:w-6 text-lg md:text-xl fa-solid fa-gauge-high text-accent-red"></i>
+                            <p class="text-xs md:text-lg font-medium">Page Speed Performance</p>
+                        </div>
+            
+                        <div class="flex items-center space-x-2 md:space-x-4">
+                            <i class="flex-shrink-0 w-4 md:w-6 text-lg md:text-xl fa-solid fa-user-gear text-accent-red"></i>
+                            <p class="text-xs md:text-lg font-medium">Optimized Design as per user needs</p>
+                        </div>
+            
+                        <div class="flex items-center space-x-2 md:space-x-4">
+                            <i class="flex-shrink-0 w-4 md:w-6 text-lg md:text-xl fa-solid fa-wand-magic-sparkles text-accent-red"></i>
+                            <p class="text-xs md:text-lg font-medium">Unique look & feel</p>
+                        </div>
+            
+                        <div class="flex items-center space-x-2 md:space-x-4">
+                            <i class="flex-shrink-0 w-4 md:w-6 text-lg md:text-xl fa-solid fa-bullseye text-accent-red"></i>
+                            <p class="text-xs md:text-lg font-medium">Reaching to Target Audience</p>
+                        </div>
+            
+                        <div class="flex items-center space-x-2 md:space-x-4">
+                            <i class="flex-shrink-0 w-4 md:w-6 h-auto text-lg md:text-xl fa-solid fa-server text-accent-red"></i>
+                            <p class="text-xs md:text-lg font-medium">Flexibility with Hosting</p>
+                        </div>
+            
+                    </div>
+            
+                    <div class="lg:flex lg:justify-end">
+                        <img src="https://www.designstudiouiux.com/static/ff957bb37cb532723535b38aa844a6b0/4664d/transaction-conversion.jpg"
+                            alt="Transaction Conversion Rates vs. Page Load Speed Chart" class="object-contain w-full max-w-lg rounded-lg">
+                    </div>
+            
+                </div>
+            
+            
+                </section>
+                 <!-- Advanteages of website developement-->
+
+                <!-- Technologies Section -->
+                <section class="py-10 md:py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+                    <div class="max-w-screen-xl px-4 mx-auto sm:px-6 lg:px-8">
+
+                        <!-- Section Header -->
+                        <div class="mb-8 md:mb-16 text-center">
+                            <h2 class="mb-2 md:mb-6 text-xl md:text-5xl font-bold leading-tight text-white">
+                                Our Website Design & Development Process &<br> <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">Technologies</span>
+                            </h2>
+                            <p class="max-w-3xl mx-auto mt-2 md:mt-4 text-xs md:text-lg text-gray-400">
+                                We use cutting-edge technologies and best practices to build robust, scalable, and future-proof web solutions.
+                            </p>
+                        </div>
+
+                        <!-- Tech Stack Grid Label -->
+                        <h3 class="mb-4 md:mb-12 text-lg md:text-2xl font-bold text-white">Tech Stack Grid</h3>
+
+                        <!-- Technologies Grid - 2x3 Layout -->
+                        <div class="grid gap-2 md:gap-8 mb-2 md:mb-8 md:grid-cols-2 lg:grid-cols-3">
+
+                            <!-- Frontend Card -->
+                            <div class="relative p-4 md:p-8 overflow-hidden transition-all duration-300 border group bg-slate-800/50 border-slate-700 rounded-2xl hover:border-blue-500/50 hover:shadow-lg hover:shadow-blue-500/10">
+                                <!-- Background Glow -->
+                                <div class="absolute inset-0 transition-all duration-300 bg-gradient-to-br from-blue-600/0 to-blue-600/0 group-hover:from-blue-600/10 group-hover:to-blue-600/5"></div>
+                                
+                                <!-- Icon Box -->
+                                <div class="relative flex items-center mb-2 md:mb-6">
+                                    <div class="flex items-center justify-center w-12 h-12 md:w-16 md:h-16 transition-all duration-300 border rounded-lg bg-slate-700/50 border-slate-600 group-hover:border-blue-500/50">
+                                        <svg class="w-6 h-6 md:w-8 md:h-8 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                                        </svg>
+                                    </div>
+                                </div>
+
+                                <!-- Content -->
+                                <h4 class="mb-2 md:mb-3 text-lg md:text-xl font-bold text-white">Frontend</h4>
+                                <p class="mb-2 md:mb-4 text-xs md:text-sm text-gray-400">React, Next.js, Vue, Angular, HTML5, CSS3, Tailwind CSS, JavaScript, Lighthouse Optimization, Typescript.</p>
+                                
+                                <!-- Tech Tags -->
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-2 md:px-2 md:px-3 py-1 text-xs font-medium text-blue-300 border rounded-full bg-blue-500/10 border-blue-500/30">React</span>
+                                    <span class="px-2 md:px-2 md:px-3 py-1 text-xs font-medium text-blue-300 border rounded-full bg-blue-500/10 border-blue-500/30">Next.js</span>
+                                    <span class="px-2 md:px-2 md:px-3 py-1 text-xs font-medium text-blue-300 border rounded-full bg-blue-500/10 border-blue-500/30">Vue</span>
+                                </div>
+                            </div>
+
+                            <!-- Wireframe & Prototype Card -->
+                            <div class="relative p-4 md:p-8 overflow-hidden transition-all duration-300 border group bg-slate-800/50 border-slate-700 rounded-2xl hover:border-purple-500/50 hover:shadow-lg hover:shadow-purple-500/10">
+                                <!-- Background Glow -->
+                                <div class="absolute inset-0 transition-all duration-300 bg-gradient-to-br from-purple-600/0 to-purple-600/0 group-hover:from-purple-600/10 group-hover:to-purple-600/5"></div>
+                                
+                                <!-- Icon Box -->
+                                <div class="relative flex items-center mb-2 md:mb-6">
+                                    <div class="flex items-center justify-center w-12 h-12 md:w-16 md:h-16 transition-all duration-300 border rounded-lg bg-slate-700/50 border-slate-600 group-hover:border-purple-500/50">
+                                        <svg class="w-6 h-6 md:w-8 md:h-8 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                        </svg>
+                                    </div>
+                                </div>
+
+                                <!-- Content -->
+                                <h4 class="mb-2 md:mb-3 text-lg md:text-xl font-bold text-white">Wireframe & Prototype</h4>
+                                <p class="mb-2 md:mb-4 text-xs md:text-sm text-gray-400">Figma, Sketch, Adobe XD, Moki, MidJourney, Adobe Photoshop.</p>
+                                
+                                <!-- Tech Tags -->
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-2 md:px-3 py-1 text-xs font-medium text-purple-300 border rounded-full bg-purple-500/10 border-purple-500/30">Figma</span>
+                                    <span class="px-2 md:px-3 py-1 text-xs font-medium text-purple-300 border rounded-full bg-purple-500/10 border-purple-500/30">Sketch</span>
+                                    <span class="px-2 md:px-3 py-1 text-xs font-medium text-purple-300 border rounded-full bg-purple-500/10 border-purple-500/30">Adobe XD</span>
+                                </div>
+                            </div>
+
+                            <!-- Backend Card -->
+                            <div class="relative p-4 md:p-8 overflow-hidden transition-all duration-300 border group bg-slate-800/50 border-slate-700 rounded-2xl hover:border-pink-500/50 hover:shadow-lg hover:shadow-pink-500/10">
+                                <!-- Background Glow -->
+                                <div class="absolute inset-0 transition-all duration-300 bg-gradient-to-br from-pink-600/0 to-pink-600/0 group-hover:from-pink-600/10 group-hover:to-pink-600/5"></div>
+                                
+                                <!-- Icon Box -->
+                                <div class="relative flex items-center mb-2 md:mb-6">
+                                    <div class="flex items-center justify-center w-12 h-12 md:w-16 md:h-16 transition-all duration-300 border rounded-lg bg-slate-700/50 border-slate-600 group-hover:border-pink-500/50">
+                                        <svg class="w-6 h-6 md:w-8 md:h-8 text-pink-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01"></path>
+                                        </svg>
+                                    </div>
+                                </div>
+
+                                <!-- Content -->
+                                <h4 class="mb-2 md:mb-3 text-lg md:text-xl font-bold text-white">Backend</h4>
+                                <p class="mb-2 md:mb-4 text-xs md:text-sm text-gray-400">Node.js, Nest.js, Prisma, GraphQL, REST APIs, Express.js, JWT Authentication, API Rate Limiting, RabbitMQ, WebSockets.</p>
+                                
+                                <!-- Tech Tags -->
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-2 md:px-3 py-1 text-xs font-medium text-pink-300 border rounded-full bg-pink-500/10 border-pink-500/30">Node.js</span>
+                                    <span class="px-2 md:px-3 py-1 text-xs font-medium text-pink-300 border rounded-full bg-pink-500/10 border-pink-500/30">Express</span>
+                                    <span class="px-2 md:px-3 py-1 text-xs font-medium text-pink-300 border rounded-full bg-pink-500/10 border-pink-500/30">GraphQL</span>
+                                </div>
+                            </div>
+
+                            <!-- Database Card -->
+                            <div class="relative p-4 md:p-8 overflow-hidden transition-all duration-300 border group bg-slate-800/50 border-slate-700 rounded-2xl hover:border-cyan-500/50 hover:shadow-lg hover:shadow-cyan-500/10">
+                                <!-- Background Glow -->
+                                <div class="absolute inset-0 transition-all duration-300 bg-gradient-to-br from-cyan-600/0 to-cyan-600/0 group-hover:from-cyan-600/10 group-hover:to-cyan-600/5"></div>
+                                
+                                <!-- Icon Box -->
+                                <div class="relative flex items-center mb-2 md:mb-6">
+                                    <div class="flex items-center justify-center w-12 h-12 md:w-16 md:h-16 transition-all duration-300 border rounded-lg bg-slate-700/50 border-slate-600 group-hover:border-cyan-500/50">
+                                        <svg class="w-6 h-6 md:w-8 md:h-8 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10a2 2 0 002 2h12a2 2 0 002-2V7M4 7a2 2 0 012-2h12a2 2 0 012 2m0 0V5a2 2 0 00-2-2H6a2 2 0 00-2 2v2m0 0h12m0 0v9m0-9v9"></path>
+                                        </svg>
+                                    </div>
+                                </div>
+
+                                <!-- Content -->
+                                <h4 class="mb-2 md:mb-3 text-lg md:text-xl font-bold text-white">Database</h4>
+                                <p class="mb-2 md:mb-4 text-xs md:text-sm text-gray-400">PostgreSQL, MongoDB, SQLite, Firebase, Supabase, Redis, Amazon DynamoDB, Amazon DocumentDB, ElastiCache.</p>
+                                
+                                <!-- Tech Tags -->
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-2 md:px-3 py-1 text-xs font-medium border rounded-full text-cyan-300 bg-cyan-500/10 border-cyan-500/30">PostgreSQL</span>
+                                    <span class="px-2 md:px-3 py-1 text-xs font-medium border rounded-full text-cyan-300 bg-cyan-500/10 border-cyan-500/30">MongoDB</span>
+                                    <span class="px-2 md:px-3 py-1 text-xs font-medium border rounded-full text-cyan-300 bg-cyan-500/10 border-cyan-500/30">Firebase</span>
+                                </div>
+                            </div>
+
+                            <!-- CMS Card -->
+                            <div class="relative p-4 md:p-8 overflow-hidden transition-all duration-300 border group bg-slate-800/50 border-slate-700 rounded-2xl hover:border-green-500/50 hover:shadow-lg hover:shadow-green-500/10">
+                                <!-- Background Glow -->
+                                <div class="absolute inset-0 transition-all duration-300 bg-gradient-to-br from-green-600/0 to-green-600/0 group-hover:from-green-600/10 group-hover:to-green-600/5"></div>
+                                
+                                <!-- Icon Box -->
+                                <div class="relative flex items-center mb-2 md:mb-6">
+                                    <div class="flex items-center justify-center w-12 h-12 md:w-16 md:h-16 transition-all duration-300 border rounded-lg bg-slate-700/50 border-slate-600 group-hover:border-green-500/50">
+                                        <svg class="w-6 h-6 md:w-8 md:h-8 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path>
+                                        </svg>
+                                    </div>
+                                </div>
+
+                                <!-- Content -->
+                                <h4 class="mb-2 md:mb-3 text-lg md:text-xl font-bold text-white">CMS</h4>
+                                <p class="mb-2 md:mb-4 text-xs md:text-sm text-gray-400">WordPress, Shopify, Wix, Webflow, Ghost, Strapi, Contentful.</p>
+                                
+                                <!-- Tech Tags -->
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-2 md:px-3 py-1 text-xs font-medium text-green-300 border rounded-full bg-green-500/10 border-green-500/30">WordPress</span>
+                                    <span class="px-2 md:px-3 py-1 text-xs font-medium text-green-300 border rounded-full bg-green-500/10 border-green-500/30">Shopify</span>
+                                    <span class="px-2 md:px-3 py-1 text-xs font-medium text-green-300 border rounded-full bg-green-500/10 border-green-500/30">Strapi</span>
+                                </div>
+                            </div>
+
+                            <!-- DevOps & Deployment Card -->
+                            <div class="relative p-4 md:p-8 overflow-hidden transition-all duration-300 border group bg-slate-800/50 border-slate-700 rounded-2xl hover:border-orange-500/50 hover:shadow-lg hover:shadow-orange-500/10">
+                                <!-- Background Glow -->
+                                <div class="absolute inset-0 transition-all duration-300 bg-gradient-to-br from-orange-600/0 to-orange-600/0 group-hover:from-orange-600/10 group-hover:to-orange-600/5"></div>
+                                
+                                <!-- Icon Box -->
+                                <div class="relative flex items-center mb-2 md:mb-6">
+                                    <div class="flex items-center justify-center w-12 h-12 md:w-16 md:h-16 transition-all duration-300 border rounded-lg bg-slate-700/50 border-slate-600 group-hover:border-orange-500/50">
+                                        <svg class="w-6 h-6 md:w-8 md:h-8 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                                        </svg>
+                                    </div>
+                                </div>
+
+                                <!-- Content -->
+                                <h4 class="mb-2 md:mb-3 text-lg md:text-xl font-bold text-white">DevOps & Deployment</h4>
+                                <p class="mb-2 md:mb-4 text-xs md:text-sm text-gray-400">Docker, AWS, Vercel, Netlify, Azure DevOps, CI/CD, GitHub Actions, GitLab CI/CD, Jenkins, CircleCI, Nginx, Apache.</p>
+                                
+                                <!-- Tech Tags -->
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-2 md:px-3 py-1 text-xs font-medium text-orange-300 border rounded-full bg-orange-500/10 border-orange-500/30">Docker</span>
+                                    <span class="px-2 md:px-3 py-1 text-xs font-medium text-orange-300 border rounded-full bg-orange-500/10 border-orange-500/30">AWS</span>
+                                    <span class="px-2 md:px-3 py-1 text-xs font-medium text-orange-300 border rounded-full bg-orange-500/10 border-orange-500/30">CI/CD</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Development Process Section -->
+                <section class="py-10 md:py-20 bg-white">
+                    <div class="max-w-screen-xl px-4 mx-auto sm:px-6 lg:px-8">
+
+                        <!-- Section Header -->
+                        <div class="mb-8 md:mb-16 text-center">
+                            <h2 class="mb-2 md:mb-6 text-2xl md:text-4xl font-bold text-gray-900">
+                                Our Development Process
+                            </h2>
+                            <p class="max-w-3xl mx-auto text-xs md:text-lg text-gray-600">
+                                We follow a proven methodology that ensures quality, transparency, and timely delivery
+                                at every stage of your project.
+                            </p>
+                        </div>
+
+                        <!-- Process Steps -->
+                        <div class="relative flex flex-col items-stretch justify-between gap-4 md:gap-8 lg:flex-row">
+                            <!-- Step 1 -->
+                            <div class="relative flex flex-col items-center flex-1 text-center">
+                                <div
+                                    class="z-10 flex items-center justify-center w-12 h-12 md:w-16 md:h-16 mb-2 md:mb-4 shadow-sm bg-main rounded-2xl">
+                                    <span class="text-lg md:text-2xl font-bold text-white ">1</span>
+                                </div>
+                                <h3 class="mb-2 md:mb-3 text-lg md:text-xl font-bold text-gray-900">Discovery & Planning
+                                </h3>
+                                <p class="mb-2 md:mb-4 text-xs md:text-sm text-gray-600">
+                                    We dive deep into understanding your business goals, target audience, and project
+                                    requirements.
+                                </p>
+                                <ul class="space-y-1 text-sm text-gray-500">
+                                    <li>• Requirements Analysis</li>
+                                    <li>• User Research</li>
+                                    <li>• Technical Architecture</li>
+                                </ul>
+
+                            </div>
+                            <!-- Step 2 -->
+                            <div class="relative flex flex-col items-center flex-1 text-center">
+                                <div
+                                    class="z-10 flex items-center justify-center w-12 h-12 md:w-16 md:h-16 mb-2 md:mb-4 shadow-sm bg-main rounded-2xl">
+                                    <span class="text-lg md:text-2xl font-bold text-white ">2</span>
+                                </div>
+                                <h3 class="mb-2 md:mb-3 text-lg md:text-xl font-bold text-gray-900">Design & Prototyping
+                                </h3>
+                                <p class="mb-2 md:mb-4 text-xs md:text-sm text-gray-600">
+                                    Creating wireframes, mockups, and interactive prototypes to visualize the final
+                                    product.
+                                </p>
+                                <ul class="space-y-1 text-sm text-gray-500">
+                                    <li>• UI/UX Design</li>
+                                    <li>• Interactive Prototypes</li>
+                                    <li>• Design System</li>
+                                </ul>
+
+                            </div>
+                            <!-- Step 3 -->
+                            <div class="relative flex flex-col items-center flex-1 text-center">
+                                <div
+                                    class="z-10 flex items-center justify-center w-12 h-12 md:w-16 md:h-16 mb-2 md:mb-4 shadow-sm bg-main rounded-2xl">
+                                    <span class="text-lg md:text-2xl font-bold text-white ">3</span>
+                                </div>
+                                <h3 class="mb-2 md:mb-3 text-lg md:text-xl font-bold text-gray-900">Development & Testing
+                                </h3>
+                                <p class="mb-2 md:mb-4 text-xs md:text-sm text-gray-600">
+                                    Agile development with continuous testing to ensure quality and performance
+                                    standards.
+                                </p>
+                                <ul class="space-y-1 text-sm text-gray-500">
+                                    <li>• Agile Development</li>
+                                    <li>• Quality Assurance</li>
+                                    <li>• Performance Testing</li>
+                                </ul>
+
+                            </div>
+                            <!-- Step 4 -->
+                            <div class="relative flex flex-col items-center flex-1 text-center">
+                                <div
+                                    class="z-10 flex items-center justify-center w-12 h-12 md:w-16 md:h-16 mb-2 md:mb-4 shadow-sm bg-main rounded-2xl">
+                                    <span class="text-lg md:text-2xl font-bold text-white ">4</span>
+                                </div>
+                                <h3 class="mb-2 md:mb-3 text-lg md:text-xl font-bold text-gray-900">Launch & Support</h3>
+                                <p class="mb-2 md:mb-4 text-xs md:text-sm text-gray-600">
+                                    Seamless deployment with ongoing maintenance and support to ensure optimal
+                                    performance.
+                                </p>
+                                <ul class="space-y-1 text-sm text-gray-500">
+                                    <li>• Deployment</li>
+                                    <li>• Training & Documentation</li>
+                                    <li>• Ongoing Support</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Project Contact Form -->
+                <section class="text-white md:py-25 py-10 bg-dark-blue" id="contact-form">
+                 <div class="max-w-screen-xl px-4 mx-auto sm:px-6 lg:px-8">
+            <div class="grid md:gap-12 gap-8 lg:grid-cols-2">
+                
+                <div class="max-w-lg">
+                    <h2 class="md:mb-6 mb-4 md:text-5xl text-2xl font-bold leading-tight text-white">
+                        Start Your Web Development Project
+                    </h2>
+                    <p class="mb-8 md:text-lg text-xs font-light text-dark-text">
+                        Fill out the form below and we'll get back to you within 24 hours with a free
+                        consultation about your web development project.
+                    </p>
+        
+                    <div class="md:space-y-6 space-y-3">
+                        
+                        <div class="flex items-start">
+                            <div class="flex items-center justify-center flex-shrink-0 w-8 h-8 mt-1 rounded-full bg-accent-red/20">
+                                <svg class="w-5 h-5 text-accent-red" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7"></path>
+                                </svg>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="md:text-xl text-sm font-semibold text-white">Free Initial Consultation
+                                </h3>
+                                <p class="mt-1 text-dark-text text-xs md:text-sm">Get expert advice on your project requirements
+                                    and scope.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="flex items-center justify-center flex-shrink-0 w-8 h-8 mt-1 rounded-full bg-accent-red/20">
+                                <svg class="w-5 h-5 text-accent-red" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="md:text-xl text-sm font-semibold text-white">Quick Response Time</h3>
+                                <p class="mt-1 text-dark-text text-xs md:text-sm">Get a response within 24 hours of submitting
+                                    your inquiry.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="p-5 md:p-8 border-1 border-white shadow-2xl bg-form-dark rounded-2xl py-5">
+                    <form id="webDevContactForm" class="space-y-5 md:space-y-6">
+                        <input type="hidden" name="service" value="Website-Development">
+        
+                        <div class="grid md:grid-cols-2 gap-4 md:gap-6">
+                            <div>
+                                <label for="fullName" class="block mb-2 md:mb-2 text-xs md:text-sm font-medium text-white">Full Name
+                                    *</label>
+                                <input type="text" id="fullName" name="fullName" required
+                                    class="w-full px-3 py-3 md:px-4 md:py-3 text-xs md:text-sm placeholder-gray-500 border rounded-lg text-input-dark bg-dark-blue/50 border-input-dark focus:ring-1 focus:ring-accent-red focus:border-accent-red"
+                                    placeholder="Enter your full name">
+                            </div>
+                            <div>
+                                <label for="email" class="block mb-2 md:mb-2 text-xs md:text-sm font-medium text-white">Email Address
+                                    *</label>
+                                <input type="email" id="email" name="email" required
+                                    class="w-full px-3 py-3 md:px-4 md:py-3 text-xs md:text-sm placeholder-gray-500 border rounded-lg text-input-dark bg-dark-blue/50 border-input-dark focus:ring-1 focus:ring-accent-red focus:border-accent-red"
+                                    placeholder="you@company.com">
+                            </div>
+                        </div>
+        
+                        <div class="grid md:grid-cols-2 gap-4 md:gap-6">
+                            <div>
+                                <label for="mobileNumber" class="block mb-2 md:mb-2 text-xs md:text-sm font-medium text-white">Phone
+                                    Number</label>
+                                <input type="tel" id="mobileNumber" name="mobileNumber"
+                                    class="w-full px-3 py-3 md:px-4 md:py-3 text-xs md:text-sm placeholder-gray-500 border rounded-lg text-input-dark bg-dark-blue/50 border-input-dark focus:ring-1 focus:ring-accent-red focus:border-accent-red"
+                                    placeholder="Your phone number">
+                            </div>
+                            <div>
+                                <label for="company" class="block mb-2 md:mb-2 text-xs md:text-sm font-medium text-white">Company
+                                    Name</label>
+                                <input type="text" id="company" name="company"
+                                    class="w-full px-3 py-3 md:px-4 md:py-3 text-xs md:text-sm placeholder-gray-500 border rounded-lg text-input-dark bg-dark-blue/50 border-input-dark focus:ring-1 focus:ring-accent-red focus:border-accent-red"
+                                    placeholder="Your company name">
+                            </div>
+                        </div>
+        
+                        <div class="grid items-end grid-cols-1 gap-4 md:gap-6 md:grid-cols-2">
+                            <div>
+                                <label for="timeline" class="block mb-2 md:mb-2 text-xs md:text-sm font-medium text-white">Project
+                                    Timeline</label>
+                                <select id="timeline" name="timeline"
+                                    class="w-full px-3 py-3 md:px-4 md:py-3 text-xs md:text-sm border rounded-lg text-white bg-dark-blue/50 border-input-dark focus:ring-1 focus:ring-accent-red focus:border-accent-red">
+                                    <option class="bg-form-dark" value="">Select timeline</option>
+                                    <option class="bg-form-dark" value="asap">As soon as possible</option>
+                                    <option class="bg-form-dark" value="1-month">Within 1 month</option>
+                                    <option class="bg-form-dark" value="2-3-months">2-3 months</option>
+                                    <option class="bg-form-dark" value="3-6-months">3-6 months</option>
+                                    <option class="bg-form-dark" value="6-plus-months">6+ months</option>
+                                    <option class="bg-form-dark" value="just-exploring">Just exploring</option>
+                                </select>
+                            </div>
+                            <div class="flex items-center pt-2 md:pt-0">
+                                <div class="flex items-center h-5">
+                                    <input id="newsletter" name="newsletter" type="checkbox"
+                                        class="w-4 h-4 border-gray-600 rounded text-accent-red focus:ring-accent-red bg-dark-blue/50">
+                                    <label for="newsletter" class="ml-2 text-xs md:text-sm text-dark-text">
+                                        Subscribe to updates
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div>
+                            <label for="description" class="block mb-1 md:mb-2 text-xs md:text-sm font-medium text-white">Project
+                                Description
+                                *</label>
+                            <textarea id="description" name="description" required rows="3"
+                                class="w-full px-3 py-2 md:px-4 md:py-3 text-xs md:text-sm placeholder-gray-500 border rounded-lg text-input-dark bg-dark-blue/50 border-input-dark focus:ring-1 focus:ring-accent-red focus:border-accent-red"
+                                placeholder="Tell us about your project requirements..."></textarea>
+                        </div>
+        
+                        <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between md:gap-3 gap-1 pt-2 md:pt-4">
+                            <p class="text-xs md:text-sm text-dark-text">
+                                Required fields
+                            </p>
+                            <button type="submit"
+                                class="w-full sm:w-auto px-6 py-2 md:px-8 md:py-3 md:text-sm text-xs md:text-base font-semibold text-white transition-colors duration-300 rounded-lg bg-gradient-to-r from-blue-400 to-cyan-700">
+                                Submit Project Request
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+                </section>
+    
+                <!-- Pricing Comparison Table Section -->
+                <section class="py-10 md:py-20 bg-white">
+                    <div class="max-w-screen-xl px-4 mx-auto sm:px-6 lg:px-8">
+                        <!-- Section Header -->
+                        <div class="mb-8 text-center md:mb-12">
+                            <div class="inline-flex items-center px-4 py-2 mb-4 text-xs font-medium text-gray-700 border border-blue-200 rounded-full md:text-sm bg-blue-50">
+                                <span>Pricing Plans</span>
+                            </div>
+                            <h2 class="mb-4 text-2xl font-bold text-gray-900 md:text-4xl lg:text-5xl">
+                                Choose Your Perfect <span class="text-blue-600">Package</span>
+                            </h2>
+                            <p class="max-w-2xl mx-auto text-xs text-gray-600 md:text-base">
+                                Transparent pricing with no hidden fees. All plans include responsive design and SEO optimization.
+                            </p>
+                        </div>
+
+                        <!-- Pricing Table -->
+                        <div class="overflow-x-auto">
+                            <div class="inline-block min-w-full align-middle">
+                                <div class="overflow-hidden border border-gray-200 rounded-2xl shadow-lg">
+                                    <table class="min-w-full divide-y divide-gray-200">
+                                        <thead class="bg-gradient-to-r from-blue-600 to-cyan-600">
+                                            <tr>
+                                                <th scope="col" class="px-4 py-4 md:px-6 md:py-5 text-left text-xs md:text-sm font-bold text-white uppercase tracking-wider">
+                                                    Features
+                                                </th>
+                                                <th scope="col" class="px-4 py-4 md:px-6 md:py-5 text-center text-xs md:text-sm font-bold text-white uppercase tracking-wider">
+                                                    Starter
+                                                    <div class="mt-1 text-xl md:text-2xl font-bold">₹25,000</div>
+                                                </th>
+                                                <th scope="col" class="px-4 py-4 md:px-6 md:py-5 text-center text-xs md:text-sm font-bold text-white uppercase tracking-wider bg-blue-700">
+                                                    Professional
+                                                    <div class="mt-1 text-xl md:text-2xl font-bold">₹50,000</div>
+                                                    <span class="inline-block px-2 py-1 mt-2 text-xs font-semibold bg-yellow-400 text-gray-900 rounded-full">POPULAR</span>
+                                                </th>
+                                                <th scope="col" class="px-4 py-4 md:px-6 md:py-5 text-center text-xs md:text-sm font-bold text-white uppercase tracking-wider">
+                                                    Enterprise
+                                                    <div class="mt-1 text-xl md:text-2xl font-bold">₹1,00,000+</div>
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="bg-white divide-y divide-gray-200">
+                                            <!-- Number of Pages -->
+                                            <tr class="hover:bg-gray-50 transition-colors">
+                                                <td class="px-4 py-4 md:px-6 md:py-5 text-xs md:text-sm font-medium text-gray-900 whitespace-nowrap">
+                                                    Number of Pages
+                                                </td>
+                                                <td class="px-4 py-4 md:px-6 md:py-5 text-xs md:text-sm text-center text-gray-700">
+                                                    Up to 5 pages
+                                                </td>
+                                                <td class="px-4 py-4 md:px-6 md:py-5 text-xs md:text-sm text-center text-gray-700 bg-blue-50/50">
+                                                    Up to 15 pages
+                                                </td>
+                                                <td class="px-4 py-4 md:px-6 md:py-5 text-xs md:text-sm text-center text-gray-700">
+                                                    Unlimited
+                                                </td>
+                                            </tr>
+                                            <!-- Responsive Design -->
+                                            <tr class="hover:bg-gray-50 transition-colors">
+                                                <td class="px-4 py-4 md:px-6 md:py-5 text-xs md:text-sm font-medium text-gray-900 whitespace-nowrap">
+                                                    Responsive Design
+                                                </td>
+                                                <td class="px-4 py-4 md:px-6 md:py-5 text-center">
+                                                    <svg class="w-5 h-5 md:w-6 md:h-6 mx-auto text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                                                </td>
+                                                <td class="px-4 py-4 md:px-6 md:py-5 text-center bg-blue-50/50">
+                                                    <svg class="w-5 h-5 md:w-6 md:h-6 mx-auto text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                                                </td>
+                                                <td class="px-4 py-4 md:px-6 md:py-5 text-center">
+                                                    <svg class="w-5 h-5 md:w-6 md:h-6 mx-auto text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                                                </td>
+                                            </tr>
+                                            <!-- CMS Integration -->
+                                            <tr class="hover:bg-gray-50 transition-colors">
+                                                <td class="px-4 py-4 md:px-6 md:py-5 text-xs md:text-sm font-medium text-gray-900 whitespace-nowrap">
+                                                    CMS Integration
+                                                </td>
+                                                <td class="px-4 py-4 md:px-6 md:py-5 text-xs md:text-sm text-center text-gray-700">
+                                                    Basic WordPress
+                                                </td>
+                                                <td class="px-4 py-4 md:px-6 md:py-5 text-xs md:text-sm text-center text-gray-700 bg-blue-50/50">
+                                                    Advanced CMS
+                                                </td>
+                                                <td class="px-4 py-4 md:px-6 md:py-5 text-xs md:text-sm text-center text-gray-700">
+                                                    Custom CMS
+                                                </td>
+                                            </tr>
+                                            <!-- E-commerce -->
+                                            <tr class="hover:bg-gray-50 transition-colors">
+                                                <td class="px-4 py-4 md:px-6 md:py-5 text-xs md:text-sm font-medium text-gray-900 whitespace-nowrap">
+                                                    E-commerce Features
+                                                </td>
+                                                <td class="px-4 py-4 md:px-6 md:py-5 text-center">
+                                                    <svg class="w-5 h-5 md:w-6 md:h-6 mx-auto text-red-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"/></svg>
+                                                </td>
+                                                <td class="px-4 py-4 md:px-6 md:py-5 text-xs md:text-sm text-center text-gray-700 bg-blue-50/50">
+                                                    Up to 50 products
+                                                </td>
+                                                <td class="px-4 py-4 md:px-6 md:py-5 text-xs md:text-sm text-center text-gray-700">
+                                                    Unlimited products
+                                                </td>
+                                            </tr>
+                                            <!-- SEO Setup -->
+                                            <tr class="hover:bg-gray-50 transition-colors">
+                                                <td class="px-4 py-4 md:px-6 md:py-5 text-xs md:text-sm font-medium text-gray-900 whitespace-nowrap">
+                                                    SEO Optimization
+                                                </td>
+                                                <td class="px-4 py-4 md:px-6 md:py-5 text-xs md:text-sm text-center text-gray-700">
+                                                    Basic
+                                                </td>
+                                                <td class="px-4 py-4 md:px-6 md:py-5 text-xs md:text-sm text-center text-gray-700 bg-blue-50/50">
+                                                    Advanced
+                                                </td>
+                                                <td class="px-4 py-4 md:px-6 md:py-5 text-xs md:text-sm text-center text-gray-700">
+                                                    Premium + Audit
+                                                </td>
+                                            </tr>
+                                            <!-- Support -->
+                                            <tr class="hover:bg-gray-50 transition-colors">
+                                                <td class="px-4 py-4 md:px-6 md:py-5 text-xs md:text-sm font-medium text-gray-900 whitespace-nowrap">
+                                                    Support & Maintenance
+                                                </td>
+                                                <td class="px-4 py-4 md:px-6 md:py-5 text-xs md:text-sm text-center text-gray-700">
+                                                    3 months
+                                                </td>
+                                                <td class="px-4 py-4 md:px-6 md:py-5 text-xs md:text-sm text-center text-gray-700 bg-blue-50/50">
+                                                    6 months
+                                                </td>
+                                                <td class="px-4 py-4 md:px-6 md:py-5 text-xs md:text-sm text-center text-gray-700">
+                                                    12 months
+                                                </td>
+                                            </tr>
+                                            <!-- Delivery Time -->
+                                            <tr class="hover:bg-gray-50 transition-colors">
+                                                <td class="px-4 py-4 md:px-6 md:py-5 text-xs md:text-sm font-medium text-gray-900 whitespace-nowrap">
+                                                    Delivery Time
+                                                </td>
+                                                <td class="px-4 py-4 md:px-6 md:py-5 text-xs md:text-sm text-center text-gray-700">
+                                                    2-3 weeks
+                                                </td>
+                                                <td class="px-4 py-4 md:px-6 md:py-5 text-xs md:text-sm text-center text-gray-700 bg-blue-50/50">
+                                                    4-6 weeks
+                                                </td>
+                                                <td class="px-4 py-4 md:px-6 md:py-5 text-xs md:text-sm text-center text-gray-700">
+                                                    8-12 weeks
+                                                </td>
+                                            </tr>
+                                            <!-- CTA Row -->
+                                            <tr class="bg-gray-50">
+                                                <td class="px-4 py-6 md:px-6 md:py-8"></td>
+                                                <td class="px-4 py-6 md:px-6 md:py-8 text-center">
+                                                    <a href="/pricing" class="inline-block px-4 py-2 md:px-6 md:py-3 text-xs md:text-sm font-bold text-blue-600 border-2 border-blue-600 rounded-lg hover:bg-blue-600 hover:text-white transition-all duration-300">
+                                                        Get Started
+                                                    </a>
+                                                </td>
+                                                <td class="px-4 py-6 md:px-6 md:py-8 text-center bg-blue-50">
+                                                    <a href="/pricing" class="inline-block px-4 py-2 md:px-6 md:py-3 text-xs md:text-sm font-bold text-white bg-gradient-to-r from-blue-600 to-cyan-600 rounded-lg hover:shadow-xl hover:shadow-blue-500/50 hover:scale-105 transition-all duration-300">
+                                                        Choose Plan
+                                                    </a>
+                                                </td>
+                                                <td class="px-4 py-6 md:px-6 md:py-8 text-center">
+                                                    <a href="/contact" class="inline-block px-4 py-2 md:px-6 md:py-3 text-xs md:text-sm font-bold text-blue-600 border-2 border-blue-600 rounded-lg hover:bg-blue-600 hover:text-white transition-all duration-300">
+                                                        Contact Us
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Additional Note -->
+                        <div class="mt-8 text-center">
+                            <p class="text-xs text-gray-600 md:text-sm">
+                                💡 All prices are subject to project requirements. <a href="/contact" class="font-semibold text-blue-600 hover:underline">Contact us</a> for a custom quote.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                                <!-- Case Studies Section -->
+                                <section class="md:py-20 py-10 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+                                    <div class="max-w-screen-xl px-4 mx-auto sm:px-6 lg:px-8">
+                                
+                                        <!-- Section Header -->
+                                        <div class="grid md:gap-8 gap-4 md:mb-16 mb-8 lg:grid-cols-2 lg:gap-12">
+                                            <!-- Left Content -->
+                                            <div>
+                                                <h2 class="md:mb-8 mb-2 text-3xl font-bold leading-tight text-white md:text-6xl">
+                                                    Our Case<br>Studies
+                                                </h2>
+                                            </div>
+                                
+                                            <!-- Right Content -->
+                                            <div class="flex flex-col justify-center">
+                                                <p class="mb-6 md:text-lg text-xs leading-relaxed text-gray-400">
+                                                    We were brought on to help re-design two of the company's logos, start to set a brand standard going
+                                                    forward, design a clean web UX, and build a website with dozens of features to appease the users.
+                                                </p>
+                                                <a href="/portfolio"
+                                                    class="inline-flex items-center gap-3 md:px-6 px-4 md:py-3 py-2 text-white transition-all duration-300 border-2 border-pink-500 rounded-full w-fit hover:bg-pink-500 hover:shadow-lg hover:shadow-pink-500/50">
+                                                    <span class="font-semibold">EXPLORE</span>
+                                                    <div class="flex items-center justify-center w-6 h-6 bg-pink-500 rounded-full">
+                                                        <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
+                                                            </path>
+                                                        </svg>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                
+                                
+                                        <!-- Case Studies Carousel -->
+                                        <div class="relative">
+                                            <!-- Main Carousel Container -->
+                                            <div class="overflow-hidden rounded-3xl">
+                                                <div class="flex transition-transform duration-500 ease-in-out" id="caseStudiesCarousel">
+                                
+                                                    <!-- Case Study 1 -->
+                                                    <div class="flex-shrink-0 w-full">
+                                                        <div class="relative h-96 md:h-[500px] rounded-3xl overflow-hidden shadow-2xl">
+                                                            <img src="/images/case-studies/airbnb-banner.jpeg" alt="airbnb case studies"
+                                                                class="object-contain w-full h-auto">
+                                                            <div class="absolute inset-0 bg-gradient-to-r from-black/40 via-transparent to-transparent">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                
+                                                    <!-- Case Study 2 -->
+                                                    <div class="flex-shrink-0 w-full">
+                                                        <div class="relative h-96 md:h-[500px] rounded-3xl overflow-hidden shadow-2xl">
+                                                            <img src="/images/case-studies/amazon-banner.png" alt="Amazon case study"
+                                                                class="object-contain w-full h-auto">
+                                                            <div class="absolute inset-0 bg-gradient-to-r from-black/40 via-transparent to-transparent">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                
+                                                    <!-- Case Study 3 -->
+                                                    <div class="flex-shrink-0 w-full">
+                                                        <div class="relative h-96 md:h-[500px] rounded-3xl overflow-hidden shadow-2xl">
+                                                            <img src="https://images.unsplash.com/photo-1460925895917-adf4e565db1d?auto=format&fit=crop&w=1200&q=80"
+                                                                alt="SaaS Dashboard" class="object-cover w-full h-full">
+                                                            <div class="absolute inset-0 bg-gradient-to-r from-black/40 via-transparent to-transparent">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                
+                                                    <!-- Case Study 4 -->
+                                                    <div class="flex-shrink-0 w-full">
+                                                        <div class="relative h-96 md:h-[500px] rounded-3xl overflow-hidden shadow-2xl">
+                                                            <img src="https://images.unsplash.com/photo-1553531090-d949cff2b89d?auto=format&fit=crop&w=1200&q=80"
+                                                                alt="E-Learning Platform" class="object-cover w-full h-full">
+                                                            <div class="absolute inset-0 bg-gradient-to-r from-black/40 via-transparent to-transparent">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                
+                                                    <!-- Case Study 5 -->
+                                                    <div class="flex-shrink-0 w-full">
+                                                        <div class="relative h-96 md:h-[500px] rounded-3xl overflow-hidden shadow-2xl">
+                                                            <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=1200&q=80"
+                                                                alt="Corporate Website" class="object-cover w-full h-full">
+                                                            <div class="absolute inset-0 bg-gradient-to-r from-black/40 via-transparent to-transparent">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                
+                                            <!-- Navigation Dots -->
+                                            <div class="flex justify-center gap-3 mt-8">
+                                                <button class="w-3 h-3 transition-all duration-300 bg-gray-600 rounded-full hover:bg-white"
+                                                    data-slide="0" onclick="goToSlide(0)"></button>
+                                                <button class="w-3 h-3 transition-all duration-300 bg-gray-600 rounded-full hover:bg-white"
+                                                    data-slide="1" onclick="goToSlide(1)"></button>
+                                                <button class="w-3 h-3 transition-all duration-300 bg-pink-500 rounded-full" data-slide="2"
+                                                    onclick="goToSlide(2)"></button>
+                                                <button class="w-3 h-3 transition-all duration-300 bg-gray-600 rounded-full hover:bg-white"
+                                                    data-slide="3" onclick="goToSlide(3)"></button>
+                                                <button class="w-3 h-3 transition-all duration-300 bg-gray-600 rounded-full hover:bg-white"
+                                                    data-slide="4" onclick="goToSlide(4)"></button>
+                                            </div>
+                                
+                                            <!-- Navigation Arrows -->
+                                            <div
+                                                class="absolute left-0 right-0 flex justify-between px-4 transform -translate-y-1/2 pointer-events-none top-1/2">
+                                                <button onclick="prevSlide()"
+                                                    class="p-2 text-white transition-all duration-300 rounded-full pointer-events-auto bg-gray-800/50 hover:bg-gray-700 backdrop-blur-sm">
+                                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7">
+                                                        </path>
+                                                    </svg>
+                                                </button>
+                                                <button onclick="nextSlide()"
+                                                    class="p-2 text-white transition-all duration-300 bg-pink-500 rounded-full shadow-lg pointer-events-auto hover:bg-pink-600 shadow-pink-500/50">
+                                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+ 
+                <!-- FAQ Section -->
+                <section class="py-10 md:py-20 bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900">
+                    <div class="max-w-screen-xl px-4 mx-auto sm:px-6 lg:px-8">
+                        <div class="grid grid-cols-1 gap-8 md:gap-12 lg:grid-cols-3">
+                            <!-- FAQ Questions Column -->
+                            <div class="lg:col-span-2">
+                                <h2 class="mb-2 text-2xl md:text-4xl lg:text-5xl font-bold text-white">
+                                    FAQ
+                                </h2>
+                                <p class="mb-6 md:mb-8 text-xs md:text-sm lg:text-base text-blue-200">Have questions? We've got answers about our web development services.</p>
+
+                                <!-- FAQ Accordion -->
+                                <div class="space-y-3 md:space-y-4">
+                                    <!-- Question 1 -->
+                                    <div class="pb-3 md:pb-4 border-b border-slate-700">
+                                        <button onclick="toggleFAQ(this)" class="flex items-center justify-between w-full py-3 md:py-4 text-left transition-colors duration-300 group hover:text-blue-300">
+                                            <span class="text-sm md:text-base lg:text-lg font-semibold text-white group-hover:text-blue-300">
+                                                What services are included in your website design and development package?
+                                            </span>
+                                            <svg class="w-5 h-5 md:w-6 md:h-6 text-blue-400 transition-transform duration-300 transform flex-shrink-0 ml-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" data-icon="arrow">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                                            </svg>
+                                        </button>
+                                        <div class="overflow-hidden transition-all duration-300 ease-in-out faq-answer">
+                                            <p class="pb-3 md:pb-4 text-xs md:text-sm lg:text-base text-blue-100">
+                                                Our package includes custom website design, responsive development, UI/UX optimization, CMS integration (like WordPress), contact forms, and basic SEO setup. This may vary based on your specific requirements.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <!-- Question 2 -->
+                                    <div class="pb-3 md:pb-4 border-b border-slate-700">
+                                        <button onclick="toggleFAQ(this)" class="flex items-center justify-between w-full py-3 md:py-4 text-left transition-colors duration-300 group hover:text-blue-300">
+                                            <span class="text-sm md:text-base lg:text-lg font-semibold text-white group-hover:text-blue-300">
+                                                How long does it take to build a website?
+                                            </span>
+                                            <svg class="w-5 h-5 md:w-6 md:h-6 text-blue-400 transition-transform duration-300 transform flex-shrink-0 ml-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" data-icon="arrow">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                                            </svg>
+                                        </button>
+                                        <div class="overflow-hidden transition-all duration-300 ease-in-out faq-answer">
+                                            <p class="pb-3 md:pb-4 text-xs md:text-sm lg:text-base text-blue-100">
+                                                The timeline depends on the project scope and complexity. A simple website typically takes 4-6 weeks, while more complex projects with e-commerce or custom features may take 8-12 weeks. We'll provide a detailed timeline during the initial consultation.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <!-- Question 3 -->
+                                    <div class="pb-3 md:pb-4 border-b border-slate-700">
+                                        <button onclick="toggleFAQ(this)" class="flex items-center justify-between w-full py-3 md:py-4 text-left transition-colors duration-300 group hover:text-blue-300">
+                                            <span class="text-sm md:text-base lg:text-lg font-semibold text-white group-hover:text-blue-300">
+                                                Will my website be mobile-friendly?
+                                            </span>
+                                            <svg class="w-5 h-5 md:w-6 md:h-6 text-blue-400 transition-transform duration-300 transform flex-shrink-0 ml-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" data-icon="arrow">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                                            </svg>
+                                        </button>
+                                        <div class="overflow-hidden transition-all duration-300 ease-in-out faq-answer">
+                                            <p class="pb-3 md:pb-4 text-xs md:text-sm lg:text-base text-blue-100">
+                                                Absolutely! All our websites are built with a mobile-first approach using responsive design. Your site will look and function perfectly on all devices including smartphones, tablets, and desktops.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <!-- Question 4 -->
+                                    <div class="pb-3 md:pb-4 border-b border-slate-700">
+                                        <button onclick="toggleFAQ(this)" class="flex items-center justify-between w-full py-3 md:py-4 text-left transition-colors duration-300 group hover:text-blue-300">
+                                            <span class="text-sm md:text-base lg:text-lg font-semibold text-white group-hover:text-blue-300">
+                                                Can you redesign my existing website?
+                                            </span>
+                                            <svg class="w-5 h-5 md:w-6 md:h-6 text-blue-400 transition-transform duration-300 transform flex-shrink-0 ml-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" data-icon="arrow">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                                            </svg>
+                                        </button>
+                                        <div class="overflow-hidden transition-all duration-300 ease-in-out faq-answer">
+                                            <p class="pb-3 md:pb-4 text-xs md:text-sm lg:text-base text-blue-100">
+                                                Yes! We offer complete website redesigns that modernize your existing site while maintaining your brand identity. We can upgrade your design, improve UX, enhance performance, and implement new features to better serve your customers.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <!-- Question 5 -->
+                                    <div class="pb-3 md:pb-4 border-b border-slate-700">
+                                        <button onclick="toggleFAQ(this)" class="flex items-center justify-between w-full py-3 md:py-4 text-left transition-colors duration-300 group hover:text-blue-300">
+                                            <span class="text-sm md:text-base lg:text-lg font-semibold text-white group-hover:text-blue-300">
+                                                Do you use templates or custom design?
+                                            </span>
+                                            <svg class="w-5 h-5 md:w-6 md:h-6 text-blue-400 transition-transform duration-300 transform flex-shrink-0 ml-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" data-icon="arrow">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                                            </svg>
+                                        </button>
+                                        <div class="overflow-hidden transition-all duration-300 ease-in-out faq-answer">
+                                            <p class="pb-3 md:pb-4 text-xs md:text-sm lg:text-base text-blue-100">
+                                                We create custom designs tailored to your brand and business goals. While we may use established frameworks and tools for efficiency, every website is uniquely designed to reflect your business identity and provide an excellent user experience.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <!-- Question 6 -->
+                                    <div class="pb-3 md:pb-4 border-b border-slate-700">
+                                        <button onclick="toggleFAQ(this)" class="flex items-center justify-between w-full py-3 md:py-4 text-left transition-colors duration-300 group hover:text-blue-300">
+                                            <span class="text-sm md:text-base lg:text-lg font-semibold text-white group-hover:text-blue-300">
+                                                What platforms do you build websites on?
+                                            </span>
+                                            <svg class="w-5 h-5 md:w-6 md:h-6 text-blue-400 transition-transform duration-300 transform flex-shrink-0 ml-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" data-icon="arrow">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                                            </svg>
+                                        </button>
+                                        <div class="overflow-hidden transition-all duration-300 ease-in-out faq-answer">
+                                            <p class="pb-3 md:pb-4 text-xs md:text-sm lg:text-base text-blue-100">
+                                                We specialize in building websites on modern platforms including WordPress, React, Node.js, and custom CMS solutions. We recommend the platform based on your specific needs, scalability requirements, and budget.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Team Contact Card -->
+                            <div class="lg:col-span-1">
+                                <div class="sticky p-6 md:p-8 border top-32 border-slate-700 rounded-2xl bg-gradient-to-br from-slate-800 to-slate-900">
+                                    <h3 class="mb-3 md:mb-4 text-lg md:text-xl font-bold text-white">Have More Questions?</h3>
+                                    
+                                    <!-- Team Avatars -->
+                                    <div class="flex items-center mb-4 md:mb-6 -space-x-3">
+                                        <div class="flex items-center justify-center w-10 h-10 md:w-12 md:h-12 border-2 rounded-full bg-gradient-to-br from-blue-400 to-blue-600 border-slate-800">
+                                            <svg class="w-5 h-5 md:w-6 md:h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                                <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                                            </svg>
+                                        </div>
+                                        <div class="flex items-center justify-center w-10 h-10 md:w-12 md:h-12 border-2 rounded-full bg-gradient-to-br from-purple-400 to-purple-600 border-slate-800">
+                                            <svg class="w-5 h-5 md:w-6 md:h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                                <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                                            </svg>
+                                        </div>
+                                        <div class="flex items-center justify-center w-10 h-10 md:w-12 md:h-12 border-2 rounded-full bg-gradient-to-br from-pink-400 to-pink-600 border-slate-800">
+                                            <svg class="w-5 h-5 md:w-6 md:h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                                <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                                            </svg>
+                                        </div>
+                                    </div>
+
+                                    <p class="mb-4 md:mb-6 text-xs md:text-sm text-blue-200">
+                                        Ask our team, feel free to text and get all the answers you need.
+                                    </p>
+
+                                    <a href="/contact" class="inline-flex items-center justify-center w-full px-4 py-2 md:px-6 md:py-3 text-sm md:text-base font-semibold transition-all duration-300 bg-pink-400 border-2 border-pink-400 rounded-lg text-slate-900 hover:bg-transparent hover:text-pink-400">
+                                        ASK QUESTION
+                                        <svg class="w-3 h-3 md:w-4 md:h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- CTA Section -->
+                <section class="flex items-center justify-start md:min-h-screen p-8 sm:p-16">
+                    <div class="max-w-4xl mx-auto">
+        <h1 class="mb-4 text-5xl font-extrabold leading-tight text-white md:text-8xl">
+            Got a Project in<br>
+            Mind?
+            <span class="inline-flex items-center avatar-stack">
+                <img class="avatar"
+                    src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt="Avatar 1">
+                <img class="avatar"
+                    src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt="Avatar 2">
+                <img class="avatar"
+                    src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt="Avatar 3">
+            </span>
+        </h1>
+        <h2 class="relative inline-block pb-2 text-5xl font-extrabold leading-tight text-transparent md:text-8xl bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
+            Let's Talk!
+            <span class="absolute bottom-0 left-0 w-2/3 h-1 bg-accent-pink"></span>
+        </h2>
+
+        <div class="flex items-center md:mt-12 mt-4 space-x-3 text-lg">
+            <i class="text-white fa-regular fa-envelope"></i>
+            <a href="mailto:hello@designstudiouiux.com"
+                class="text-white hover:text-accent-pink hover:underline md:text-sm text-xs">contact@itbizone.com</a>
+        </div>
+                    </div>
+                </section>
+
+            </main>
+
+            <%- include('../partials/footer.ejs') %>
+
+                <style>
+                    .faq-answer {
+                        max-height: 0;
+                        opacity: 0;
+                    }
+                    
+                    .faq-answer.open {
+                        max-height: 1000px;
+                        opacity: 1;
+                    }
+                    
+                    .faq-answer.closing {
+                        max-height: 0;
+                        opacity: 0;
+                    }
+                </style>
+
+                <!-- Form Validation Script -->
+                <script>
+                    document.addEventListener('DOMContentLoaded', function () {
+                        const form = document.getElementById('webDevContactForm');
+                        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                        const phoneRegex = /^[\d\s\-()+]+$/; // Basic phone validation
+
+                        form.addEventListener('submit', function (e) {
+                            e.preventDefault();
+                            let isValid = true;
+                            const errors = [];
+
+                            // Reset any previous error styles
+                            form.querySelectorAll('input, textarea, select').forEach(field => {
+                                field.classList.remove('border-red-500');
+                                const errorDiv = field.parentElement.querySelector('.error-message');
+                                if (errorDiv) errorDiv.remove();
+                            });
+
+                            // Required field validation
+                            ['fullName', 'email', 'description'].forEach(fieldName => {
+                                const field = form.querySelector(`[name="${fieldName}"]`);
+                                if (!field.value.trim()) {
+                                    markFieldAsError(field, `${fieldName.charAt(0).toUpperCase() + fieldName.slice(1)} is required`);
+                                    isValid = false;
+                                }
+                            });
+
+                            // Email validation
+                            const emailField = form.querySelector('[name="email"]');
+                            if (emailField.value && !emailRegex.test(emailField.value)) {
+                                markFieldAsError(emailField, 'Please enter a valid email address');
+                                isValid = false;
+                            }
+
+                            // Phone validation (optional)
+                            const phoneField = form.querySelector('[name="mobileNumber"]');
+                            if (phoneField.value && !phoneRegex.test(phoneField.value)) {
+                                markFieldAsError(phoneField, 'Please enter a valid phone number');
+                                isValid = false;
+                            }
+
+                            if (isValid) {
+                                // Create form data object
+                                const formData = new FormData(form);
+                                const data = Object.fromEntries(formData.entries());
+
+                                // Send form data to server
+                                fetch('/api/contact', {
+                                    method: 'POST',
+                                    headers: {
+                                        'Content-Type': 'application/json',
+                                    },
+                                    body: JSON.stringify(data)
+                                })
+                                    .then(response => response.json())
+                                    .then(data => {
+                                        if (data.success) {
+                                            // Show success message
+                                            showMessage('Thank you! We\'ll be in touch soon.', 'success');
+                                            form.reset();
+                                        } else {
+                                            // Show error message
+                                            showMessage('Something went wrong. Please try again.', 'error');
+                                        }
+                                    })
+                                    .catch(error => {
+                                        showMessage('An error occurred. Please try again.', 'error');
+                                    });
+                            }
+                        });
+
+                        function markFieldAsError(field, message) {
+                            field.classList.add('border-red-500');
+                            const errorDiv = document.createElement('div');
+                            errorDiv.className = 'error-message text-red-500 text-sm mt-1';
+                            errorDiv.textContent = message;
+                            field.parentElement.appendChild(errorDiv);
+                        }
+
+                        function showMessage(message, type) {
+                            const alertDiv = document.createElement('div');
+                            alertDiv.className = `fixed top-4 right-4 p-4 rounded-lg ${type === 'success' ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'} shadow-lg max-w-md`;
+                            alertDiv.textContent = message;
+                            document.body.appendChild(alertDiv);
+
+                            // Remove the message after 5 seconds
+                            setTimeout(() => {
+                                alertDiv.remove();
+                            }, 5000);
+                        }
+
+                        // FAQ Accordion Toggle - Simple Direct Implementation
+                        window.toggleFAQ = function(button) {
+                            // Get the answer element (next sibling after button)
+                            const answer = button.nextElementSibling;
+                            if (!answer || !answer.classList.contains('faq-answer')) {
+                                return;
+                            }
+                            
+                            const isOpen = answer.classList.contains('open');
+                            
+                            // Close all other FAQs
+                            document.querySelectorAll('.faq-answer').forEach(ans => {
+                                if (ans !== answer && ans.classList.contains('open')) {
+                                    ans.classList.remove('open');
+                                    ans.classList.add('closing');
+                                    
+                                    // Remove closing class after animation completes
+                                    setTimeout(() => {
+                                        ans.classList.remove('closing');
+                                    }, 400);
+                                    
+                                    const parentBtn = ans.previousElementSibling;
+                                    if (parentBtn && parentBtn.querySelector('[data-icon="arrow"]')) {
+                                        parentBtn.querySelector('[data-icon="arrow"]').style.transform = 'rotate(0deg)';
+                                    }
+                                }
+                            });
+                            
+                            // Toggle current FAQ
+                            if (isOpen) {
+                                answer.classList.remove('open');
+                                answer.classList.add('closing');
+                                
+                                setTimeout(() => {
+                                    answer.classList.remove('closing');
+                                }, 400);
+                                
+                                button.querySelector('[data-icon="arrow"]').style.transform = 'rotate(0deg)';
+                            } else {
+                                answer.classList.remove('closing');
+                                answer.classList.add('open');
+                                button.querySelector('[data-icon="arrow"]').style.transform = 'rotate(180deg)';
+                            }
+                        };
+                    });
+                </script>
+
+                <!-- Case Studies Carousel Script -->
+                <script>
+                    let currentSlide = 2;
+                    const totalSlides = 5;
+
+                    function updateCarousel() {
+                        const carousel = document.getElementById('caseStudiesCarousel');
+                        const offset = -currentSlide * 100;
+                        carousel.style.transform = `translateX(${offset}%)`;
+
+                        // Update dots
+                        document.querySelectorAll('[data-slide]').forEach((dot, index) => {
+                            if (index === currentSlide) {
+                                dot.classList.remove('bg-gray-600');
+                                dot.classList.add('bg-pink-500');
+                            } else {
+                                dot.classList.remove('bg-pink-500');
+                                dot.classList.add('bg-gray-600');
+                            }
+                        });
+                    }
+
+                    function nextSlide() {
+                        currentSlide = (currentSlide + 1) % totalSlides;
+                        updateCarousel();
+                    }
+
+                    function prevSlide() {
+                        currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+                        updateCarousel();
+                    }
+
+                    function goToSlide(index) {
+                        currentSlide = index;
+                        updateCarousel();
+                    }
+
+                    // Initialize carousel
+                    updateCarousel();
+                </script>
+
+
+    </body>
+
+    </html>

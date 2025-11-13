@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%= pageTitle %>
+    </title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="<%= typeof pageDescription !== 'undefined' ? pageDescription : 'ITBIZONE - Professional IT services including web development, graphic design, digital marketing, and UI/UX design. Transform your digital presence with our expert solutions.' %>">
+    <meta name="keywords" content="web development, graphic design, digital marketing, UI UX design, IT services, website development, branding, SEO services">
+    <meta name="author" content="ITBIZONE">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://itbizone.com<%= typeof currentPath !== 'undefined' ? currentPath : '/' %>">
+
+    <!-- Open Graph Meta Tags for Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="ITBIZONE">
+    <meta property="og:title" content="<%= pageTitle %>">
+    <meta property="og:description" content="<%= typeof pageDescription !== 'undefined' ? pageDescription : 'Professional IT services including web development, graphic design, digital marketing, and UI/UX design.' %>">
+    <meta property="og:image" content="https://itbizone.com/images/itbizone-logo.svg">
+    <meta property="og:url" content="https://itbizone.com<%= typeof currentPath !== 'undefined' ? currentPath : '/' %>">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@itbizone">
+    <meta name="twitter:creator" content="@itbizone">
+    <meta name="twitter:title" content="<%= pageTitle %>">
+    <meta name="twitter:description" content="<%= typeof pageDescription !== 'undefined' ? pageDescription : 'Professional IT services including web development, graphic design, digital marketing, and UI/UX design.' %>">
+    <meta name="twitter:image" content="https://itbizone.com/images/itbizone-logo.svg">
+
+    <!-- Additional Meta Tags -->
+    <meta name="theme-color" content="#667eea">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/images/icon.ico">
+
+    <!-- Google Fonts - Inter Variable Font for Tailwind CSS 4.1 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind CSS 4.1 Optimized Output -->
+    <link rel="stylesheet" href="/output.css" type="text/css">
+
+    <!-- Font Awesome 7.0 for Modern Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Lenis - Smooth Scrolling Library -->
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.43/dist/lenis.min.js"></script>
+
+    <!-- Light Mode Only - No Theme Toggle -->
+    <script>
+        // Force light theme initialization before page renders
+        document.documentElement.classList.remove('dark');
+        document.documentElement.setAttribute('data-theme', 'light');
+        localStorage.setItem('theme', 'light');
+    </script>
+
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX', {
+            'send_page_view': true,
+            'page_title': '<%= pageTitle %>',
+            'page_location': window.location.href
+        });
+        
+        // Track CTA clicks
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('a[href="/contact"], a[href="/pricing"], a[href*="quotation"]').forEach(function(element) {
+                element.addEventListener('click', function() {
+                    gtag('event', 'click_cta', {
+                        'event_category': 'engagement',
+                        'event_label': this.textContent.trim(),
+                        'value': 1
+                    });
+                });
+            });
+        });
+    </script>
+
+    <!-- Facebook Pixel (Optional - Replace with your Pixel ID) -->
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', 'YOUR_PIXEL_ID_HERE');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID_HERE&ev=PageView&noscript=1"/></noscript>
+
+    <!-- Loading Animation Styles -->
+    <style>
+        /* Page Loader */
+        .page-loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease, visibility 0.5s ease;
+        }
+
+        .page-loader.hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        /* Spinner Animation */
+        .spinner {
+            width: 60px;
+            height: 60px;
+            border: 4px solid rgba(255, 255, 255, 0.3);
+            border-top-color: #ffffff;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        /* Loading Text */
+        .loading-text {
+            color: white;
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-top: 1.5rem;
+            animation: pulse 1.5s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        /* Skeleton Loaders */
+        .skeleton {
+            background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+            background-size: 200% 100%;
+            animation: skeleton-loading 1.5s infinite;
+            border-radius: 4px;
+        }
+
+        @keyframes skeleton-loading {
+            0% { background-position: 200% 0; }
+            100% { background-position: -200% 0; }
+        }
+
+        .skeleton-text {
+            height: 1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .skeleton-title {
+            height: 2rem;
+            width: 60%;
+            margin-bottom: 1rem;
+        }
+
+        .skeleton-avatar {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+        }
+
+        .skeleton-card {
+            height: 200px;
+            border-radius: 12px;
+        }
+
+        /* Smooth Scroll Behavior */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Page Transition */
+        .page-transition {
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+
+    <!-- Page Loader Script -->
+    <script>
+        // Show loader immediately
+        window.addEventListener('DOMContentLoaded', function() {
+            const loader = document.querySelector('.page-loader');
+            
+            // Hide loader when page is fully loaded
+            window.addEventListener('load', function() {
+                setTimeout(function() {
+                    if (loader) {
+                        loader.classList.add('hidden');
+                        // Remove loader from DOM after transition
+                        setTimeout(function() {
+                            loader.remove();
+                        }, 500);
+                    }
+                }, 300); // Small delay for better UX
+            });
+        });
+
+        // Smooth scroll for anchor links
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    const href = this.getAttribute('href');
+                    if (href !== '#' && href !== '#reachUs') {
+                        e.preventDefault();
+                        const target = document.querySelector(href);
+                        if (target) {
+                            target.scrollIntoView({
+                                behavior: 'smooth',
+                                block: 'start'
+                            });
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+
+    <!-- Tawk.to Live Chat Widget -->
+    <script type="text/javascript">
+        var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+        (function(){
+            var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+            s1.async=true;
+            s1.src='https://embed.tawk.to/YOUR_TAWK_TO_PROPERTY_ID/YOUR_WIDGET_ID';
+            s1.charset='UTF-8';
+            s1.setAttribute('crossorigin','*');
+            s0.parentNode.insertBefore(s1,s0);
+        })();
+
+        // Tawk.to event tracking
+        if (typeof Tawk_API !== 'undefined') {
+            Tawk_API.onLoad = function(){
+                console.log('Live chat loaded');
+                // Track chat widget load
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'live_chat_loaded', {
+                        'event_category': 'engagement',
+                        'event_label': 'Tawk.to Widget Loaded'
+                    });
+                }
+            };
+
+            Tawk_API.onChatStarted = function(){
+                // Track when user starts a chat
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'live_chat_started', {
+                        'event_category': 'engagement',
+                        'event_label': 'User Started Chat'
+                    });
+                }
+            };
+        }
+    </script>
+
+    <!-- Schema.org Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "ITBIZONE",
+        "url": "https://itbizone.com",
+        "logo": "https://itbizone.com/images/itbizone-logo.svg",
+        "description": "Professional IT services company specializing in web development, graphic design, digital marketing, and UI/UX design solutions.",
+        "email": "info@itbizone.com",
+        "telephone": "+919535111129",
+        "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "IN"
+        },
+        "sameAs": [
+            "https://facebook.com/itbizone",
+            "https://twitter.com/itbizone",
+            "https://linkedin.com/company/itbizone",
+            "https://instagram.com/itbizone"
+        ],
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+919535111129",
+            "contactType": "Customer Service",
+            "areaServed": "Worldwide",
+            "availableLanguage": ["English"]
+        }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "ITBIZONE",
+        "image": "https://itbizone.com/images/itbizone-logo.svg",
+        "priceRange": "$$",
+        "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "IN"
+        },
+        "telephone": "+919535111129",
+        "openingHours": "Mo-Fr 09:00-18:00"
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "ITBIZONE",
+        "url": "https://itbizone.com",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://itbizone.com/search?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+        }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "name": "IT Services",
+        "itemListElement": [
+            {
+                "@type": "Service",
+                "name": "Web Development",
+                "description": "Custom web development services including responsive websites, web applications, and e-commerce solutions",
+                "provider": {
+                    "@type": "Organization",
+                    "name": "ITBIZONE"
+                }
+            },
+            {
+                "@type": "Service",
+                "name": "Graphic Design",
+                "description": "Professional graphic design services including branding, logo design, and marketing materials",
+                "provider": {
+                    "@type": "Organization",
+                    "name": "ITBIZONE"
+                }
+            },
+            {
+                "@type": "Service",
+                "name": "Digital Marketing",
+                "description": "Comprehensive digital marketing services including SEO, social media marketing, and content strategy",
+                "provider": {
+                    "@type": "Organization",
+                    "name": "ITBIZONE"
+                }
+            },
+            {
+                "@type": "Service",
+                "name": "UI/UX Design",
+                "description": "User interface and user experience design services for web and mobile applications",
+                "provider": {
+                    "@type": "Organization",
+                    "name": "ITBIZONE"
+                }
+            }
+        ]
+    }
+    </script>
+
+    <!-- Exit Intent Popup Styles -->
+    <style>
+        /* Exit Intent Modal */
+        .exit-intent-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 99999;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(5px);
+            animation: fadeIn 0.3s ease-in;
+        }
+
+        .exit-intent-modal.show {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .exit-intent-content {
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+            border-radius: 20px;
+            padding: 2rem;
+            max-width: 500px;
+            width: 90%;
+            position: relative;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            animation: slideDown 0.4s ease-out;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-50px) scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        .exit-intent-close {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: rgba(255, 255, 255, 0.1);
+            border: none;
+            color: white;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 20px;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .exit-intent-close:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: rotate(90deg);
+        }
+
+        .exit-intent-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, #3b82f6, #06b6d4);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        .exit-intent-badge {
+            background: linear-gradient(90deg, #ef4444, #dc2626);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 1rem;
+            animation: blink 1.5s infinite;
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+
+        /* Social Proof Notification */
+        .social-proof-notification {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            background: white;
+            border-radius: 12px;
+            padding: 1rem 1.5rem;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            display: none;
+            align-items: center;
+            gap: 1rem;
+            z-index: 9999;
+            max-width: 350px;
+            animation: slideInLeft 0.5s ease-out;
+            border-left: 4px solid #10b981;
+        }
+
+        .social-proof-notification.show {
+            display: flex;
+        }
+
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-100px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .social-proof-avatar {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #3b82f6, #06b6d4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 600;
+            flex-shrink: 0;
+        }
+
+        .social-proof-close {
+            background: none;
+            border: none;
+            color: #6b7280;
+            cursor: pointer;
+            font-size: 18px;
+            padding: 0;
+            width: 20px;
+            height: 20px;
+            flex-shrink: 0;
+        }
+
+        @media (max-width: 640px) {
+            .exit-intent-content {
+                padding: 1.5rem;
+            }
+            
+            .social-proof-notification {
+                bottom: 20px;
+                left: 20px;
+                right: 20px;
+                max-width: calc(100% - 40px);
+            }
+        }
+
+        /* Parallax Effects */
+        .parallax-container {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .parallax-layer {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            will-change: transform;
+        }
+
+        .parallax-bg {
+            transform: translateZ(-1px) scale(2);
+        }
+
+        .parallax-slow {
+            transition: transform 0.1s ease-out;
+        }
+
+        .parallax-medium {
+            transition: transform 0.15s ease-out;
+        }
+
+        .parallax-fast {
+            transition: transform 0.2s ease-out;
+        }
+
+        /* Parallax 3D Perspective */
+        .parallax-scene {
+            perspective: 1000px;
+            perspective-origin: center center;
+        }
+
+        /* Hero Background Fade on Scroll */
+        #hero-canvas,
+        #heroSection > div:first-of-type {
+            transition: opacity 0.3s ease-out;
+        }
+
+        /* Smooth parallax animations */
+        @media (prefers-reduced-motion: no-preference) {
+            .parallax-item {
+                transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            }
+        }
+
+        /* Disable parallax on mobile for better performance */
+        @media (max-width: 768px) {
+            .parallax-layer,
+            .parallax-item {
+                transform: none !important;
+            }
+            
+            #hero-canvas,
+            #heroSection > div:first-of-type {
+                position: absolute !important;
+            }
+        }
+
+        /* Portfolio Hero Animations */
+        @keyframes fade-in {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fade-in-up {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0px) rotate(0deg);
+            }
+            50% {
+                transform: translateY(-20px) rotate(5deg);
+            }
+        }
+
+        @keyframes gradient {
+            0%, 100% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+        }
+
+        .animate-fade-in {
+            animation: fade-in 0.8s ease-out;
+        }
+
+        .animate-fade-in-up {
+            animation: fade-in-up 0.8s ease-out;
+        }
+
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .animate-gradient {
+            background-size: 200% 200%;
+            animation: gradient 3s ease infinite;
+        }
+    </style>
+</head>

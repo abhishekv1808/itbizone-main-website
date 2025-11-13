@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Checkbox Test</title>
+    <style>
+        body { font-family: Arial; background: #1a1a1a; color: white; padding: 20px; }
+        .test { margin: 20px 0; border: 1px solid #444; padding: 15px; background: #2a2a2a; }
+        input { margin-right: 10px; cursor: pointer; }
+        button { background: #0066cc; color: white; padding: 8px 15px; border: none; border-radius: 4px; cursor: pointer; }
+        #total { font-size: 24px; color: #0f0; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <h1>Pricing Calculator Diagnostic</h1>
+    
+    <div class="test">
+        <h2>Test 1: HTML Checkboxes</h2>
+        <label><input type="checkbox" class="service-checkbox" data-price="35000" /> Service A - ₹35,000</label><br/>
+        <label><input type="checkbox" class="service-checkbox" data-price="50000" /> Service B - ₹50,000</label><br/>
+        <label><input type="checkbox" class="service-checkbox" data-price="65000" /> Service C - ₹65,000</label>
+        <br/><br/>
+        <button onclick="testManualCheck()">Manual Check Service A</button>
+        <button onclick="testRecalculate()">Recalculate Now</button>
+    </div>
+
+    <div class="test">
+        <h2>Test 2: Totals</h2>
+        <div>Subtotal: <span id="subtotal">₹0</span></div>
+        <div>Discount (10%): <span id="discount">₹0</span></div>
+        <div id="total">Total: ₹0</div>
+    </div>
+
+    <div class="test">
+        <h2>Test 3: Debug Info</h2>
+        <div id="debug-log" style="background: #1a1a1a; padding: 10px; border-left: 3px solid #0f0; font-family: monospace; font-size: 12px; max-height: 200px; overflow-y: auto;"></div>
+    </div>
+
+    <script>
+        function log(msg) {
+            console.log(msg);
+            const logDiv = document.getElementById('debug-log');
+            const line = document.createElement('div');
+            line.textContent = msg;
+            logDiv.appendChild(line);
+            logDiv.scrollTop = logDiv.scrollHeight;
+        }
+
+        function testManualCheck() {
+            const checkboxes = document.querySelectorAll('.service-checkbox');
+            if (checkboxes.length > 0) {
+                checkboxes[0].checked = !checkboxes[0].checked;
+                log(`✓ Toggled checkbox 0: ${checkboxes[0].checked}`);
+            }
+        }
+
+        function testRecalculate() {
+            const checkboxes = document.querySelectorAll('.service-checkbox');
+            log(`Found ${checkboxes.length} checkboxes`);
+
+            let total = 0;
+            checkboxes.forEach((cb, idx) => {
+                if (cb.checked) {
+                    const price = parseInt(cb.getAttribute('data-price'), 10);
+                    log(`  [${idx}] Checked: ${cb.getAttribute('data-price')} = ${price}`);
+                    total += price;
+                }
+            });
+
+            const discount = Math.floor(total * 0.1);
+            const finalTotal = total - discount;
+
+            log(`Subtotal: ₹${total.toLocaleString('en-IN')}`);
+            log(`Discount: ₹${discount.toLocaleString('en-IN')}`);
+            log(`Final Total: ₹${finalTotal.toLocaleString('en-IN')}`);
+
+            document.getElementById('subtotal').textContent = `₹${total.toLocaleString('en-IN')}`;
+            document.getElementById('discount').textContent = `₹${discount.toLocaleString('en-IN')}`;
+            document.getElementById('total').innerHTML = `Total: <span style="color: #0f0;">₹${finalTotal.toLocaleString('en-IN')}</span>`;
+        }
+
+        // Auto-recalculate on checkbox change
+        document.querySelectorAll('.service-checkbox').forEach(cb => {
+            cb.addEventListener('change', function() {
+                log(`Checkbox change event fired: ${this.checked}`);
+                testRecalculate();
+            });
+        });
+
+        log('Diagnostic page loaded');
+        log(`Found ${document.querySelectorAll('.service-checkbox').length} checkboxes`);
+    </script>
+</body>
+</html>

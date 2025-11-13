@@ -1,0 +1,1023 @@
+<%- include('../partials/head.ejs') %>
+
+    <body class="">
+
+        <%- include('../partials/navbar.ejs') %>
+
+            <!-- Main content with proper top margin for fixed navbar -->
+            <main class="bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900">
+
+                <!-- Hero Section - Minimalist & Elegant with 3D Background & Parallax -->
+                <section class="relative flex items-center justify-center min-h-screen overflow-hidden bg-black parallax-container parallax-scene" id="graphicHero">
+                    <!-- 3D Canvas Background - Parallax Layer -->
+                    <canvas id="hero-canvas" class="absolute inset-0 w-full h-full parallax-layer parallax-item" data-speed="0.3"></canvas>
+
+                    <!-- Subtle Animated Gradient Blobs - Parallax Layer -->
+                    <div class="absolute inset-0 parallax-layer parallax-item" data-speed="0.5">
+                        <div class="absolute bg-purple-600 rounded-full top-1/4 left-1/4 w-48 h-48 md:w-72 md:h-72 mix-blend-multiply filter blur-3xl opacity-20 animate-blob parallax-item" data-speed="0.4"></div>
+                        <div class="absolute bg-blue-600 rounded-full top-1/3 right-1/4 w-48 h-48 md:w-72 md:h-72 mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000 parallax-item" data-speed="0.6"></div>
+                        <div class="absolute bg-pink-600 rounded-full bottom-1/4 left-1/2 w-48 h-48 md:w-72 md:h-72 mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-4000 parallax-item" data-speed="0.5"></div>
+                    </div>
+
+                    <!-- 3D Floating Elements - Parallax Layer -->
+                    <div class="absolute inset-0 perspective parallax-layer parallax-item" data-speed="0.6">
+                        <!-- Floating Card 1 -->
+                        <div class="absolute w-20 h-24 md:w-32 md:h-40 border top-20 left-10 rounded-xl bg-gradient-to-br from-purple-500/10 to-pink-500/10 border-purple-500/20 backdrop-blur-md floating-card parallax-item" data-speed="0.7" style="transform: perspective(1200px) rotateX(-10deg) rotateY(20deg); animation: float 6s ease-in-out infinite;"></div>
+                        
+                        <!-- Floating Card 2 -->
+                        <div class="absolute w-24 h-20 md:w-40 md:h-32 border top-1/3 right-20 rounded-xl bg-gradient-to-br from-blue-500/10 to-cyan-500/10 border-blue-500/20 backdrop-blur-md floating-card parallax-item" data-speed="0.8" style="transform: perspective(1200px) rotateX(10deg) rotateY(-15deg); animation: float 8s ease-in-out infinite 1s;"></div>
+                        
+                        <!-- Floating Card 3 -->
+                        <div class="absolute border rounded-full bottom-32 left-1/4 w-24 h-24 md:w-36 md:h-36 bg-gradient-to-br from-pink-500/5 to-purple-500/5 border-pink-500/10 backdrop-blur-md floating-card parallax-item" data-speed="0.6" style="transform: perspective(1200px) rotateZ(45deg); animation: float 7s ease-in-out infinite 2s;"></div>
+
+                        <!-- Floating Card 4 -->
+                        <div class="absolute w-20 h-24 md:w-32 md:h-40 border bottom-20 right-1/4 rounded-xl bg-gradient-to-br from-cyan-500/10 to-blue-500/10 border-cyan-500/20 backdrop-blur-md floating-card" style="transform: perspective(1200px) rotateX(-15deg) rotateY(-20deg); animation: float 9s ease-in-out infinite 1.5s;"></div>
+
+                        <!-- Floating Orb -->
+                        <div class="absolute w-16 h-16 md:w-24 md:h-24 rounded-full top-1/4 right-1/4 bg-gradient-to-br from-purple-500/20 to-transparent blur-2xl floating-orb" style="animation: float-slow 12s ease-in-out infinite;"></div>
+
+                        <!-- Floating Orb 2 -->
+                        <div class="absolute w-20 h-20 md:w-32 md:h-32 rounded-full bottom-1/3 left-1/3 bg-gradient-to-tr from-blue-500/15 to-transparent blur-3xl floating-orb" style="animation: float-slow 14s ease-in-out infinite 3s;"></div>
+                    </div>
+
+                    <!-- Content -->
+                    <div class="relative z-10 max-w-5xl px-4 mx-auto text-center sm:px-6 lg:px-8">
+                        <!-- New Badge -->
+                        <div class="inline-flex items-center gap-2 px-3 py-2 md:px-4 mb-2 md:mb-8 border rounded-full bg-gradient-to-r from-purple-500/20 to-blue-500/20 border-purple-500/30 backdrop-blur-sm">
+                            <span class="w-2 h-2 bg-purple-400 rounded-full"></span>
+                            <span class="text-xs md:text-sm font-medium text-gray-300">New Release</span>
+                        </div>
+
+                        <!-- Main Heading -->
+                        <h1 class="mb-2 md:mb-6 text-3xl md:text-7xl font-bold leading-tight text-white">
+                            Creative Design That<br>
+                            <span class="text-transparent bg-gradient-to-r from-purple-400 via-blue-400 to-pink-400 bg-clip-text">
+                                Resonates & Converts
+                            </span>
+                        </h1>
+
+                        <!-- Description -->
+                        <p class="max-w-2xl mx-auto mb-4 md:mb-10 text-xs md:text-lg text-xs md:text-sm font-light leading-relaxed text-gray-300">
+                            Transform your brand vision into stunning visual masterpieces. We craft designs that communicate, 
+                            engage, and inspire action. From logos to complete brand systems.
+                        </p>
+
+                        <!-- CTA Buttons -->
+                        <div class="flex  items-center justify-center gap-2 md:gap-4 mb-8 md:mb-16 flex-row">
+                            <a href="/contact"
+                                class="px-3 py-3 md:px-8 text-xs md:text-xs md:text-sm font-semibold text-white transition-all duration-300 rounded-lg bg-gradient-to-r from-purple-600 to-blue-600 hover:shadow-lg hover:shadow-purple-500/50 hover:scale-105">
+                                Get in touch →
+                            </a>
+                            <a href="#services"
+                                class="px-3 py-3 md:px-8 text-xs md:text-xs md:text-sm font-semibold text-white transition-all duration-300 border border-gray-500 rounded-lg hover:border-white hover:bg-white/5">
+                                View services
+                            </a>
+                        </div>
+
+                        <!-- Scroll Indicator -->
+                        <div class="flex justify-center mt-12">
+                            <div class="scroll-indicator">
+                                <div class="dot"></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Design Services Section -->
+                <section class="py-10 md:py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+                    <div class="max-w-screen-xl px-4 mx-auto sm:px-6 lg:px-8">
+                        <!-- Section Header -->
+                        <div class="mb-8 md:mb-16 text-center">
+                            <h2 class="mb-2 md:mb-6 text-xl md:text-5xl font-bold leading-tight text-white px-4 md:px-0">
+                                Comprehensive Graphic Design Services For Every Brand Need
+                            </h2>
+                            <p class="max-w-3xl mx-auto text-xs md:text-lg font-light text-gray-400">
+                                From brand strategy and identity design to marketing collateral and digital assets, we provide 
+                                complete graphic design solutions that make your brand stand out and resonate with your audience.
+                            </p>
+                        </div>
+
+                        <!-- Services Grid - 2x2 -->
+                        <div class="grid gap-2 md:gap-8 md:grid-cols-2">
+
+                            <!-- Service 1: Brand Identity -->
+                            <div
+                                class="relative p-4 md:p-8 overflow-hidden transition-all duration-300 border group bg-slate-800/50 border-slate-700 rounded-2xl hover:border-pink-500/50 hover:shadow-lg hover:shadow-pink-500/10">
+                                <!-- Background Glow -->
+                                <div
+                                    class="absolute inset-0 transition-all duration-300 bg-gradient-to-br from-pink-600/0 to-pink-600/0 group-hover:from-pink-600/10 group-hover:to-pink-600/5">
+                                </div>
+
+                                <!-- Icon Box -->
+                                <div
+                                    class="relative z-10 inline-flex items-center justify-center w-12 h-12 md:w-16 md:h-16 mb-2 md:mb-6 transition-all duration-300 rounded-xl bg-gradient-to-br from-pink-400 to-pink-600 group-hover:shadow-xl group-hover:shadow-pink-500/50">
+                                    <svg class="w-6 h-6 md:w-8 md:h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"></path>
+                                    </svg>
+                                </div>
+
+                                <!-- Content -->
+                                <h3 class="relative z-10 mb-2 md:mb-3 text-lg md:text-2xl font-bold text-white">Brand Identity</h3>
+                                <p class="relative z-10 mb-2 md:mb-6 font-light text-xs md:text-sm text-gray-300">
+                                    We create comprehensive brand identities that reflect your values and <span class="font-semibold text-pink-300">resonate with your target audience</span>, 
+                                    including logos, color palettes, and brand guidelines.
+                                </p>
+                                <ul class="relative z-10 space-y-2 text-xs md:text-sm text-gray-400">
+                                    <li class="flex items-center">
+                                        <span class="w-1.5 h-1.5 bg-pink-400 rounded-full mr-3"></span>
+                                        Logo Design
+                                    </li>
+                                    <li class="flex items-center">
+                                        <span class="w-1.5 h-1.5 bg-pink-400 rounded-full mr-3"></span>
+                                        Brand Guidelines
+                                    </li>
+                                    <li class="flex items-center">
+                                        <span class="w-1.5 h-1.5 bg-pink-400 rounded-full mr-3"></span>
+                                        Visual Identity
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <!-- Service 2: Marketing Collateral -->
+                            <div
+                                class="relative p-4 md:p-8 overflow-hidden transition-all duration-300 border group bg-slate-800/50 border-slate-700 rounded-2xl hover:border-purple-500/50 hover:shadow-lg hover:shadow-purple-500/10">
+                                <!-- Background Glow -->
+                                <div
+                                    class="absolute inset-0 transition-all duration-300 bg-gradient-to-br from-purple-600/0 to-purple-600/0 group-hover:from-purple-600/10 group-hover:to-purple-600/5">
+                                </div>
+
+                                <!-- Icon Box -->
+                                <div
+                                    class="relative z-10 inline-flex items-center justify-center w-12 h-12 md:w-16 md:h-16 mb-2 md:mb-6 transition-all duration-300 rounded-xl bg-gradient-to-br from-purple-400 to-purple-600 group-hover:shadow-xl group-hover:shadow-purple-500/50">
+                                    <svg class="w-6 h-6 md:w-8 md:h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M4 6a2 2 0 012-2h12a2 2 0 012 2v12a2 2 0 01-2 2H6a2 2 0 01-2-2V6z"></path>
+                                    </svg>
+                                </div>
+
+                                <!-- Content -->
+                                <h3 class="relative z-10 mb-2 md:mb-3 text-lg md:text-2xl font-bold text-white">Marketing Collateral</h3>
+                                <p class="relative z-10 mb-2 md:mb-6 font-light text-xs md:text-sm text-gray-300">
+                                    Professional design for all your marketing needs - <span class="font-semibold text-purple-300">brochures, flyers, business cards, and more</span> 
+                                    that create cohesive brand messaging.
+                                </p>
+                                <ul class="relative z-10 space-y-2 text-xs md:text-sm text-gray-400">
+                                    <li class="flex items-center">
+                                        <span class="w-1.5 h-1.5 bg-purple-400 rounded-full mr-3"></span>
+                                        Brochures & Flyers
+                                    </li>
+                                    <li class="flex items-center">
+                                        <span class="w-1.5 h-1.5 bg-purple-400 rounded-full mr-3"></span>
+                                        Business Cards
+                                    </li>
+                                    <li class="flex items-center">
+                                        <span class="w-1.5 h-1.5 bg-purple-400 rounded-full mr-3"></span>
+                                        Packaging Design
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <!-- Service 3: Digital Assets -->
+                            <div
+                                class="relative p-4 md:p-8 overflow-hidden transition-all duration-300 border group bg-slate-800/50 border-slate-700 rounded-2xl hover:border-cyan-500/50 hover:shadow-lg hover:shadow-cyan-500/10">
+                                <!-- Background Glow -->
+                                <div
+                                    class="absolute inset-0 transition-all duration-300 bg-gradient-to-br from-cyan-600/0 to-cyan-600/0 group-hover:from-cyan-600/10 group-hover:to-cyan-600/5">
+                                </div>
+
+                                <!-- Icon Box -->
+                                <div
+                                    class="relative z-10 inline-flex items-center justify-center w-12 h-12 md:w-16 md:h-16 mb-2 md:mb-6 transition-all duration-300 rounded-xl bg-gradient-to-br from-cyan-400 to-cyan-600 group-hover:shadow-xl group-hover:shadow-cyan-500/50">
+                                    <svg class="w-6 h-6 md:w-8 md:h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 2l3.09 6.26L22 9l-6.91 1.01L12 16l-3.09-5.99L2 9l6.91-1.74L12 2z"></path>
+                                    </svg>
+                                </div>
+
+                                <!-- Content -->
+                                <h3 class="relative z-10 mb-2 md:mb-3 text-lg md:text-2xl font-bold text-white">Digital Assets</h3>
+                                <p class="relative z-10 mb-2 md:mb-6 font-light text-xs md:text-sm text-gray-300">
+                                    Create <span class="font-semibold text-cyan-300">engaging digital content</span> optimized for web and social media - 
+                                    social media graphics, banners, templates, and more.
+                                </p>
+                                <ul class="relative z-10 space-y-2 text-xs md:text-sm text-gray-400">
+                                    <li class="flex items-center">
+                                        <span class="w-1.5 h-1.5 bg-cyan-400 rounded-full mr-3"></span>
+                                        Social Media Graphics
+                                    </li>
+                                    <li class="flex items-center">
+                                        <span class="w-1.5 h-1.5 bg-cyan-400 rounded-full mr-3"></span>
+                                        Web Banners
+                                    </li>
+                                    <li class="flex items-center">
+                                        <span class="w-1.5 h-1.5 bg-cyan-400 rounded-full mr-3"></span>
+                                        Email Templates
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <!-- Service 4: Illustration & Custom Art -->
+                            <div
+                                class="relative p-4 md:p-8 overflow-hidden transition-all duration-300 border group bg-slate-800/50 border-slate-700 rounded-2xl hover:border-orange-500/50 hover:shadow-lg hover:shadow-orange-500/10">
+                                <!-- Background Glow -->
+                                <div
+                                    class="absolute inset-0 transition-all duration-300 bg-gradient-to-br from-orange-600/0 to-orange-600/0 group-hover:from-orange-600/10 group-hover:to-orange-600/5">
+                                </div>
+
+                                <!-- Icon Box -->
+                                <div
+                                    class="relative z-10 inline-flex items-center justify-center w-12 h-12 md:w-16 md:h-16 mb-2 md:mb-6 transition-all duration-300 rounded-xl bg-gradient-to-br from-orange-400 to-orange-600 group-hover:shadow-xl group-hover:shadow-orange-500/50">
+                                    <svg class="w-6 h-6 md:w-8 md:h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M11.48 3.499a.5.5 0 00-.96.04l-.5 5.009a.5.5 0 00.97.04l.5-5.009zm2.25-.023c.378.052.76.585.25 1.297L5.5 19h5v2H1.5v-2h5L3.75 8.5c-.51-.712-.128-1.245.25-1.297z"></path>
+                                    </svg>
+                                </div>
+
+                                <!-- Content -->
+                                <h3 class="relative z-10 mb-2 md:mb-3 text-lg md:text-2xl font-bold text-white">Illustration & Art</h3>
+                                <p class="relative z-10 mb-2 md:mb-6 font-light text-xs md:text-sm text-gray-300">
+                                    Original illustrations and custom artwork that <span class="font-semibold text-orange-300">bring your ideas to life</span> with 
+                                    unique artistic vision and technical excellence.
+                                </p>
+                                <ul class="relative z-10 space-y-2 text-xs md:text-sm text-gray-400">
+                                    <li class="flex items-center">
+                                        <span class="w-1.5 h-1.5 bg-orange-400 rounded-full mr-3"></span>
+                                        Custom Illustrations
+                                    </li>
+                                    <li class="flex items-center">
+                                        <span class="w-1.5 h-1.5 bg-orange-400 rounded-full mr-3"></span>
+                                        Icon Design
+                                    </li>
+                                    <li class="flex items-center">
+                                        <span class="w-1.5 h-1.5 bg-orange-400 rounded-full mr-3"></span>
+                                        Character Design
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Design Process Section -->
+                <section class="py-10 md:py-10 md:py-20 bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900">
+                    <div class="max-w-screen-xl px-4 mx-auto sm:px-6 lg:px-8">
+                        <div class="mb-8 md:mb-16 text-center">
+                            <p class="text-xs md:text-sm font-semibold tracking-widest text-blue-400 uppercase">STEP BY STEP PROCESS</p>
+                            <h2 class="mt-2 md:mt-4 text-2xl md:text-5xl font-bold text-white">We Complete every <span class="font-bold">Step Carefully</span></h2>
+                        </div>
+
+                        <!-- Timeline Container -->
+                        <div class="relative px-4 md:px-12">
+                            <!-- SVG Connector Lines -->
+                            <svg class="absolute top-0 left-0 w-full h-full pointer-events-none" preserveAspectRatio="none" style="height: 500px;">
+                                <defs>
+                                    <linearGradient id="lineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                                        <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:1" />
+                                        <stop offset="100%" style="stop-color:#3b82f6;stop-opacity:1" />
+                                    </linearGradient>
+                                </defs>
+                                <!-- Top horizontal line: Planning -> Design -> Development -->
+                                <line x1="16.67%" y1="60px" x2="83.33%" y2="60px" stroke="url(#lineGradient)" stroke-width="3" class="hidden md:block"/>
+                                <!-- Right curve: Development down to bottom right (Support area) -->
+                                <path d="M 83.33% 60px L 83.33% 200px Q 83.33% 250px 83.33% 300px" fill="none" stroke="url(#lineGradient)" stroke-width="3" class="hidden md:block"/>
+                                <!-- Bottom horizontal line: Support <- Launch <- Testing (from right to left at bottom) -->
+                                <line x1="16.67%" y1="300px" x2="83.33%" y2="300px" stroke="url(#lineGradient)" stroke-width="3" class="hidden md:block"/>
+                                <!-- Left curve: Testing down to left side -->
+                                <path d="M 16.67% 300px L 16.67% 200px Q 16.67% 250px 16.67% 60px" fill="none" stroke="url(#lineGradient)" stroke-width="3" class="hidden md:block"/>
+                            </svg>
+
+                            <!-- Steps Grid -->
+                            <div class="relative z-10 grid grid-cols-1 gap-4 md:gap-8 md:grid-cols-3">
+                                <!-- Step 1: Planning -->
+                                <div class="pt-8 md:pt-12 text-center md:pt-0">
+                                    <!-- Icon Circle -->
+                                    <div class="flex justify-center mb-6">
+                                        <div class="relative flex items-center justify-center w-16 h-16 md:w-20 md:h-20 bg-white rounded-full shadow-lg">
+                                            <svg class="w-8 h-8 md:w-10 md:h-10 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <h3 class="mb-2 md:mb-3 text-lg md:text-xl font-bold text-white">Planning</h3>
+                                    <p class="text-xs md:text-sm font-light leading-relaxed text-gray-400">
+                                        Design first, with real content in mind but do drop in the real content
+                                    </p>
+                                </div>
+
+                                <!-- Step 2: Design -->
+                                <div class="text-center">
+                                    <!-- Icon Circle with highlight -->
+                                    <div class="flex justify-center mb-6">
+                                        <div class="relative flex items-center justify-center w-24 h-24 bg-blue-500 rounded-full shadow-2xl">
+                                            <svg class="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a6 6 0 016 6v10a2 2 0 01-2 2z"></path>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <h3 class="mb-2 md:mb-3 text-lg md:text-xl font-bold text-white">Design</h3>
+                                    <p class="text-xs md:text-sm font-light leading-relaxed text-gray-400">
+                                        Use filler text where it helps your design process, but use real content
+                                    </p>
+                                </div>
+
+                                <!-- Step 3: Development -->
+                                <div class="pt-8 md:pt-12 text-center md:pt-0">
+                                    <!-- Icon Circle -->
+                                    <div class="flex justify-center mb-6">
+                                        <div class="relative flex items-center justify-center w-16 h-16 md:w-20 md:h-20 bg-white rounded-full shadow-lg">
+                                            <svg class="w-8 h-8 md:w-10 md:h-10 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <h3 class="mb-2 md:mb-3 text-lg md:text-xl font-bold text-white">Development</h3>
+                                    <p class="text-xs md:text-sm font-light leading-relaxed text-gray-400">
+                                        We prepare a compromise: Only use filler text that has been edited
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Bottom Row Steps -->
+                            <div class="relative z-10 grid grid-cols-1 gap-8 mt-32 md:grid-cols-3">
+                                <!-- Step 4: Testing -->
+                                <div class="text-center">
+                                    <!-- Icon Circle -->
+                                    <div class="flex justify-center mb-6">
+                                        <div class="relative flex items-center justify-center w-16 h-16 md:w-20 md:h-20 bg-white rounded-full shadow-lg">
+                                            <svg class="w-8 h-8 md:w-10 md:h-10 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <h3 class="mb-2 md:mb-3 text-lg md:text-xl font-bold text-white">Testing</h3>
+                                    <p class="text-xs md:text-sm font-light leading-relaxed text-gray-400">
+                                        Using filler text avoids the inevitable awkwardness accompanies
+                                    </p>
+                                </div>
+
+                                <!-- Step 5: Launch -->
+                                <div class="text-center">
+                                    <!-- Icon Circle -->
+                                    <div class="flex justify-center mb-6">
+                                        <div class="relative flex items-center justify-center w-16 h-16 md:w-20 md:h-20 bg-white rounded-full shadow-lg">
+                                            <svg class="w-8 h-8 md:w-10 md:h-10 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <h3 class="mb-2 md:mb-3 text-lg md:text-xl font-bold text-white">Launch</h3>
+                                    <p class="text-xs md:text-sm font-light leading-relaxed text-gray-400">
+                                        Surprisingly, there is a very vocal faction of the design community
+                                    </p>
+                                </div>
+
+                                <!-- Step 6: Support -->
+                                <div class="text-center">
+                                    <!-- Icon Circle -->
+                                    <div class="flex justify-center mb-6">
+                                        <div class="relative flex items-center justify-center w-16 h-16 md:w-20 md:h-20 bg-white rounded-full shadow-lg">
+                                            <svg class="w-8 h-8 md:w-10 md:h-10 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <h3 class="mb-2 md:mb-3 text-lg md:text-xl font-bold text-white">Support</h3>
+                                    <p class="text-xs md:text-sm font-light leading-relaxed text-gray-400">
+                                        Equally vocal contingent of designers loving to defend time-honored
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Tools & Technologies Section -->
+                <section class="py-10 md:py-20 bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900">
+                    <div class="max-w-screen-xl px-4 mx-auto sm:px-6 lg:px-8">
+                        <div class="md:mb-16 mb-10 text-center">
+                            <h2 class="mb-4 text-2xl px-6 md:px-0 font-bold text-white md:text-5xl">Tools & Technologies We Use</h2>
+                            <p class="max-w-3xl mx-auto md:text-lg text-xs font-light text-gray-400">
+                                Leveraging industry-leading design tools and software to deliver exceptional results
+                            </p>
+                        </div>
+
+                        <div class="grid gap-2 md:gap-6 grid-cols-2 md:grid-cols-3 lg:grid-cols-6">
+                            <!-- Photoshop -->
+                            <div class="flex flex-col items-center p-4 md:p-6 transition-all duration-300 border rounded-xl bg-slate-800/50 border-slate-700 group hover:border-blue-500/50 hover:shadow-lg hover:shadow-blue-500/10">
+                                <div class="flex items-center justify-center w-10 h-10 md:w-12 md:h-12 mb-2 md:mb-3 font-bold text-white rounded-lg bg-gradient-to-br from-blue-600 to-blue-800">Ps</div>
+                                <p class="text-xs md:text-sm font-semibold text-white">Photoshop</p>
+                            </div>
+
+                            <!-- Illustrator -->
+                            <div class="flex flex-col items-center p-4 md:p-6 transition-all duration-300 border rounded-xl bg-slate-800/50 border-slate-700 group hover:border-orange-500/50 hover:shadow-lg hover:shadow-orange-500/10">
+                                <div class="flex items-center justify-center w-10 h-10 md:w-12 md:h-12 mb-2 md:mb-3 font-bold text-white rounded-lg bg-gradient-to-br from-orange-600 to-orange-800">Ai</div>
+                                <p class="text-xs md:text-sm font-semibold text-white">Illustrator</p>
+                            </div>
+
+                            <!-- InDesign -->
+                            <div class="flex flex-col items-center p-4 md:p-6 transition-all duration-300 border rounded-xl bg-slate-800/50 border-slate-700 group hover:border-pink-500/50 hover:shadow-lg hover:shadow-pink-500/10">
+                                <div class="flex items-center justify-center w-10 h-10 md:w-12 md:h-12 mb-2 md:mb-3 font-bold text-white rounded-lg bg-gradient-to-br from-pink-600 to-pink-800">Id</div>
+                                <p class="text-xs md:text-sm font-semibold text-white">InDesign</p>
+                            </div>
+
+                            <!-- Figma -->
+                            <div class="flex flex-col items-center p-4 md:p-6 transition-all duration-300 border rounded-xl bg-slate-800/50 border-slate-700 group hover:border-purple-500/50 hover:shadow-lg hover:shadow-purple-500/10">
+                                <img src="https://www.designstudiouiux.com/static/eef0dac8459416b9b73264bfc4f275fd/2038b/figma-new.jpg" alt="Figma" class="w-12 h-12 mb-3 transition-transform duration-300 rounded group-hover:scale-110">
+                                <p class="text-xs md:text-sm font-semibold text-white">Figma</p>
+                            </div>
+
+                            <!-- CorelDRAW -->
+                            <div class="flex flex-col items-center p-4 md:p-6 transition-all duration-300 border rounded-xl bg-slate-800/50 border-slate-700 group hover:border-green-500/50 hover:shadow-lg hover:shadow-green-500/10">
+                                <div class="flex items-center justify-center w-10 h-10 md:w-12 md:h-12 mb-2 md:mb-3 font-bold text-white rounded-lg bg-gradient-to-br from-green-600 to-green-800">CD</div>
+                                <p class="text-xs md:text-sm font-semibold text-white">CorelDRAW</p>
+                            </div>
+
+                            <!-- Procreate -->
+                            <div class="flex flex-col items-center p-4 md:p-6 transition-all duration-300 border rounded-xl bg-slate-800/50 border-slate-700 group hover:border-indigo-500/50 hover:shadow-lg hover:shadow-indigo-500/10">
+                                <div class="flex items-center justify-center w-10 h-10 md:w-12 md:h-12 mb-2 md:mb-3 font-bold text-white rounded-lg bg-gradient-to-br from-indigo-600 to-indigo-800">Pr</div>
+                                <p class="text-xs md:text-sm font-semibold text-white">Procreate</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Proven result Section -->
+                <section class="py-10 md:py-20 bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900">
+                    <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+                        <!-- Header Section: Title and Subtext -->
+                        <div class="grid grid-cols-1 gap-2 md:gap-8 mb-8 md:mb-12 lg:grid-cols-3 lg:mb-16">
+                
+                            <!-- Main Heading Area -->
+                            <div class="lg:col-span-2">
+                                <!-- Main Title -->
+                                <h1
+                                    class="max-w-4xl mt-4 text-2xl md:text-4xl font-extrabold leading-tight text-white sm:text-5xl lg:text-6xl">
+                                    Proven results for every project
+                                </h1>
+                            </div>
+                
+                            <!-- Subtext/Mission Statement -->
+                            <div class="flex items-end lg:col-span-1">
+                                <p class="max-w-sm mt-2 md:mt-4 text-xs md:text-base text-white lg:mt-0">
+                                    We combine strategy, speed, and skill to deliver exceptional design — every time.
+                                </p>
+                            </div>
+                        </div>
+                
+                        <!-- Stats and Image Grid Section -->
+                        <div class="grid grid-cols-1 gap-4 md:gap-6 md:grid-cols-3 lg:grid-cols-3">
+                
+                            <!-- 1. Large Image Card (Left) -->
+                            <div class="image-card md:col-span-1">
+                                <!-- Placeholder Image: Note the aspect ratio adjustment for smaller screens -->
+                                <img src="https://placehold.co/800x1200/2c2c2c/ffffff?text=Design+Expert"
+                                    alt="Profile of Robert Park, Founder" class="object-cover w-full h-full"
+                                    onerror="this.onerror=null; this.src='https://placehold.co/400x600/333333/ffffff?text=Image+Placeholder';">
+                
+                                <!-- Gradient Overlay -->
+                                <div class="image-overlay"></div>
+                
+                                <!-- Text Content at the Bottom -->
+                                <div class="absolute bottom-0 left-0 z-10 w-full p-6">
+                                    <p class="text-sm md:text-lg font-semibold text-white">Robert Park</p>
+                                    <p class="mb-4 text-sm text-gray-300">Founder Of Formix</p>
+                
+                                    <!-- Social Icons (Mocked) -->
+                                    <div class="flex space-x-4">
+                                        <div
+                                            class="flex items-center justify-center w-6 h-6 text-xs text-white bg-gray-700 rounded-full">
+                                            X</div>
+                                        <div
+                                            class="flex items-center justify-center w-6 h-6 text-xs text-white bg-gray-700 rounded-full">
+                                            IN</div>
+                                        <div
+                                            class="flex items-center justify-center w-6 h-6 text-xs text-white bg-gray-700 rounded-full">
+                                            IG</div>
+                                    </div>
+                                </div>
+                            </div>
+                
+                            <!-- 2. Stats Grid (Right 2/3 columns) -->
+                            <div class="grid grid-cols-1 gap-6 md:col-span-2 sm:grid-cols-2">
+                
+                                <!-- Stat Card 1 -->
+                                <div class="flex flex-col justify-between stat-card">
+                                    <div>
+                                        <div class="flex items-start justify-between mb-2">
+                                            <span class="text-3xl md:text-5xl sm:text-6xl font-extrabold text-[var(--primary-text)]">50+</span>
+                                            <div class="flex mt-1 space-x-1">
+                                                <div class="w-1.5 h-1.5 rounded-full bg-[var(--accent-color)]"></div>
+                                                <div class="w-1.5 h-1.5 rounded-full bg-[var(--accent-color)]"></div>
+                                            </div>
+                                        </div>
+                                        <p class="mt-2 text-xs md:text-base text-gray-600">
+                                            Digital projects delivered across all industries.
+                                        </p>
+                                    </div>
+                                </div>
+                
+                                <!-- Stat Card 2 -->
+                                <div class="flex flex-col justify-between stat-card">
+                                    <div>
+                                        <div class="flex items-start justify-between mb-2">
+                                            <span class="text-3xl md:text-5xl sm:text-6xl font-extrabold text-[var(--primary-text)]">3X</span>
+                                            <div class="flex mt-1 space-x-1">
+                                                <div class="w-1.5 h-1.5 rounded-full bg-[var(--accent-color)]"></div>
+                                                <div class="w-1.5 h-1.5 rounded-full bg-[var(--accent-color)]"></div>
+                                                <div class="w-1.5 h-1.5 rounded-full bg-[var(--accent-color)]"></div>
+                                            </div>
+                                        </div>
+                                        <p class="mt-2 text-xs md:text-base text-gray-600">
+                                            Our model cuts typical delivery timelines by two-thirds.
+                                        </p>
+                                    </div>
+                                </div>
+                
+                                <!-- Stat Card 3 -->
+                                <div class="flex flex-col justify-between stat-card">
+                                    <div>
+                                        <div class="flex items-start justify-between mb-2">
+                                            <span class="text-3xl md:text-5xl sm:text-6xl font-extrabold text-[var(--primary-text)]">80k+</span>
+                                            <div class="flex mt-1 space-x-1">
+                                                <div class="w-1.5 h-1.5 rounded-full bg-[var(--accent-color)]"></div>
+                                                <div class="w-1.5 h-1.5 rounded-full bg-[var(--accent-color)]"></div>
+                                                <div class="w-1.5 h-1.5 rounded-full bg-[var(--accent-color)]"></div>
+                                            </div>
+                                        </div>
+                                        <p class="mt-2 text-xs md:text-base text-gray-600">
+                                            Monthly visitors via SEO content hub
+                                        </p>
+                                    </div>
+                                </div>
+                
+                                <!-- Stat Card 4 -->
+                                <div class="flex flex-col justify-between stat-card">
+                                    <div>
+                                        <div class="flex items-start justify-between mb-2">
+                                            <span class="text-3xl md:text-5xl sm:text-6xl font-extrabold text-[var(--primary-text)]">100%</span>
+                                            <div class="flex mt-1 space-x-1">
+                                                <div class="w-1.5 h-1.5 rounded-full bg-[var(--accent-color)]"></div>
+                                                <div class="w-1.5 h-1.5 rounded-full bg-[var(--accent-color)]"></div>
+                                                <div class="w-1.5 h-1.5 rounded-full bg-[var(--accent-color)]"></div>
+                                                <div class="w-1.5 h-1.5 rounded-full bg-[var(--accent-color)]"></div>
+                                            </div>
+                                        </div>
+                                        <p class="mt-2 text-xs md:text-base text-gray-600">
+                                            Client satisfaction rate across paid users
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- FAQ Section -->
+                <section class="py-10 md:py-20 bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900">
+                    <div class="max-w-screen-xl px-4 mx-auto sm:px-6 lg:px-8">
+                        <div class="grid grid-cols-1 gap-6 md:gap-12 lg:grid-cols-3">
+                            <!-- FAQ Questions Column -->
+                            <div class="lg:col-span-2">
+                                <h2 class="mb-2 text-2xl md:text-4xl font-bold text-white md:text-5xl">
+                                    FAQ
+                                </h2>
+                                <p class="mb-4 md:mb-8 text-xs md:text-sm font-light text-blue-200">Have questions? We've got answers about our graphic design services.</p>
+
+                                <!-- FAQ Accordion -->
+                                <div class="space-y-2 md:space-y-4">
+                                    <!-- Question 1 -->
+                                    <div class="pb-4 border-b border-slate-700">
+                                        <button onclick="toggleFAQ(this)" class="flex items-center justify-between w-full py-4 text-left transition-colors duration-300 group hover:text-blue-300">
+                                            <span class="text-sm md:text-lg font-semibold text-white group-hover:text-blue-300">
+                                                What's included in a brand identity package?
+                                            </span>
+                                            <svg class="w-5 h-5 md:w-6 md:h-6 text-blue-400 transition-transform duration-300 transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" data-icon="arrow">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                                            </svg>
+                                        </button>
+                                        <div class="overflow-hidden transition-all duration-300 ease-in-out faq-answer">
+                                            <p class="pb-2 md:pb-4 text-xs md:text-sm font-light text-blue-100">
+                                                Our comprehensive brand identity package includes logo design, color palette development, typography guidelines, brand guidelines document, and initial social media templates. We can also add additional assets as needed.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <!-- Question 2 -->
+                                    <div class="pb-4 border-b border-slate-700">
+                                        <button onclick="toggleFAQ(this)" class="flex items-center justify-between w-full py-4 text-left transition-colors duration-300 group hover:text-blue-300">
+                                            <span class="text-sm md:text-lg font-semibold text-white group-hover:text-blue-300">
+                                                How long does a design project typically take?
+                                            </span>
+                                            <svg class="w-5 h-5 md:w-6 md:h-6 text-blue-400 transition-transform duration-300 transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" data-icon="arrow">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                                            </svg>
+                                        </button>
+                                        <div class="overflow-hidden transition-all duration-300 ease-in-out faq-answer">
+                                            <p class="pb-2 md:pb-4 text-xs md:text-sm font-light text-blue-100">
+                                                Timeline varies based on project scope. A simple logo design takes 1-2 weeks, brand identity projects take 3-4 weeks, and larger design systems can take 6-8 weeks. We'll provide a detailed timeline during our discovery meeting.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <!-- Question 3 -->
+                                    <div class="pb-4 border-b border-slate-700">
+                                        <button onclick="toggleFAQ(this)" class="flex items-center justify-between w-full py-4 text-left transition-colors duration-300 group hover:text-blue-300">
+                                            <span class="text-sm md:text-lg font-semibold text-white group-hover:text-blue-300">
+                                                Do you provide unlimited revisions?
+                                            </span>
+                                            <svg class="w-5 h-5 md:w-6 md:h-6 text-blue-400 transition-transform duration-300 transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" data-icon="arrow">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                                            </svg>
+                                        </button>
+                                        <div class="overflow-hidden transition-all duration-300 ease-in-out faq-answer">
+                                            <p class="pb-2 md:pb-4 text-xs md:text-sm font-light text-blue-100">
+                                                Yes! We include unlimited revisions during the design process to ensure you're completely satisfied with the final result. We'll work with you until we get it right.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <!-- Question 4 -->
+                                    <div class="pb-4 border-b border-slate-700">
+                                        <button onclick="toggleFAQ(this)" class="flex items-center justify-between w-full py-4 text-left transition-colors duration-300 group hover:text-blue-300">
+                                            <span class="text-sm md:text-lg font-semibold text-white group-hover:text-blue-300">
+                                                In what formats do you deliver the final designs?
+                                            </span>
+                                            <svg class="w-5 h-5 md:w-6 md:h-6 text-blue-400 transition-transform duration-300 transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" data-icon="arrow">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                                            </svg>
+                                        </button>
+                                        <div class="overflow-hidden transition-all duration-300 ease-in-out faq-answer">
+                                            <p class="pb-2 md:pb-4 text-xs md:text-sm font-light text-blue-100">
+                                                We deliver designs in multiple formats including PNG, JPG, SVG, PDF, and editable source files (PSD, AI, etc.) so you can use them wherever needed or make future edits.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <!-- Question 5 -->
+                                    <div class="pb-4 border-b border-slate-700">
+                                        <button onclick="toggleFAQ(this)" class="flex items-center justify-between w-full py-4 text-left transition-colors duration-300 group hover:text-blue-300">
+                                            <span class="text-sm md:text-lg font-semibold text-white group-hover:text-blue-300">
+                                                Can you help with both print and digital design?
+                                            </span>
+                                            <svg class="w-5 h-5 md:w-6 md:h-6 text-blue-400 transition-transform duration-300 transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" data-icon="arrow">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                                            </svg>
+                                        </button>
+                                        <div class="overflow-hidden transition-all duration-300 ease-in-out faq-answer">
+                                            <p class="pb-2 md:pb-4 text-xs md:text-sm font-light text-blue-100">
+                                                Absolutely! We specialize in both print design (business cards, brochures, packaging) and digital design (social media, web graphics, email templates). We ensure consistency across all mediums.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <!-- Question 6 -->
+                                    <div class="pb-4 border-b border-slate-700">
+                                        <button onclick="toggleFAQ(this)" class="flex items-center justify-between w-full py-4 text-left transition-colors duration-300 group hover:text-blue-300">
+                                            <span class="text-sm md:text-lg font-semibold text-white group-hover:text-blue-300">
+                                                Do you retain ownership of the designs or do I?
+                                            </span>
+                                            <svg class="w-5 h-5 md:w-6 md:h-6 text-blue-400 transition-transform duration-300 transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" data-icon="arrow">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                                            </svg>
+                                        </button>
+                                        <div class="overflow-hidden transition-all duration-300 ease-in-out faq-answer">
+                                            <p class="pb-2 md:pb-4 text-xs md:text-sm font-light text-blue-100">
+                                                You own all designs upon project completion and full payment. You have full rights to use, modify, and distribute the designs as you wish.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Team Contact Card -->
+                            <div class="lg:col-span-1">
+                                <div class="sticky p-8 border top-32 border-slate-700 rounded-2xl bg-gradient-to-br from-slate-800 to-slate-900">
+                                    <h3 class="mb-4 text-xl font-bold text-white">Have More Questions?</h3>
+                                    
+                                    <!-- Team Avatars -->
+                                    <div class="flex items-center mb-6 -space-x-3">
+                                        <div class="flex items-center justify-center w-12 h-12 border-2 rounded-full bg-gradient-to-br from-pink-400 to-pink-600 border-slate-800">
+                                            <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                                <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                                            </svg>
+                                        </div>
+                                        <div class="flex items-center justify-center w-12 h-12 border-2 rounded-full bg-gradient-to-br from-purple-400 to-purple-600 border-slate-800">
+                                            <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                                <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                                            </svg>
+                                        </div>
+                                        <div class="flex items-center justify-center w-12 h-12 border-2 rounded-full bg-gradient-to-br from-cyan-400 to-cyan-600 border-slate-800">
+                                            <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                                <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                                            </svg>
+                                        </div>
+                                    </div>
+
+                                    <p class="mb-6 text-sm font-light text-blue-200">
+                                        Ask our design team, feel free to text and get all the answers you need.
+                                    </p>
+
+                                    <a href="/contact" class="inline-flex items-center justify-center w-full px-6 py-3 font-semibold transition-all duration-300 bg-pink-400 border-2 border-pink-400 rounded-lg text-slate-900 hover:bg-transparent hover:text-pink-400">
+                                        ASK QUESTION
+                                        <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- CTA Section -->
+                <section class="flex items-center justify-start md:min-h-screen p-8 sm:p-16">
+                                    <div class="max-w-4xl mx-auto">
+                                        <h1 class="mb-4 text-5xl font-extrabold leading-tight text-white md:text-8xl">
+                                            Got a Project in<br>
+                                            Mind?
+                                            <span class="inline-flex items-center avatar-stack">
+                                                <img class="avatar"
+                                                    src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                                    alt="Avatar 1">
+                                                <img class="avatar"
+                                                    src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                                    alt="Avatar 2">
+                                                <img class="avatar"
+                                                    src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                                    alt="Avatar 3">
+                                            </span>
+                                        </h1>
+                                        <h2
+                                            class="relative inline-block pb-2 text-5xl font-extrabold leading-tight text-transparent md:text-8xl bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
+                                            Let's Talk!
+                                            <span class="absolute bottom-0 left-0 w-2/3 h-1 bg-accent-pink"></span>
+                                        </h2>
+                                
+                                        <div class="flex items-center md:mt-12 mt-4 space-x-3 text-lg">
+                                            <i class="text-white fa-regular fa-envelope"></i>
+                                            <a href="mailto:hello@designstudiouiux.com"
+                                                class="text-white hover:text-accent-pink hover:underline md:text-sm text-xs">contact@itbizone.com</a>
+                                        </div>
+                                    </div>
+                </section>
+            </main>
+
+        <%- include('../partials/footer.ejs') %>
+
+        <script>
+            // 3D Hero Canvas Background
+            const initializeHeroCanvas = () => {
+                const canvas = document.getElementById('hero-canvas');
+                if (!canvas) return;
+                
+                const ctx = canvas.getContext('2d');
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+
+                let particles = [];
+                const particleCount = 60;
+
+                class Particle {
+                    constructor() {
+                        this.x = Math.random() * canvas.width;
+                        this.y = Math.random() * canvas.height;
+                        this.z = Math.random() * 100;
+                        this.vx = (Math.random() - 0.5) * 0.5;
+                        this.vy = (Math.random() - 0.5) * 0.5;
+                        this.vz = (Math.random() - 0.5) * 0.3;
+                        this.size = Math.random() * 2 + 1;
+                        this.opacity = Math.random() * 0.5 + 0.2;
+                        this.color = ['#a78bfa', '#60a5fa', '#ec4899'][Math.floor(Math.random() * 3)];
+                    }
+
+                    update() {
+                        this.x += this.vx;
+                        this.y += this.vy;
+                        this.z += this.vz;
+
+                        // Wrap around
+                        if (this.x < 0) this.x = canvas.width;
+                        if (this.x > canvas.width) this.x = 0;
+                        if (this.y < 0) this.y = canvas.height;
+                        if (this.y > canvas.height) this.y = 0;
+                        if (this.z < 0 || this.z > 100) {
+                            this.z = this.z < 0 ? 100 : 0;
+                        }
+                    }
+
+                    draw() {
+                        const scale = (this.z + 50) / 150;
+                        const size = this.size * scale;
+                        const opacity = this.opacity * (this.z / 100);
+
+                        ctx.fillStyle = this.color;
+                        ctx.globalAlpha = opacity;
+                        ctx.beginPath();
+                        ctx.arc(this.x, this.y, size, 0, Math.PI * 2);
+                        ctx.fill();
+                    }
+                }
+
+                // Initialize particles
+                for (let i = 0; i < particleCount; i++) {
+                    particles.push(new Particle());
+                }
+
+                function animate() {
+                    ctx.globalAlpha = 1;
+                    ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+                    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+                    particles.forEach(particle => {
+                        particle.update();
+                        particle.draw();
+                    });
+
+                    requestAnimationFrame(animate);
+                }
+
+                // Sort particles by z-depth and draw
+                function sortAndDraw() {
+                    particles.sort((a, b) => a.z - b.z);
+                    animate();
+                }
+
+                // Handle window resize
+                window.addEventListener('resize', () => {
+                    canvas.width = window.innerWidth;
+                    canvas.height = window.innerHeight;
+                });
+
+                sortAndDraw();
+            };
+
+            // Add navigation active state
+            document.addEventListener('DOMContentLoaded', function() {
+                // Initialize 3D canvas
+                initializeHeroCanvas();
+
+                // Set active nav link
+                const navLinks = document.querySelectorAll('.nav-link');
+                navLinks.forEach(link => {
+                    link.classList.remove('active', 'bg-primary/10', 'text-primary');
+                    link.classList.add('text-gray-700');
+                });
+
+                // Scroll effect on navbar
+                const navbar = document.getElementById('navbar');
+                window.addEventListener('scroll', function() {
+                    if (window.scrollY > 10) {
+                        navbar.classList.add('shadow-md');
+                    } else {
+                        navbar.classList.remove('shadow-md');
+                    }
+                });
+
+                // Mobile menu toggle
+                const mobileToggle = document.getElementById('mobileToggle');
+                const mobileMenu = document.getElementById('mobileMenu');
+
+                if (mobileToggle && mobileMenu) {
+                    mobileToggle.addEventListener('click', function() {
+                        const isOpen = mobileMenu.style.display === 'block';
+                        mobileMenu.style.display = isOpen ? 'none' : 'block';
+                        const lines = document.querySelectorAll('.hamburger-line');
+                        lines.forEach((line, index) => {
+                            if (isOpen) {
+                                line.style.transform = '';
+                            } else {
+                                if (index === 0) line.style.transform = 'rotate(45deg) translateY(10px)';
+                                if (index === 1) line.style.opacity = '0';
+                                if (index === 2) line.style.transform = 'rotate(-45deg) translateY(-10px)';
+                            }
+                        });
+                    });
+                }
+
+                // Contact form handling
+                const contactForm = document.getElementById('contactForm');
+                if (contactForm) {
+                    contactForm.addEventListener('submit', async function(e) {
+                        e.preventDefault();
+                        const formData = new FormData(this);
+                        const data = {
+                            name: formData.get('name'),
+                            email: formData.get('email'),
+                            phone: formData.get('phone'),
+                            message: formData.get('message')
+                        };
+
+                        // Validate email format
+                        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                        if (!emailRegex.test(data.email)) {
+                            showMessage('Please enter a valid email address', 'error');
+                            return;
+                        }
+
+                        // Validate phone format
+                        const phoneRegex = /^[0-9\-\+\(\) ]{10,}$/;
+                        if (!phoneRegex.test(data.phone)) {
+                            showMessage('Please enter a valid phone number', 'error');
+                            return;
+                        }
+
+                        try {
+                            const response = await fetch('/submit-form', {
+                                method: 'POST',
+                                headers: {
+                                    'Content-Type': 'application/json',
+                                },
+                                body: JSON.stringify(data)
+                            });
+
+                            if (response.ok) {
+                                showMessage('Thank you! We will get back to you soon.', 'success');
+                                contactForm.reset();
+                            } else {
+                                showMessage('Something went wrong. Please try again.', 'error');
+                            }
+                        } catch (error) {
+                            showMessage('Error submitting form. Please try again.', 'error');
+                        }
+                    });
+                }
+
+                function showMessage(message, type) {
+                    const alertDiv = document.createElement('div');
+                    alertDiv.className = `fixed top-4 right-4 p-4 rounded-lg ${type === 'success' ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'} shadow-lg max-w-md`;
+                    alertDiv.textContent = message;
+                    document.body.appendChild(alertDiv);
+
+                    // Remove the message after 5 seconds
+                    setTimeout(() => {
+                        alertDiv.remove();
+                    }, 5000);
+                }
+
+                // FAQ Accordion Toggle - Simple Direct Implementation
+                window.toggleFAQ = function(button) {
+                    // Get the answer element (next sibling after button)
+                    const answer = button.nextElementSibling;
+                    if (!answer || !answer.classList.contains('faq-answer')) {
+                        return;
+                    }
+                    
+                    const isOpen = answer.classList.contains('open');
+                    
+                    // Close all other FAQs
+                    document.querySelectorAll('.faq-answer').forEach(ans => {
+                        if (ans !== answer && ans.classList.contains('open')) {
+                            ans.classList.remove('open');
+                            ans.classList.add('closing');
+                            
+                            // Remove closing class after animation completes
+                            setTimeout(() => {
+                                ans.classList.remove('closing');
+                            }, 400);
+                            
+                            const parentBtn = ans.previousElementSibling;
+                            if (parentBtn && parentBtn.querySelector('[data-icon="arrow"]')) {
+                                parentBtn.querySelector('[data-icon="arrow"]').style.transform = 'rotate(0deg)';
+                            }
+                        }
+                    });
+                    
+                    // Toggle current FAQ
+                    if (isOpen) {
+                        answer.classList.remove('open');
+                        answer.classList.add('closing');
+                        
+                        setTimeout(() => {
+                            answer.classList.remove('closing');
+                        }, 400);
+                        
+                        button.querySelector('[data-icon="arrow"]').style.transform = 'rotate(0deg)';
+                    } else {
+                        answer.classList.remove('closing');
+                        answer.classList.add('open');
+                        button.querySelector('[data-icon="arrow"]').style.transform = 'rotate(180deg)';
+                    }
+                };
+
+                // Initialize Lenis for smooth scrolling
+                if (typeof Lenis !== 'undefined') {
+                    const lenis = new Lenis({
+                        duration: 1.2,
+                        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+                        direction: 'vertical',
+                        gestureDirection: 'vertical',
+                        smooth: true,
+                        smoothTouch: false,
+                        touchMultiplier: 2,
+                    });
+
+                    function raf(time) {
+                        lenis.raf(time);
+                        requestAnimationFrame(raf);
+                    }
+
+                    requestAnimationFrame(raf);
+                }
+            });
+        </script>
+
+    </body>
+
+    </html>

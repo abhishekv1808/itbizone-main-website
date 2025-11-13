@@ -1,0 +1,828 @@
+<%- include('../partials/head.ejs') %>
+
+    <body class="">
+
+        <%- include('../partials/navbar.ejs') %>
+
+            <!-- Main content with proper top margin for fixed navbar -->
+            <main class="pt-16 bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900">
+
+                <!-- Hero Section with Parallax -->
+                <section class="relative py-10 md:py-20 bg-center bg-no-repeat bg-cover parallax-container parallax-scene" id="uiUxHero">
+                    <div class="absolute inset-0 parallax-layer parallax-item" data-speed="0.3"
+                        style="filter: blur(3px); background-image: url('/images/graphic-design.png'); background-size: cover; background-position: center;">
+                    </div>
+
+                    <div class="relative z-10 max-w-screen-xl px-4 mx-auto sm:px-6 lg:px-8 parallax-item" data-speed="0.7">
+                        <div class="grid items-center gap-8 md:gap-12 lg:grid-cols-2">
+                            <!-- Content -->
+                            <div class="space-y-6 md:space-y-8">
+                                <div>
+                                    <div
+                                        class="inline-flex items-center px-4 py-2 mb-6 text-sm font-light text-white border border-white rounded-full bg-cyan-500/20 backdrop-blur-sm">
+                                        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M14.828 14.828a4 4 0 01-5.656 0M21 12a9 9 0 11-18 0 9 9 0 0118 0zM15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                            </svg>
+                                        UI/UX Design
+                                    </div>
+                                    <h1 class="mb-4 md:mb-6 text-2xl md:text-4xl lg:text-5xl font-bold leading-tight text-white">
+                                        Design Experiences That Delight Users
+                                    </h1>
+                                    <p class="mb-6 md:mb-8 text-xs md:text-sm lg:text-base font-light leading-relaxed text-gray-200">
+                                        We create intuitive, beautiful digital interfaces that combine strategic thinking with 
+                                        stunning visuals. Our user-centered design approach ensures every interaction is purposeful 
+                                        and engaging, driving both user satisfaction and business results.
+                                    </p>
+                                </div>
+
+                                <div class="flex flex-col gap-4 sm:flex-row">
+                                    <a href="#expertise"
+                                        class="px-6 py-3 md:px-8 md:py-4 text-sm md:text-base font-semibold text-center text-white transition-colors duration-300 rounded-lg shadow-lg bg-main hover:bg-blue-700">
+                                        Explore Our Expertise
+                                    </a>
+                                    <a href="/contact"
+                                        class="px-6 py-3 md:px-8 md:py-4 text-sm md:text-base font-semibold text-center text-white transition-all duration-300 border-2 border-white rounded-lg hover:bg-gray-700 hover:text-white backdrop-blur-sm">
+                                        Start Your Project
+                                    </a>
+                                </div>
+
+                                <!-- Quick Stats -->
+                                <div class="grid grid-cols-3 gap-4 md:gap-6 pt-6 md:pt-8 border-t border-gray-300/30">
+                                    <div class="text-center">
+                                        <div class="mb-1 text-lg md:text-2xl font-bold text-white">200+</div>
+                                        <div class="text-xs md:text-sm text-gray-300">Designs Created</div>
+                                    </div>
+                                    <div class="text-center">
+                                        <div class="mb-1 text-lg md:text-2xl font-bold text-white">95%</div>
+                                        <div class="text-xs md:text-sm text-gray-300">User Rating</div>
+                                    </div>
+                                    <div class="text-center">
+                                        <div class="mb-1 text-lg md:text-2xl font-bold text-white">50+</div>
+                                        <div class="text-xs md:text-sm text-gray-300">Awards Won</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Visual Element -->
+                            <div class="relative">
+                                <img src="/images/digital-marketing.png" alt="UI/UX Design" class="w-auto h-full mx-auto">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- why choose us Section -->
+                <section class="p-4 md:p-8 mx-auto text-white max-w-7xl sm:p-8 md:p-16">
+                
+                    <h1 class="mb-6 md:mb-8 text-2xl md:text-4xl lg:text-5xl font-bold text-center">
+                        Why Choose Us
+                    </h1>
+                
+                    <div class="max-w-5xl mx-auto mb-8 md:mb-16 space-y-4 md:space-y-6 text-xs md:text-sm lg:text-base font-light">
+                        <p class="font-light">
+                            With years of experience as a UX research company, we profoundly analyze your users' perspectives before
+                            finalizing any design choices. Our UI UX research services are keenly focused on your distinct requirements
+                            and their driving forces.
+                        </p>
+                        <p class="font-light">
+                            By mending the gaps between your venture and your users with insights generated from detailed data churning,
+                            we curate tailored products that suffice every need of your company and its users. By working across various
+                            departments using the latest techniques, we draw insights into your users. You can also explore our <a
+                                href="#" class="font-semibold text-accent-red hover:underline">UX research case studies</a> to see how
+                            these insights have translated into successful product strategies.
+                        </p>
+                        <p class="font-light">
+                            Then, we go for comprehensive research as per your present goals and the areas you want us to address to
+                            ensure the right insights and fastest conversions.
+                        </p>
+                    </div>
+                
+                    <div class="items-center lg:grid lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16">
+                
+                        <div class="mb-8 md:mb-12 lg:mb-0">
+                            <div class="w-full max-w-md mx-auto overflow-hidden rounded-lg shadow-2xl aspect-square">
+                                <div class="w-full h-full bg-center bg-cover"
+                                    style="background-image: url('https://images.unsplash.com/photo-1620021613589-940428d0840c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); background-position: center 30%;">
+                                    <div class="w-full h-full bg-gradient-to-t from-black/50 via-transparent to-black/30"></div>
+                                </div>
+                            </div>
+                        </div>
+                
+                        <div class="pl-4 space-y-6 md:space-y-10 lg:pl-0">
+                
+                            <div class="flex space-x-4">
+                                <i class="fa-solid fa-chart-line text-accent-red text-xl md:text-2xl w-6 md:w-8 pt-0.5 flex-shrink-0"></i>
+                                <div>
+                                    <p class="text-xs md:text-sm lg:text-base font-light">Result-Driven UX Research Services: We deliver impactful research
+                                        solutions for our clientele to arrive at the finest design outcomes.</p>
+                                </div>
+                            </div>
+                
+                            <div class="flex space-x-4">
+                                <i class="fa-solid fa-database text-accent-red text-xl md:text-2xl w-6 md:w-8 pt-0.5 flex-shrink-0"></i>
+                                <div>
+                                    <p class="text-xs md:text-sm lg:text-base font-light">Data-Backed Services: We use strong data to make design choices,
+                                        making sure your product meets what users exactly want.</p>
+                                </div>
+                            </div>
+                
+                            <div class="flex space-x-4">
+                                <i class="fa-solid fa-puzzle-piece text-accent-red text-xl md:text-2xl w-6 md:w-8 pt-0.5 flex-shrink-0"></i>
+                                <div>
+                                    <p class="text-xs md:text-sm lg:text-base font-light">Customization at Each Step: Each product is special; so we
+                                        provide customized <a href="#" class="font-semibold text-accent-red hover:underline">UX design
+                                            for startups</a> and big companies, giving great results.</p>
+                                </div>
+                            </div>
+                
+                        </div>
+                
+                    </div>
+                
+                </section>
+
+                <section class="py-10 md:py-20 bg-dark-blue">
+                    <div class="grid items-center max-w-screen-xl gap-12 px-4 mx-auto sm:px-6 lg:px-8 md:grid-cols-2">
+                        <div class="md:space-y-6 space-y-3">
+                            <h2 class="text-2xl md:text-3xl lg:text-5xl font-bold leading-tight text-white">
+                                Result-Driven UI UX Design Services: <span class="text-accent-red">Our 360° Approach</span>
+                            </h2>
+                            <p class="font-light text-white md:text-md text-xs">
+                                Design a digital product that delivers exceptional user experience and brings your vision to life.
+                                Collaborate with the team of industry-experienced and dedicated UI/UX design consultants and
+                                researchers at Design Studio. Our comprehensive UI/UX consulting services prioritize usability
+                                and aesthetics for the best results.
+                            </p>
+                        </div>
+                
+                        <div class="relative flex justify-center">
+                            <img src="https://www.designstudiouiux.com/static/59debd0a6eeac811bacd0b91119bb4c6/fe10d/banner-description.webp"
+                                alt="UI UX Design Showcase"
+                                class="w-full h-auto max-w-xl border border-gray-700 shadow-2xl rounded-3xl">
+                        </div>
+                    </div>
+                </section>
+                <!-- Design Services Section -->
+                <section class="py-10 md:py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+                    <div class="max-w-screen-xl px-4 mx-auto sm:px-6 lg:px-8">
+                        <!-- Section Header -->
+                        <div class="md:mb-20 mb-10 text-center">
+                            <h2 class="mb-4 md:mb-6 text-2xl md:text-4xl lg:text-5xl font-bold leading-tight text-white">
+                                Comprehensive UI/UX Design Services<br> For <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">Every Need</span>
+                            </h2>
+                            <p class="max-w-3xl mx-auto text-xs md:text-sm lg:text-base font-light text-gray-400">
+                                From user research and wireframing to interactive prototypes and final design systems, we provide 
+                                end-to-end UI/UX design solutions that create meaningful digital experiences.
+                            </p>
+                        </div>
+
+                        <!-- Services Grid - 2x2 -->
+                        <div class="grid gap-8 md:grid-cols-2">
+
+                            <!-- Service 1: User Experience Design -->
+                            <div
+                                class="relative md:p-8 p-4 overflow-hidden transition-all duration-300 border group bg-slate-800/50 border-slate-700 rounded-2xl hover:border-cyan-500/50 hover:shadow-lg hover:shadow-cyan-500/10">
+                                <!-- Background Glow -->
+                                <div
+                                    class="absolute inset-0 transition-all duration-300 bg-gradient-to-br from-cyan-600/0 to-cyan-600/0 group-hover:from-cyan-600/10 group-hover:to-cyan-600/5">
+                                </div>
+
+                                <!-- Icon Box -->
+                                <div
+                                    class="relative z-10 inline-flex items-center justify-center md:w-16 md:h-16 w-10 h-10 md:mb-6 mb-4 transition-all duration-300 rounded-xl bg-gradient-to-br from-cyan-400 to-cyan-600 group-hover:shadow-xl group-hover:shadow-cyan-500/50">
+                                    <svg class="md:w-8 md:h-8 w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                    </svg>
+                                </div>
+
+                                <!-- Content -->
+                                <h3 class="relative z-10 mb-2 md:mb-3 text-lg md:text-xl lg:text-2xl font-bold text-white">User Experience Design</h3>
+                                <p class="relative z-10 mb-6 font-light text-gray-300 text-xs md:text-sm">
+                                    We conduct in-depth user research, create user personas, and design intuitive user flows that 
+                                    <span class="font-semibold text-cyan-300">optimize conversion and engagement</span> for your product.
+                                </p>
+                                <ul class="relative z-10 space-y-2 md:text-sm text-xs text-gray-400">
+                                    <li class="flex items-center">
+                                        <span class="w-1.5 h-1.5 bg-cyan-400 rounded-full mr-3"></span>
+                                        User Research & Testing
+                                    </li>
+                                    <li class="flex items-center">
+                                        <span class="w-1.5 h-1.5 bg-cyan-400 rounded-full mr-3"></span>
+                                        Information Architecture
+                                    </li>
+                                    <li class="flex items-center">
+                                        <span class="w-1.5 h-1.5 bg-cyan-400 rounded-full mr-3"></span>
+                                        User Flow Mapping
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <!-- Service 2: UI Design -->
+                            <div
+                                class="relative md:p-8 p-4 overflow-hidden transition-all duration-300 border group bg-slate-800/50 border-slate-700 rounded-2xl hover:border-purple-500/50 hover:shadow-lg hover:shadow-purple-500/10">
+                                <!-- Background Glow -->
+                                <div
+                                    class="absolute inset-0 transition-all duration-300 bg-gradient-to-br from-purple-600/0 to-purple-600/0 group-hover:from-purple-600/10 group-hover:to-purple-600/5">
+                                </div>
+
+                                <!-- Icon Box -->
+                                <div
+                                    class="relative z-10 inline-flex items-center justify-center md:w-16 md:h-16 w-10 h-10 md:mb-6 mb-4 transition-all duration-300 rounded-xl bg-gradient-to-br from-purple-400 to-purple-600 group-hover:shadow-xl group-hover:shadow-purple-500/50">
+                                    <svg class="md:w-8 md:h-8 w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17v4a2 2 0 002 2h4"></path>
+                                    </svg>
+                                </div>
+
+                                <!-- Content -->
+                                <h3 class="relative z-10 mb-2 md:mb-3 text-lg md:text-xl lg:text-2xl font-bold text-white">UI Design & Branding</h3>
+                                <p class="relative z-10 mb-6 font-light text-gray-300 text-xs md:text-sm">
+                                    We craft visually stunning interfaces that reflect your brand identity while maintaining 
+                                    <span class="font-semibold text-purple-300">consistency and accessibility across all touchpoints</span>.
+                                </p>
+                                <ul class="relative z-10 space-y-2 md:text-sm text-xs text-gray-400">
+                                    <li class="flex items-center">
+                                        <span class="w-1.5 h-1.5 bg-purple-400 rounded-full mr-3"></span>
+                                        Visual Design Systems
+                                    </li>
+                                    <li class="flex items-center">
+                                        <span class="w-1.5 h-1.5 bg-purple-400 rounded-full mr-3"></span>
+                                        Component Libraries
+                                    </li>
+                                    <li class="flex items-center">
+                                        <span class="w-1.5 h-1.5 bg-purple-400 rounded-full mr-3"></span>
+                                        Brand Guidelines
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <!-- Service 3: Prototyping -->
+                            <div
+                                class="relative md:p-8 p-4 overflow-hidden transition-all duration-300 border group bg-slate-800/50 border-slate-700 rounded-2xl hover:border-pink-500/50 hover:shadow-lg hover:shadow-pink-500/10">
+                                <!-- Background Glow -->
+                                <div
+                                    class="absolute inset-0 transition-all duration-300 bg-gradient-to-br from-pink-600/0 to-pink-600/0 group-hover:from-pink-600/10 group-hover:to-pink-600/5">
+                                </div>
+
+                                <!-- Icon Box -->
+                                <div
+                                    class="relative z-10 inline-flex items-center justify-center md:w-16 md:h-16 w-10 h-10 md:mb-6 mb-4 transition-all duration-300 rounded-xl bg-gradient-to-br from-pink-400 to-pink-600 group-hover:shadow-xl group-hover:shadow-pink-500/50">
+                                    <svg class="md:w-8 md:h-8 w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 00 12 18.469V19m0 0v1m0-1c.588 0 1.162.129 1.715.357m0 0a9 9 0 01-1.715-.357m0 0c-.628-.188-1.185-.527-1.679-.987"></path>
+                                    </svg>
+                                </div>
+
+                                <!-- Content -->
+                                <h3 class="relative z-10 mb-2 md:mb-3 text-lg md:text-xl lg:text-2xl font-bold text-white">Prototyping & Interaction</h3>
+                                <p class="relative z-10 mb-6 font-light text-gray-300 text-xs md:text-sm">
+                                    We create interactive prototypes and <span class="font-semibold text-pink-300">high-fidelity mockups</span> 
+                                    that bring your vision to life, allowing for early validation and user testing.
+                                </p>
+                                <ul class="relative z-10 space-y-2 md:text-sm text-xs text-gray-400">
+                                    <li class="flex items-center">
+                                        <span class="w-1.5 h-1.5 bg-pink-400 rounded-full mr-3"></span>
+                                        Interactive Prototypes
+                                    </li>
+                                    <li class="flex items-center">
+                                        <span class="w-1.5 h-1.5 bg-pink-400 rounded-full mr-3"></span>
+                                        Animated Transitions
+                                    </li>
+                                    <li class="flex items-center">
+                                        <span class="w-1.5 h-1.5 bg-pink-400 rounded-full mr-3"></span>
+                                        Usability Testing
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <!-- Service 4: Design Systems -->
+                            <div
+                                class="relative md:p-8 p-4 overflow-hidden transition-all duration-300 border group bg-slate-800/50 border-slate-700 rounded-2xl hover:border-orange-500/50 hover:shadow-lg hover:shadow-orange-500/10">
+                                <!-- Background Glow -->
+                                <div
+                                    class="absolute inset-0 transition-all duration-300 bg-gradient-to-br from-orange-600/0 to-orange-600/0 group-hover:from-orange-600/10 group-hover:to-orange-600/5">
+                                </div>
+
+                                <!-- Icon Box -->
+                                <div
+                                    class="relative z-10 inline-flex items-center justify-center md:w-16 md:h-16 w-10 h-10 md:mb-6 mb-4 transition-all duration-300 rounded-xl bg-gradient-to-br from-orange-400 to-orange-600 group-hover:shadow-xl group-hover:shadow-orange-500/50">
+                                    <svg class="md:w-8 md:h-8 w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                                    </svg>
+                                </div>
+
+                                <!-- Content -->
+                                <h3 class="relative z-10 mb-2 md:mb-3 text-lg md:text-xl lg:text-2xl font-bold text-white">Design Systems & Scalability</h3>
+                                <p class="relative z-10 mb-6 font-light text-gray-300 text-xs md:text-sm">
+                                    We build <span class="font-semibold text-orange-300 ">scalable design systems and documentation</span> 
+                                    that ensure consistency and efficiency across your entire product ecosystem.
+                                </p>
+                                <ul class="relative z-10 space-y-2 md:text-sm text-xs text-gray-400">
+                                    <li class="flex items-center">
+                                        <span class="w-1.5 h-1.5 bg-orange-400 rounded-full mr-3"></span>
+                                        Design Tokens
+                                    </li>
+                                    <li class="flex items-center">
+                                        <span class="w-1.5 h-1.5 bg-orange-400 rounded-full mr-3"></span>
+                                        Component Specifications
+                                    </li>
+                                    <li class="flex items-center">
+                                        <span class="w-1.5 h-1.5 bg-orange-400 rounded-full mr-3"></span>
+                                        Design Documentation
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Design Process Section -->
+                <section class="py-10 md:py-20 bg-main">
+                    <div class="max-w-screen-xl px-4 mx-auto sm:px-6 lg:px-8">
+                        <div class="mb-16 text-center">
+                            <h2 class="mb-3 md:mb-4 text-2xl md:text-4xl lg:text-5xl font-bold text-white">Our Design Process</h2>
+                            <p class="max-w-3xl mx-auto text-xs md:text-sm lg:text-base font-light text-blue-100">
+                                A strategic, user-centered approach to creating meaningful digital experiences
+                            </p>
+                        </div>
+
+                        <div class="grid gap-8 md:grid-cols-4">
+                            <!-- Step 1 -->
+                            <div class="text-center">
+                                <div class="flex items-center justify-center w-12 h-12 md:w-16 md:h-16 mx-auto mb-3 md:mb-4 text-2xl font-bold text-white bg-blue-700 rounded-full">
+                                    1
+                                </div>
+                                <h3 class="mb-3 text-xl font-bold text-white">Research</h3>
+                                <p class="font-light text-blue-100">
+                                    Understanding your users, market, and business goals through comprehensive research
+                                </p>
+                            </div>
+
+                            <!-- Step 2 -->
+                            <div class="text-center">
+                                <div class="flex items-center justify-center w-12 h-12 md:w-16 md:h-16 mx-auto mb-3 md:mb-4 text-2xl font-bold text-white bg-blue-700 rounded-full">
+                                    2
+                                </div>
+                                <h3 class="mb-3 text-xl font-bold text-white">Strategy</h3>
+                                <p class="font-light text-blue-100">
+                                    Creating user personas, user journeys, and strategic design direction
+                                </p>
+                            </div>
+
+                            <!-- Step 3 -->
+                            <div class="text-center">
+                                <div class="flex items-center justify-center w-12 h-12 md:w-16 md:h-16 mx-auto mb-3 md:mb-4 text-2xl font-bold text-white bg-blue-700 rounded-full">
+                                    3
+                                </div>
+                                <h3 class="mb-3 text-xl font-bold text-white">Design</h3>
+                                <p class="font-light text-blue-100">
+                                    Crafting wireframes, prototypes, and high-fidelity designs with iterative refinement
+                                </p>
+                            </div>
+
+                            <!-- Step 4 -->
+                            <div class="text-center">
+                                <div class="flex items-center justify-center w-12 h-12 md:w-16 md:h-16 mx-auto mb-3 md:mb-4 text-2xl font-bold text-white bg-blue-700 rounded-full">
+                                    4
+                                </div>
+                                <h3 class="mb-3 text-xl font-bold text-white">Testing & Handoff</h3>
+                                <p class="font-light text-blue-100">
+                                    User testing, optimization, and seamless handoff to development teams
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Technologies We Use Section -->
+                <section class="py-10 md:py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+                                    <div class="max-w-screen-xl px-4 mx-auto sm:px-6 lg:px-8">
+                                        <!-- Section Layout -->
+                                        <div class="grid items-center gap-6 md:gap-12 lg:grid-cols-2">
+                                            <!-- Left Content -->
+                                            <div>
+                                                <h2 class="mb-4 md:mb-6 text-2xl md:text-4xl lg:text-5xl font-bold leading-tight text-white">
+                                                    Tools & Technologies<br><span
+                                                        class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">We Use.</span>
+                                                </h2>
+                                                <p class="md:text-lg text-xs leading-relaxed text-gray-400">
+                                                    We rely on Figma as our main design tool to create captivating experiences for our clients. Its
+                                                    intuitive interface and powerful features streamline our workflow, from brainstorming ideas to
+                                                    refining concepts and iterating on designs.
+                                                </p>
+                                            </div>
+                                
+                                            <!-- Right - Technologies Grid -->
+                                            <div class="grid grid-cols-2 gap-6 md:grid-cols-3">
+                                                <!-- Figma -->
+                                                <div
+                                                    class="flex flex-col items-center justify-center p-6 transition-all duration-300 bg-white cursor-pointer group rounded-2xl hover:shadow-xl hover:scale-105">
+                                                    <img src="https://www.designstudiouiux.com/static/eef0dac8459416b9b73264bfc4f275fd/2038b/figma-new.jpg"
+                                                        alt="Figma" class="w-12 h-12 mb-4 transition-transform duration-300 group-hover:scale-110">
+                                                    <h3 class="text-sm font-bold text-gray-900">FIGMA</h3>
+                                                </div>
+                                
+                                                <!-- Midjourney -->
+                                                <div
+                                                    class="flex flex-col items-center justify-center p-6 transition-all duration-300 bg-white cursor-pointer group rounded-2xl hover:shadow-xl hover:scale-105">
+                                                    <img src="https://www.designstudiouiux.com/static/818dedbce5188cfdf7e3636bcae0c514/2038b/midjourney-new.jpg"
+                                                        alt="Midjourney" class="w-12 h-12 mb-4 transition-transform duration-300 group-hover:scale-110">
+                                                    <h3 class="text-sm font-bold text-gray-900">MIDJOURNEY</h3>
+                                                </div>
+                                
+                                                <!-- Sketch -->
+                                                <div
+                                                    class="flex flex-col items-center justify-center p-6 transition-all duration-300 bg-white cursor-pointer group rounded-2xl hover:shadow-xl hover:scale-105">
+                                                    <img src="https://www.designstudiouiux.com/static/4b7b6666f1df245228e89ae22b9217fe/2038b/sketch-new.jpg"
+                                                        alt="Sketch" class="w-12 h-12 mb-4 transition-transform duration-300 group-hover:scale-110">
+                                                    <h3 class="text-sm font-bold text-gray-900">SKETCH</h3>
+                                                </div>
+                                
+                                                <!-- ChatGPT -->
+                                                <div
+                                                    class="flex flex-col items-center justify-center p-6 transition-all duration-300 bg-white cursor-pointer group rounded-2xl hover:shadow-xl hover:scale-105">
+                                                    <img src="https://www.designstudiouiux.com/static/22741c09a1753f8ed871fb0cb0674842/2038b/chatgpt-new.jpg"
+                                                        alt="ChatGPT" class="w-12 h-12 mb-4 transition-transform duration-300 group-hover:scale-110">
+                                                    <h3 class="text-sm font-bold text-gray-900">CHATGPT</h3>
+                                                </div>
+                                
+                                                <!-- Adobe XD -->
+                                                <div
+                                                    class="flex flex-col items-center justify-center p-6 transition-all duration-300 bg-white cursor-pointer group rounded-2xl hover:shadow-xl hover:scale-105">
+                                                    <img src="https://www.designstudiouiux.com/static/3fd7d5bb01ca537cd157aedc535ab254/2038b/xd.jpg"
+                                                        alt="Adobe XD" class="w-12 h-12 mb-4 transition-transform duration-300 group-hover:scale-110">
+                                                    <h3 class="text-sm font-bold text-gray-900">ADOBE XD</h3>
+                                                </div>
+                                
+                                                <!-- Framer -->
+                                                <div
+                                                    class="flex flex-col items-center justify-center p-6 transition-all duration-300 bg-white cursor-pointer group rounded-2xl hover:shadow-xl hover:scale-105">
+                                                    <img src="https://www.designstudiouiux.com/static/9a7fc969a886332ae1748d5f5f86b216/1a655/framerLogo.png"
+                                                        alt="Framer" class="w-12 h-12 mb-4 transition-transform duration-300 group-hover:scale-110">
+                                                    <h3 class="text-sm font-bold text-gray-900">FRAMER</h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                </section>
+
+                <!-- FAQ Section -->
+                <section class="py-10 md:py-20 bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900">
+                    <div class="max-w-screen-xl px-4 mx-auto sm:px-6 lg:px-8">
+                        <div class="grid grid-cols-1 gap-8 md:gap-12 lg:grid-cols-3">
+                            <!-- FAQ Questions Column -->
+                            <div class="lg:col-span-2">
+                                <h2 class="mb-2 text-2xl md:text-4xl lg:text-5xl font-bold text-white">
+                                    FAQ
+                                </h2>
+                                <p class="mb-6 md:mb-8 text-xs md:text-sm lg:text-base text-blue-200">Have questions? We've got answers about our UI/UX design services.</p>
+
+                                <!-- FAQ Accordion -->
+                                <div class="space-y-4">
+                                    <!-- Question 1 -->
+                                    <div class="pb-3 md:pb-4 border-b border-slate-700">
+                                        <button onclick="toggleFAQ(this)" class="flex items-center justify-between w-full py-3 md:py-4 text-left transition-colors duration-300 group hover:text-blue-300">
+                                            <span class="text-sm md:text-base lg:text-lg font-semibold text-white group-hover:text-blue-300">
+                                                What is the difference between UI and UX design?
+                                            </span>
+                                            <svg class="w-5 h-5 md:w-6 md:h-6 text-blue-400 transition-transform flex-shrink-0 ml-3 duration-300 transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" data-icon="arrow">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                                            </svg>
+                                        </button>
+                                        <div class="overflow-hidden transition-all duration-300 ease-in-out faq-answer">
+                                            <p class="pt-2 pb-3 md:pb-4 text-xs md:text-sm lg:text-base font-light text-blue-100">
+                                                UX (User Experience) focuses on the overall experience and functionality - how the product works, user flows, and problem-solving. UI (User Interface) is about the visual design - how it looks, colors, typography, and interactive elements. Both are essential and work together to create great products.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <!-- Question 2 -->
+                                    <div class="pb-3 md:pb-4 border-b border-slate-700">
+                                        <button onclick="toggleFAQ(this)" class="flex items-center justify-between w-full py-3 md:py-4 text-left transition-colors duration-300 group hover:text-blue-300">
+                                            <span class="text-sm md:text-base lg:text-lg font-semibold text-white group-hover:text-blue-300">
+                                                How long does the design process typically take?
+                                            </span>
+                                            <svg class="w-5 h-5 md:w-6 md:h-6 text-blue-400 transition-transform flex-shrink-0 ml-3 duration-300 transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" data-icon="arrow">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                                            </svg>
+                                        </button>
+                                        <div class="overflow-hidden transition-all duration-300 ease-in-out faq-answer">
+                                            <p class="pt-2 pb-3 md:pb-4 text-xs md:text-sm lg:text-base font-light text-blue-100">
+                                                Timeline depends on project scope. A simple project (landing page) takes 2-3 weeks, medium complexity (app redesign) takes 4-8 weeks, and complex projects (design system) can take 8-12+ weeks. We'll provide a detailed timeline during our initial consultation.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <!-- Question 3 -->
+                                    <div class="pb-3 md:pb-4 border-b border-slate-700">
+                                        <button onclick="toggleFAQ(this)" class="flex items-center justify-between w-full py-3 md:py-4 text-left transition-colors duration-300 group hover:text-blue-300">
+                                            <span class="text-sm md:text-base lg:text-lg font-semibold text-white group-hover:text-blue-300">
+                                                Do you provide user research and testing?
+                                            </span>
+                                            <svg class="w-5 h-5 md:w-6 md:h-6 text-blue-400 transition-transform flex-shrink-0 ml-3 duration-300 transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" data-icon="arrow">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                                            </svg>
+                                        </button>
+                                        <div class="overflow-hidden transition-all duration-300 ease-in-out faq-answer">
+                                            <p class="pt-2 pb-3 md:pb-4 text-xs md:text-sm lg:text-base font-light text-blue-100">
+                                                Absolutely! We conduct user research, create user personas, perform usability testing, and validate designs with real users. This data-driven approach ensures our designs solve actual user problems.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <!-- Question 4 -->
+                                    <div class="pb-3 md:pb-4 border-b border-slate-700">
+                                        <button onclick="toggleFAQ(this)" class="flex items-center justify-between w-full py-3 md:py-4 text-left transition-colors duration-300 group hover:text-blue-300">
+                                            <span class="text-sm md:text-base lg:text-lg font-semibold text-white group-hover:text-blue-300">
+                                                Will you work with our development team?
+                                            </span>
+                                            <svg class="w-5 h-5 md:w-6 md:h-6 text-blue-400 transition-transform flex-shrink-0 ml-3 duration-300 transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" data-icon="arrow">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                                            </svg>
+                                        </button>
+                                        <div class="overflow-hidden transition-all duration-300 ease-in-out faq-answer">
+                                            <p class="pt-2 pb-3 md:pb-4 text-xs md:text-sm lg:text-base font-light text-blue-100">
+                                                Yes! We collaborate closely with your development teams. We provide detailed specifications, design systems, component handoff, and ongoing support during implementation to ensure the design is executed perfectly.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <!-- Question 5 -->
+                                    <div class="pb-3 md:pb-4 border-b border-slate-700">
+                                        <button onclick="toggleFAQ(this)" class="flex items-center justify-between w-full py-3 md:py-4 text-left transition-colors duration-300 group hover:text-blue-300">
+                                            <span class="text-sm md:text-base lg:text-lg font-semibold text-white group-hover:text-blue-300">
+                                                Do you design for mobile and desktop?
+                                            </span>
+                                            <svg class="w-5 h-5 md:w-6 md:h-6 text-blue-400 transition-transform flex-shrink-0 ml-3 duration-300 transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" data-icon="arrow">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                                            </svg>
+                                        </button>
+                                        <div class="overflow-hidden transition-all duration-300 ease-in-out faq-answer">
+                                            <p class="pt-2 pb-3 md:pb-4 text-xs md:text-sm lg:text-base font-light text-blue-100">
+                                                Of course! We use a mobile-first design approach, ensuring your product works beautifully and functions perfectly on all devices - smartphones, tablets, and desktops.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <!-- Question 6 -->
+                                    <div class="pb-3 md:pb-4 border-b border-slate-700">
+                                        <button onclick="toggleFAQ(this)" class="flex items-center justify-between w-full py-3 md:py-4 text-left transition-colors duration-300 group hover:text-blue-300">
+                                            <span class="text-sm md:text-base lg:text-lg font-semibold text-white group-hover:text-blue-300">
+                                                Can you design for accessibility (WCAG compliance)?
+                                            </span>
+                                            <svg class="w-5 h-5 md:w-6 md:h-6 text-blue-400 transition-transform flex-shrink-0 ml-3 duration-300 transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" data-icon="arrow">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                                            </svg>
+                                        </button>
+                                        <div class="overflow-hidden transition-all duration-300 ease-in-out faq-answer">
+                                            <p class="pt-2 pb-3 md:pb-4 text-xs md:text-sm lg:text-base font-light text-blue-100">
+                                                Yes! Accessibility is integral to our design process. We design with WCAG 2.1 guidelines in mind, ensuring your product is usable by everyone, including people with disabilities.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Team Contact Card -->
+                            <div class="lg:col-span-1">
+                                <div class="sticky p-6 md:p-8 border top-32 border-slate-700 rounded-2xl bg-gradient-to-br from-slate-800 to-slate-900">
+                                    <h3 class="mb-3 md:mb-4 text-lg md:text-xl font-bold text-white">Have More Questions?</h3>
+                                    
+                                    <!-- Team Avatars -->
+                                    <div class="flex items-center mb-4 md:mb-6 -space-x-3">
+                                        <div class="flex items-center justify-center w-10 h-10 md:w-12 md:h-12 border-2 rounded-full bg-gradient-to-br from-cyan-400 to-cyan-600 border-slate-800">
+                                            <svg class="w-5 h-5 md:w-6 md:h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                                <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                                            </svg>
+                                        </div>
+                                        <div class="flex items-center justify-center w-10 h-10 md:w-12 md:h-12 border-2 rounded-full bg-gradient-to-br from-purple-400 to-purple-600 border-slate-800">
+                                            <svg class="w-5 h-5 md:w-6 md:h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                                <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                                            </svg>
+                                        </div>
+                                        <div class="flex items-center justify-center w-10 h-10 md:w-12 md:h-12 border-2 rounded-full bg-gradient-to-br from-pink-400 to-pink-600 border-slate-800">
+                                            <svg class="w-5 h-5 md:w-6 md:h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                                <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                                            </svg>
+                                        </div>
+                                    </div>
+
+                                    <p class="mb-4 md:mb-6 text-xs md:text-sm font-light text-blue-200">
+                                        Ask our design team, feel free to text and get all the answers you need.
+                                    </p>
+
+                                    <a href="/contact" class="inline-flex items-center justify-center w-full px-4 py-2 md:px-6 md:py-3 text-sm md:text-base font-semibold transition-all duration-300 bg-pink-400 border-2 border-pink-400 rounded-lg text-slate-900 hover:bg-transparent hover:text-pink-400">
+                                        ASK QUESTION
+                                        <svg class="w-3 h-3 md:w-4 md:h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- CTA Section -->
+                <section class="flex items-center justify-start md:min-h-screen p-8 sm:p-16">
+                    <div class="max-w-4xl mx-auto">
+                        <h1 class="mb-4 text-5xl font-extrabold leading-tight text-white md:text-8xl">
+                            Got a Project in<br>
+                            Mind?
+                            <span class="inline-flex items-center avatar-stack">
+                                <img class="avatar"
+                                    src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                    alt="Avatar 1">
+                                <img class="avatar"
+                                    src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                    alt="Avatar 2">
+                                <img class="avatar"
+                                    src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                    alt="Avatar 3">
+                            </span>
+                        </h1>
+                        <h2
+                            class="relative inline-block pb-2 text-5xl font-extrabold leading-tight text-transparent md:text-8xl bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
+                            Let's Talk!
+                            <span class="absolute bottom-0 left-0 w-2/3 h-1 bg-accent-pink"></span>
+                        </h2>
+                
+                        <div class="flex items-center md:mt-12 mt-4 space-x-3 text-lg">
+                            <i class="text-white fa-regular fa-envelope"></i>
+                            <a href="mailto:hello@designstudiouiux.com"
+                                class="text-white hover:text-accent-pink hover:underline md:text-sm text-xs">contact@itbizone.com</a>
+                        </div>
+                    </div>
+                </section>
+
+            </main>
+
+        <%- include('../partials/footer.ejs') %>
+
+        <style>
+            .faq-answer {
+                max-height: 0;
+                opacity: 0;
+            }
+            
+            .faq-answer.open {
+                max-height: 1000px;
+                opacity: 1;
+            }
+            
+            .faq-answer.closing {
+                max-height: 0;
+                opacity: 0;
+            }
+        </style>
+
+        <script>
+            // Add navigation active state
+            document.addEventListener('DOMContentLoaded', function() {
+                // Set active nav link
+                const navLinks = document.querySelectorAll('.nav-link');
+                navLinks.forEach(link => {
+                    link.classList.remove('active', 'bg-primary/10', 'text-primary');
+                    link.classList.add('text-gray-700');
+                });
+
+                // Scroll effect on navbar
+                const navbar = document.getElementById('navbar');
+                window.addEventListener('scroll', function() {
+                    if (window.scrollY > 10) {
+                        navbar.classList.add('shadow-md');
+                    } else {
+                        navbar.classList.remove('shadow-md');
+                    }
+                });
+
+                // Mobile menu toggle
+                const mobileToggle = document.getElementById('mobileToggle');
+                const mobileMenu = document.getElementById('mobileMenu');
+
+                if (mobileToggle && mobileMenu) {
+                    mobileToggle.addEventListener('click', function() {
+                        const isOpen = mobileMenu.style.display === 'block';
+                        mobileMenu.style.display = isOpen ? 'none' : 'block';
+                        const lines = document.querySelectorAll('.hamburger-line');
+                        lines.forEach((line, index) => {
+                            if (isOpen) {
+                                line.style.transform = '';
+                            } else {
+                                if (index === 0) line.style.transform = 'rotate(45deg) translateY(10px)';
+                                if (index === 1) line.style.opacity = '0';
+                                if (index === 2) line.style.transform = 'rotate(-45deg) translateY(-10px)';
+                            }
+                        });
+                    });
+                }
+
+                // Contact form handling
+                const contactForm = document.getElementById('contactForm');
+                if (contactForm) {
+                    contactForm.addEventListener('submit', async function(e) {
+                        e.preventDefault();
+                        const formData = new FormData(this);
+                        const data = {
+                            name: formData.get('name'),
+                            email: formData.get('email'),
+                            phone: formData.get('phone'),
+                            message: formData.get('message')
+                        };
+
+                        // Validate email format
+                        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                        if (!emailRegex.test(data.email)) {
+                            showMessage('Please enter a valid email address', 'error');
+                            return;
+                        }
+
+                        // Validate phone format
+                        const phoneRegex = /^[0-9\-\+\(\) ]{10,}$/;
+                        if (!phoneRegex.test(data.phone)) {
+                            showMessage('Please enter a valid phone number', 'error');
+                            return;
+                        }
+
+                        try {
+                            const response = await fetch('/submit-form', {
+                                method: 'POST',
+                                headers: {
+                                    'Content-Type': 'application/json',
+                                },
+                                body: JSON.stringify(data)
+                            });
+
+                            if (response.ok) {
+                                showMessage('Thank you! We will get back to you soon.', 'success');
+                                contactForm.reset();
+                            } else {
+                                showMessage('Something went wrong. Please try again.', 'error');
+                            }
+                        } catch (error) {
+                            showMessage('Error submitting form. Please try again.', 'error');
+                        }
+                    });
+                }
+
+                function showMessage(message, type) {
+                    const alertDiv = document.createElement('div');
+                    alertDiv.className = `fixed top-4 right-4 p-4 rounded-lg ${type === 'success' ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'} shadow-lg max-w-md`;
+                    alertDiv.textContent = message;
+                    document.body.appendChild(alertDiv);
+
+                    // Remove the message after 5 seconds
+                    setTimeout(() => {
+                        alertDiv.remove();
+                    }, 5000);
+                }
+
+                // FAQ Accordion Toggle - Simple Direct Implementation
+                window.toggleFAQ = function(button) {
+                    // Get the answer element (next sibling after button)
+                    const answer = button.nextElementSibling;
+                    if (!answer || !answer.classList.contains('faq-answer')) {
+                        return;
+                    }
+                    
+                    const isOpen = answer.classList.contains('open');
+                    
+                    // Close all other FAQs
+                    document.querySelectorAll('.faq-answer').forEach(ans => {
+                        if (ans !== answer && ans.classList.contains('open')) {
+                            ans.classList.remove('open');
+                            ans.classList.add('closing');
+                            
+                            // Remove closing class after animation completes
+                            setTimeout(() => {
+                                ans.classList.remove('closing');
+                            }, 400);
+                            
+                            const parentBtn = ans.previousElementSibling;
+                            if (parentBtn && parentBtn.querySelector('[data-icon="arrow"]')) {
+                                parentBtn.querySelector('[data-icon="arrow"]').style.transform = 'rotate(0deg)';
+                            }
+                        }
+                    });
+                    
+                    // Toggle current FAQ
+                    if (isOpen) {
+                        answer.classList.remove('open');
+                        answer.classList.add('closing');
+                        
+                        setTimeout(() => {
+                            answer.classList.remove('closing');
+                        }, 400);
+                        
+                        button.querySelector('[data-icon="arrow"]').style.transform = 'rotate(0deg)';
+                    } else {
+                        answer.classList.remove('closing');
+                        answer.classList.add('open');
+                        button.querySelector('[data-icon="arrow"]').style.transform = 'rotate(180deg)';
+                    }
+                };
+            });
+        </script>
+
+    </body>
+
+    </html>

@@ -1,0 +1,425 @@
+@import "tailwindcss";
+
+/* Tailwind CSS 4.1 Base Layer */
+@layer base {
+
+  /* CSS Custom Properties for Light Theme Brand Colors */
+  :root {
+    --color-royal-blue: #2563eb;
+    --color-electric-purple: #8b5cf6;
+    --color-emerald-green: #10b981;
+    --color-amber-gold: #f59e0b;
+    --color-light-gray: #f8fafc;
+    --color-medium-gray: #e2e8f0;
+    --color-dark-gray: #64748b;
+    --color-text-primary: #1e293b;
+    --color-text-secondary: #475569;
+    --color-pure-white: #ffffff;
+    --color-primary: #1f889f;
+    --color-secondary: #f9c053;
+    --color-accent: #06b6d4;
+    --color-background: #ffffff;
+    --color-surface: #f8fafc;
+  }
+
+  /* Font Setup with Inter */
+  html {
+    font-feature-settings: 'cv11', 'ss01';
+    font-variation-settings: 'opsz'auto;
+    scroll-padding-top: 5rem;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: 'Outfit', ui-sans-serif, system-ui, sans-serif;
+    font-weight: 700;
+    line-height: 1.5;
+    margin-bottom: 0.5rem;
+  }
+
+  p,
+  li {
+    font-family: 'Manrope', ui-sans-serif, system-ui, sans-serif;
+    font-weight: 500;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+
+  body {
+    font-family: 'Manrope', ui-sans-serif, system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: var(--color-background);
+    color: var(--color-text-primary);
+  }
+}
+
+/* Tailwind CSS 4.1 Utilities Layer */
+@layer utilities {
+
+  /* Modern Transition Utilities */
+  .transition-smooth {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .transition-fast {
+    transition: all 0.15s ease-out;
+  }
+
+  /* Hover Effects */
+  .hover-lift {
+    transition: transform 0.2s ease;
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-2px);
+  }
+
+  /* Modern Glassmorphism */
+  .glass-effect {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  /* Custom Gradient Utilities */
+  .bg-gradient-brand {
+    background: linear-gradient(135deg, var(--color-royal-blue), var(--color-electric-purple));
+  }
+
+  .bg-gradient-success {
+    background: linear-gradient(135deg, var(--color-emerald-green), var(--color-royal-blue));
+  }
+
+  .bg-gradient-warning {
+    background: linear-gradient(135deg, var(--color-amber-gold), var(--color-emerald-green));
+  }
+
+  /* Shadow Utilities */
+  .shadow-brand {
+    box-shadow: 0 4px 14px 0 rgba(37, 99, 235, 0.15);
+  }
+
+  .shadow-purple {
+    box-shadow: 0 4px 14px 0 rgba(139, 92, 246, 0.15);
+  }
+
+  .shadow-emerald {
+    box-shadow: 0 4px 14px 0 rgba(16, 185, 129, 0.15);
+  }
+
+  /* Light Theme Specific Utilities */
+  .bg-light-surface {
+    background-color: var(--color-surface);
+  }
+
+  .text-light-primary {
+    color: var(--color-text-primary);
+  }
+
+  .text-light-secondary {
+    color: var(--color-text-secondary);
+  }
+
+  .border-light {
+    border-color: var(--color-medium-gray);
+  }
+
+  /* Card Styling for Light Theme */
+  .card-light {
+    background-color: var(--color-pure-white);
+    border: 1px solid var(--color-medium-gray);
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  }
+}
+
+/* Custom utilities for smooth transitions and effects */
+@layer utilities {
+  .navbar-transition {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .hover-lift {
+    transition: transform 0.2s ease;
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-2px);
+  }
+
+  .gradient-royal-purple {
+    background: linear-gradient(135deg, var(--royal-blue), var(--electric-purple));
+  }
+
+  .backdrop-blur-glass {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+
+  /* Dropdown specific utilities */
+  .dropdown-enter {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  .dropdown-enter-active {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 300ms ease-in-out, transform 300ms ease-in-out;
+  }
+
+  .dropdown-shadow {
+    box-shadow: 0 10px 25px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  }
+}
+
+/* Smooth scrolling offset for fixed navbar */
+
+
+/* Override any custom cursor styles */
+
+/* Blob Animation for Hero Section */
+@keyframes blob {
+
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+
+  25% {
+    transform: translate(20px, -50px) scale(1.1);
+  }
+
+  50% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+
+  75% {
+    transform: translate(50px, 50px) scale(1.05);
+  }
+}
+
+.animate-blob {
+  animation: blob 7s infinite;
+}
+
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+
+.animation-delay-4000 {
+  animation-delay: 4s;
+}
+
+/* Floating Card Animation */
+@keyframes float {
+
+  0%,
+  100% {
+    transform: perspective(1200px) translateY(0px) rotateX(0deg);
+  }
+
+  25% {
+    transform: perspective(1200px) translateY(-20px) rotateX(5deg);
+  }
+
+  50% {
+    transform: perspective(1200px) translateY(-40px) rotateX(-5deg);
+  }
+
+  75% {
+    transform: perspective(1200px) translateY(-20px) rotateX(3deg);
+  }
+}
+
+/* Slower Float Animation for Orbs */
+@keyframes float-slow {
+
+  0%,
+  100% {
+    transform: translateY(0px) scale(1);
+  }
+
+  25% {
+    transform: translateY(-30px) scale(1.05);
+  }
+
+  50% {
+    transform: translateY(-60px) scale(0.95);
+  }
+
+  75% {
+    transform: translateY(-30px) scale(1.02);
+  }
+}
+
+.floating-card {
+  backdrop-filter: blur(10px);
+  will-change: transform;
+}
+
+.floating-orb {
+  will-change: transform;
+}
+
+.perspective {
+  perspective: 1200px;
+}
+
+/* 3D Canvas Container */
+#hero-canvas {
+  opacity: 0.6;
+}
+
+/* Scroll Indicator */
+.scroll-indicator {
+  display: flex;
+  justify-content: center;
+}
+
+.scroll-indicator .dot {
+  width: 12px;
+  height: 12px;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  border-radius: 50%;
+  position: relative;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+/* FAQ Accordion Animations */
+@keyframes accordion-open {
+  from {
+    max-height: 0;
+    opacity: 0;
+  }
+
+  to {
+    max-height: 500px;
+    opacity: 1;
+  }
+}
+
+@keyframes accordion-close {
+  from {
+    max-height: 500px;
+    opacity: 1;
+  }
+
+  to {
+    max-height: 0;
+    opacity: 0;
+  }
+}
+
+.faq-answer {
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+}
+
+.faq-answer.open {
+  animation: accordion-open 0.4s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.faq-answer.closing {
+  animation: accordion-close 0.4s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+/* FAQ Button Arrow Icon Animation */
+button[onclick="toggleFAQ(this)"] svg[data-icon="arrow"] {
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.primary {
+  color: #1f889f;
+}
+
+.bg-main {
+  background-color: #1f889f;
+}
+
+.yellow-border {
+  border: 2px solid #f9c053;
+}
+
+.secondary {
+  color: #f9c053;
+}
+
+.bg-secondary {
+  background-color: #f9c053;
+}
+
+.avatar-stack .avatar {
+  display: inline-block;
+  width: 40px;
+  /* Adjust as needed */
+  height: 40px;
+  /* Adjust as needed */
+  border-radius: 50%;
+  border: 2px solid #0b0d1e;
+  /* Border color to match background */
+  margin-left: -10px;
+  /* Overlap */
+  position: relative;
+  z-index: 1;
+}
+
+.avatar-stack .avatar:first-child {
+  margin-left: 0;
+  z-index: 2;
+}
+
+.avatar-stack .avatar:nth-child(2) {
+  z-index: 1;
+}
+
+.avatar-stack .avatar:nth-child(3) {
+  z-index: 0;
+}
+
+/* Custom styles to mimic the card look, especially the subtle border/shadow */
+.stat-card {
+  background-color: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* Styling for the image container to handle the gradient overlay */
+.image-card {
+  height: 100%;
+  /* Important for grid stretching */
+  background-color: #111827;
+  /* Dark background color fallback */
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.image-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 60%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+}

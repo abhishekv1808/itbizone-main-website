@@ -1,0 +1,294 @@
+<%- include('../../partials/head.ejs') %>
+
+<body class="bg-gray-50">
+    <%- include('../../partials/navbar.ejs') %>
+
+    <main class="pt-16">
+        
+        <!-- Hero Section -->
+        <section class="bg-gradient-to-br from-green-600 via-emerald-500 to-green-700 py-20 md:py-32 relative overflow-hidden">
+            <div class="absolute inset-0 bg-black/30"></div>
+            <div class="absolute inset-0">
+                <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-white/10 rounded-full blur-3xl"></div>
+                <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-white/10 rounded-full blur-3xl"></div>
+            </div>
+
+            <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="max-w-4xl">
+                    <a href="/case-studies" class="inline-flex items-center text-white/80 hover:text-white mb-6 transition-colors">
+                        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                        </svg>
+                        Back to Case Studies
+                    </a>
+                    <div class="inline-flex items-center px-4 py-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full mb-6">
+                        <span class="text-white text-sm font-medium">Music Streaming Platform</span>
+                    </div>
+                    <h1 class="text-4xl md:text-6xl font-bold text-white mb-6">
+                        Spotify: The Sound of Success
+                    </h1>
+                    <p class="text-xl text-white/90 mb-8">
+                        Creating the world's leading music streaming experience with 350M+ users through personalized discovery, seamless playback, and cross-platform excellence.
+                    </p>
+                    <div class="grid grid-cols-3 gap-6">
+                        <div class="bg-white/10 backdrop-blur-sm rounded-xl p-4">
+                            <div class="text-3xl font-bold text-white">25%</div>
+                            <div class="text-white/80 text-sm">More Listening Time</div>
+                        </div>
+                        <div class="bg-white/10 backdrop-blur-sm rounded-xl p-4">
+                            <div class="text-3xl font-bold text-white">350M+</div>
+                            <div class="text-white/80 text-sm">Active Users</div>
+                        </div>
+                        <div class="bg-white/10 backdrop-blur-sm rounded-xl p-4">
+                            <div class="text-3xl font-bold text-white">Zero</div>
+                            <div class="text-white/80 text-sm">Interruptions</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Overview -->
+        <section class="py-16 bg-white">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex items-center mb-6">
+                    <div class="w-12 h-1 bg-green-600 mr-4"></div>
+                    <h2 class="text-3xl font-bold text-gray-900">Overview</h2>
+                </div>
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Spotify is the world's leading music streaming service with over 350 million users accessing music, podcasts, and playlists. 
+                    The platform has revolutionized how people discover and enjoy music, offering personalized recommendations and a vast library 
+                    of content accessible across all devices. From mobile phones to smart speakers, Spotify delivers a consistent, high-quality 
+                    streaming experience that keeps users engaged for hours.
+                </p>
+            </div>
+        </section>
+
+        <!-- Client Goals -->
+        <section class="py-16 bg-gray-50">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex items-center mb-8">
+                    <div class="w-12 h-1 bg-green-600 mr-4"></div>
+                    <h2 class="text-3xl font-bold text-gray-900">Client Goals</h2>
+                </div>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-200">
+                        <div class="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center mb-4">
+                            <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Smooth Streaming</h3>
+                        <p class="text-gray-600">Deliver uninterrupted music streaming with zero buffering and instant playback across all network conditions.</p>
+                    </div>
+                    <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-200">
+                        <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-4">
+                            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Personalized Discovery</h3>
+                        <p class="text-gray-600">Create an intelligent music discovery system that helps users find new music they'll love.</p>
+                    </div>
+                    <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-200">
+                        <div class="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center mb-4">
+                            <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Modern Interface</h3>
+                        <p class="text-gray-600">Design a clean, modern dark-themed UI that's perfect for extended listening sessions.</p>
+                    </div>
+                    <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-200">
+                        <div class="w-12 h-12 bg-orange-100 rounded-xl flex items-center justify-center mb-4">
+                            <svg class="w-6 h-6 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Cross-Platform Experience</h3>
+                        <p class="text-gray-600">Ensure seamless experience across web, mobile, desktop, smart speakers, and car systems.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Challenges -->
+        <section class="py-16 bg-white">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex items-center mb-8">
+                    <div class="w-12 h-1 bg-green-600 mr-4"></div>
+                    <h2 class="text-3xl font-bold text-gray-900">Challenges</h2>
+                </div>
+                <div class="space-y-4">
+                    <div class="flex items-start bg-gray-50 rounded-xl p-6">
+                        <div class="w-8 h-8 bg-green-600 rounded-full flex items-center justify-center flex-shrink-0 mr-4">
+                            <span class="text-white font-bold">1</span>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold text-gray-900 mb-2">Real-Time Music Recommendations</h3>
+                            <p class="text-gray-600">Building an AI system that learns user preferences and provides accurate, engaging music recommendations in real-time.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start bg-gray-50 rounded-xl p-6">
+                        <div class="w-8 h-8 bg-green-600 rounded-full flex items-center justify-center flex-shrink-0 mr-4">
+                            <span class="text-white font-bold">2</span>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold text-gray-900 mb-2">Managing Huge Content Libraries</h3>
+                            <p class="text-gray-600">Handling millions of songs, podcasts, and playlists with efficient search and instant access.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start bg-gray-50 rounded-xl p-6">
+                        <div class="w-8 h-8 bg-green-600 rounded-full flex items-center justify-center flex-shrink-0 mr-4">
+                            <span class="text-white font-bold">3</span>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold text-gray-900 mb-2">Uniform Design Across Platforms</h3>
+                            <p class="text-gray-600">Maintaining consistent brand experience and functionality across diverse devices and operating systems.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Solution -->
+        <section class="py-16 bg-gradient-to-br from-gray-50 to-gray-100">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex items-center mb-8">
+                    <div class="w-12 h-1 bg-green-600 mr-4"></div>
+                    <h2 class="text-3xl font-bold text-gray-900">Our Solution</h2>
+                </div>
+                
+                <div class="bg-white rounded-2xl p-8 shadow-lg mb-8">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Strategic Analysis</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <svg class="w-6 h-6 text-green-600 mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                            <p class="text-gray-700">Personalization drives user retention - users stay longer when they discover music they love.</p>
+                        </div>
+                        <div class="flex items-start">
+                            <svg class="w-6 h-6 text-green-600 mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                            <p class="text-gray-700">Dark-themed UI improves long session comfort and reduces eye strain during extended listening.</p>
+                        </div>
+                        <div class="flex items-start">
+                            <svg class="w-6 h-6 text-green-600 mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                            <p class="text-gray-700">Smart caching and adaptive streaming reduce buffering and data usage significantly.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl p-8 shadow-lg">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6">Implementation Approach</h3>
+                    <div class="space-y-6">
+                        <div class="border-l-4 border-green-600 pl-6">
+                            <h4 class="text-xl font-bold text-gray-900 mb-2">Fast, Lightweight Frontend</h4>
+                            <p class="text-gray-700">Built with optimized React components ensuring instant navigation and minimal resource consumption across all devices.</p>
+                        </div>
+                        <div class="border-l-4 border-blue-600 pl-6">
+                            <h4 class="text-xl font-bold text-gray-900 mb-2">AI-Powered Recommendations</h4>
+                            <p class="text-gray-700">Implemented Discover Weekly, Release Radar, and Daily Mix using machine learning algorithms that analyze listening patterns.</p>
+                        </div>
+                        <div class="border-l-4 border-purple-600 pl-6">
+                            <h4 class="text-xl font-bold text-gray-900 mb-2">Scalable Backend</h4>
+                            <p class="text-gray-700">Microservices architecture handling billions of streams with real-time analytics and instant playback initiation.</p>
+                        </div>
+                        <div class="border-l-4 border-orange-600 pl-6">
+                            <h4 class="text-xl font-bold text-gray-900 mb-2">Adaptive Streaming Technology</h4>
+                            <p class="text-gray-700">Smart bitrate adjustment based on network conditions ensuring smooth playback without interruptions.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Results -->
+        <section class="py-16 bg-white">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex items-center mb-8">
+                    <div class="w-12 h-1 bg-green-600 mr-4"></div>
+                    <h2 class="text-3xl font-bold text-gray-900">Results & Impact</h2>
+                </div>
+                <div class="grid md:grid-cols-3 gap-6 mb-8">
+                    <div class="bg-gradient-to-br from-green-50 to-green-100 rounded-2xl p-8 text-center">
+                        <div class="text-5xl font-bold text-green-600 mb-2">25%</div>
+                        <div class="text-gray-700 font-semibold">Increase in Listening Time</div>
+                        <p class="text-sm text-gray-600 mt-2">Users spend more time on platform discovering new music</p>
+                    </div>
+                    <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-8 text-center">
+                        <div class="text-5xl font-bold text-blue-600 mb-2">350M+</div>
+                        <div class="text-gray-700 font-semibold">Active Users</div>
+                        <p class="text-sm text-gray-600 mt-2">Global user base across all platforms</p>
+                    </div>
+                    <div class="bg-gradient-to-br from-purple-50 to-purple-100 rounded-2xl p-8 text-center">
+                        <div class="text-5xl font-bold text-purple-600 mb-2">Seamless</div>
+                        <div class="text-gray-700 font-semibold">Experience</div>
+                        <p class="text-sm text-gray-600 mt-2">Industry-leading music discovery and playback</p>
+                    </div>
+                </div>
+                
+                <div class="bg-gradient-to-r from-green-600 to-emerald-600 rounded-2xl p-8 text-white">
+                    <h3 class="text-2xl font-bold mb-4">Key Achievements</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 mr-3 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>Faster onboarding process using social login integration</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 mr-3 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>Industry-leading music discovery with AI-powered playlists</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 mr-3 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>Cross-platform synchronization allowing seamless device switching</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 mr-3 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>Offline mode with smart downloads for uninterrupted listening</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
+                    Ready to Build Your Streaming Platform?
+                </h2>
+                <p class="text-xl text-gray-300 mb-8">
+                    Let's create an engaging digital experience that keeps users coming back.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="/quotation" class="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-green-600 to-emerald-600 text-white rounded-xl font-semibold hover:shadow-lg hover:shadow-green-500/50 transition-all duration-300 hover:-translate-y-1">
+                        Start Your Project
+                        <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                        </svg>
+                    </a>
+                    <a href="/case-studies" class="inline-flex items-center justify-center px-8 py-4 bg-transparent border-2 border-white text-white rounded-xl font-semibold hover:bg-white hover:text-slate-900 transition-all duration-300">
+                        View More Case Studies
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <%- include('../../partials/footer.ejs') %>
+</body>
+</html>

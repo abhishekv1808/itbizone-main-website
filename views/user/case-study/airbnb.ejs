@@ -1,0 +1,356 @@
+<%- include('../../partials/head.ejs') %>
+
+<body class="bg-gray-50">
+    <%- include('../../partials/navbar.ejs') %>
+
+    <main class="pt-16">
+        
+        <!-- Hero Section -->
+        <section class="bg-gradient-to-br from-pink-600 via-red-500 to-rose-600 py-20 md:py-32 relative overflow-hidden">
+            <div class="absolute inset-0 bg-black/20"></div>
+            <div class="absolute inset-0">
+                <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-white/10 rounded-full blur-3xl"></div>
+                <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-white/10 rounded-full blur-3xl"></div>
+            </div>
+
+            <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="max-w-4xl">
+                    <a href="/case-studies" class="inline-flex items-center text-white/80 hover:text-white mb-6 transition-colors">
+                        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                        </svg>
+                        Back to Case Studies
+                    </a>
+                    <div class="inline-flex items-center px-4 py-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full mb-6">
+                        <span class="text-white text-sm font-medium">Global Hospitality Platform</span>
+                    </div>
+                    <h1 class="text-4xl md:text-6xl font-bold text-white mb-6">
+                        Airbnb: Revolutionizing Global Travel
+                    </h1>
+                    <p class="text-xl text-white/90 mb-8">
+                        Building a worldwide marketplace connecting millions of travelers with unique homestays and vacation rentals through intuitive design and powerful technology.
+                    </p>
+                    <div class="grid grid-cols-3 gap-6">
+                        <div class="bg-white/10 backdrop-blur-sm rounded-xl p-4">
+                            <div class="text-3xl font-bold text-white">2x</div>
+                            <div class="text-white/80 text-sm">Faster Booking</div>
+                        </div>
+                        <div class="bg-white/10 backdrop-blur-sm rounded-xl p-4">
+                            <div class="text-3xl font-bold text-white">30%</div>
+                            <div class="text-white/80 text-sm">More Engagement</div>
+                        </div>
+                        <div class="bg-white/10 backdrop-blur-sm rounded-xl p-4">
+                            <div class="text-3xl font-bold text-white">99.99%</div>
+                            <div class="text-white/80 text-sm">Uptime</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Overview -->
+        <section class="py-16 bg-white">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex items-center mb-6">
+                    <div class="w-12 h-1 bg-pink-600 mr-4"></div>
+                    <h2 class="text-3xl font-bold text-gray-900">Overview</h2>
+                </div>
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Airbnb is a worldwide marketplace connecting travelers with hosts offering homestays and vacation rentals. 
+                    The platform serves millions of users daily, transforming how people travel and experience new destinations. 
+                    From cozy apartments to luxury villas, Airbnb has become synonymous with unique, authentic travel experiences.
+                </p>
+            </div>
+        </section>
+
+        <!-- Case Study Banner -->
+        <section class="py-16 bg-gradient-to-br from-gray-50 to-gray-100">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex items-center mb-8">
+                    <div class="w-12 h-1 bg-pink-600 mr-4"></div>
+                    <h2 class="text-3xl font-bold text-gray-900">What Makes the UX so Effective?</h2>
+                </div>
+                <div class="bg-white rounded-2xl shadow-2xl overflow-hidden">
+                    <img src="/images/case-studies/airbnb-banner.jpg" alt="Airbnb UX Design Case Study" class="w-full h-auto">
+                </div>
+                <div class="mt-6 bg-white rounded-xl p-6 shadow-lg">
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">UX Highlights</h3>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div class="flex items-start">
+                            <svg class="w-6 h-6 text-pink-600 mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <div>
+                                <h4 class="font-semibold text-gray-900 mb-1">Intuitive Search Interface</h4>
+                                <p class="text-sm text-gray-600">Clean search bar with location, dates, and guest selection all in one place</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <svg class="w-6 h-6 text-pink-600 mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <div>
+                                <h4 class="font-semibold text-gray-900 mb-1">Visual Property Cards</h4>
+                                <p class="text-sm text-gray-600">High-quality images with guest favorite badges and ratings prominently displayed</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <svg class="w-6 h-6 text-pink-600 mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <div>
+                                <h4 class="font-semibold text-gray-900 mb-1">Smart Filtering Options</h4>
+                                <p class="text-sm text-gray-600">Easy-to-use filters for property types, amenities, and pricing preferences</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <svg class="w-6 h-6 text-pink-600 mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <div>
+                                <h4 class="font-semibold text-gray-900 mb-1">Trust Indicators</h4>
+                                <p class="text-sm text-gray-600">Guest reviews, Superhost badges, and verified listings build immediate trust</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Client Goals -->
+        <section class="py-16 bg-gray-50">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex items-center mb-8">
+                    <div class="w-12 h-1 bg-pink-600 mr-4"></div>
+                    <h2 class="text-3xl font-bold text-gray-900">Client Goals</h2>
+                </div>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-200">
+                        <div class="w-12 h-12 bg-pink-100 rounded-xl flex items-center justify-center mb-4">
+                            <svg class="w-6 h-6 text-pink-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">User-Friendly Booking</h3>
+                        <p class="text-gray-600">Create an intuitive platform that makes finding and booking accommodations effortless for travelers worldwide.</p>
+                    </div>
+                    <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-200">
+                        <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-4">
+                            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Build Trust</h3>
+                        <p class="text-gray-600">Establish trust through verified listings, secure payments, and comprehensive host and guest reviews.</p>
+                    </div>
+                    <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-200">
+                        <div class="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center mb-4">
+                            <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Simplify Host Management</h3>
+                        <p class="text-gray-600">Provide hosts with powerful tools to manage listings, bookings, and guest communications efficiently.</p>
+                    </div>
+                    <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-200">
+                        <div class="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center mb-4">
+                            <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Global Performance</h3>
+                        <p class="text-gray-600">Ensure fast, reliable performance worldwide with optimized infrastructure and global CDN delivery.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Challenges -->
+        <section class="py-16 bg-white">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex items-center mb-8">
+                    <div class="w-12 h-1 bg-pink-600 mr-4"></div>
+                    <h2 class="text-3xl font-bold text-gray-900">Challenges</h2>
+                </div>
+                <div class="space-y-4">
+                    <div class="flex items-start bg-gray-50 rounded-xl p-6">
+                        <div class="w-8 h-8 bg-pink-600 rounded-full flex items-center justify-center flex-shrink-0 mr-4">
+                            <span class="text-white font-bold">1</span>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold text-gray-900 mb-2">Managing Large-Scale Global Traffic</h3>
+                            <p class="text-gray-600">Handling millions of concurrent users across different time zones with varying network conditions required robust infrastructure.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start bg-gray-50 rounded-xl p-6">
+                        <div class="w-8 h-8 bg-pink-600 rounded-full flex items-center justify-center flex-shrink-0 mr-4">
+                            <span class="text-white font-bold">2</span>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold text-gray-900 mb-2">Ensuring Secure Payments</h3>
+                            <p class="text-gray-600">Building a payment system that handles multiple currencies, payment methods, and ensures complete transaction security.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start bg-gray-50 rounded-xl p-6">
+                        <div class="w-8 h-8 bg-pink-600 rounded-full flex items-center justify-center flex-shrink-0 mr-4">
+                            <span class="text-white font-bold">3</span>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold text-gray-900 mb-2">Consistent Cross-Platform Experience</h3>
+                            <p class="text-gray-600">Maintaining seamless user experience across mobile apps, web browsers, and various devices without compromising functionality.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start bg-gray-50 rounded-xl p-6">
+                        <div class="w-8 h-8 bg-pink-600 rounded-full flex items-center justify-center flex-shrink-0 mr-4">
+                            <span class="text-white font-bold">4</span>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold text-gray-900 mb-2">Diverse Property Types & Advanced Filtering</h3>
+                            <p class="text-gray-600">Creating a flexible system to handle various property types with sophisticated search and filtering capabilities.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Solution -->
+        <section class="py-16 bg-gradient-to-br from-gray-50 to-gray-100">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex items-center mb-8">
+                    <div class="w-12 h-1 bg-pink-600 mr-4"></div>
+                    <h2 class="text-3xl font-bold text-gray-900">Our Solution</h2>
+                </div>
+                
+                <div class="bg-white rounded-2xl p-8 shadow-lg mb-8">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Strategic Analysis</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <svg class="w-6 h-6 text-pink-600 mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                            <p class="text-gray-700">Users needed an intuitive search and map-based browsing experience to discover properties easily and visually.</p>
+                        </div>
+                        <div class="flex items-start">
+                            <svg class="w-6 h-6 text-pink-600 mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                            <p class="text-gray-700">Strong visual storytelling with high-quality property images significantly increased booking conversions.</p>
+                        </div>
+                        <div class="flex items-start">
+                            <svg class="w-6 h-6 text-pink-600 mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                            <p class="text-gray-700">Real-time availability and dynamic pricing required robust backend architecture with instant updates.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl p-8 shadow-lg">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6">Implementation Approach</h3>
+                    <div class="space-y-6">
+                        <div class="border-l-4 border-pink-600 pl-6">
+                            <h4 class="text-xl font-bold text-gray-900 mb-2">Minimal UI with Strong Visual Hierarchy</h4>
+                            <p class="text-gray-700">Designed a clean, intuitive interface that puts properties front and center with clear navigation and seamless booking flow.</p>
+                        </div>
+                        <div class="border-l-4 border-blue-600 pl-6">
+                            <h4 class="text-xl font-bold text-gray-900 mb-2">Smart Search System</h4>
+                            <p class="text-gray-700">Implemented advanced search with location-based filtering, price range controls, amenity selection, and interactive map integration.</p>
+                        </div>
+                        <div class="border-l-4 border-purple-600 pl-6">
+                            <h4 class="text-xl font-bold text-gray-900 mb-2">Secure Multi-Gateway Payment Integration</h4>
+                            <p class="text-gray-700">Built a robust payment system supporting multiple currencies, payment methods, and secure transaction processing with fraud detection.</p>
+                        </div>
+                        <div class="border-l-4 border-green-600 pl-6">
+                            <h4 class="text-xl font-bold text-gray-900 mb-2">Optimized CDN-Based Image Delivery</h4>
+                            <p class="text-gray-700">Implemented global CDN infrastructure with smart image compression and lazy loading for lightning-fast property photo delivery.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Results -->
+        <section class="py-16 bg-white">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex items-center mb-8">
+                    <div class="w-12 h-1 bg-pink-600 mr-4"></div>
+                    <h2 class="text-3xl font-bold text-gray-900">Results & Impact</h2>
+                </div>
+                <div class="grid md:grid-cols-3 gap-6 mb-8">
+                    <div class="bg-gradient-to-br from-pink-50 to-pink-100 rounded-2xl p-8 text-center">
+                        <div class="text-5xl font-bold text-pink-600 mb-2">2x</div>
+                        <div class="text-gray-700 font-semibold">Faster Booking Experience</div>
+                        <p class="text-sm text-gray-600 mt-2">Streamlined booking process reduced time-to-reservation by 50%</p>
+                    </div>
+                    <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-8 text-center">
+                        <div class="text-5xl font-bold text-blue-600 mb-2">30%</div>
+                        <div class="text-gray-700 font-semibold">User Engagement Improvement</div>
+                        <p class="text-sm text-gray-600 mt-2">Increased time on platform and property views per session</p>
+                    </div>
+                    <div class="bg-gradient-to-br from-purple-50 to-purple-100 rounded-2xl p-8 text-center">
+                        <div class="text-5xl font-bold text-purple-600 mb-2">99.99%</div>
+                        <div class="text-gray-700 font-semibold">Global Uptime</div>
+                        <p class="text-sm text-gray-600 mt-2">Reliable platform performance with exceptional scalability</p>
+                    </div>
+                </div>
+                
+                <div class="bg-gradient-to-r from-pink-600 to-rose-600 rounded-2xl p-8 text-white">
+                    <h3 class="text-2xl font-bold mb-4">Key Achievements</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 mr-3 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>Successfully handles millions of concurrent users across 220+ countries</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 mr-3 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>Reduced page load times by 60% through optimized infrastructure</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 mr-3 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>Implemented AI-powered recommendation engine increasing booking conversion</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 mr-3 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>Built trust system with verified reviews increasing user confidence by 45%</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
+                    Want Similar Results for Your Platform?
+                </h2>
+                <p class="text-xl text-gray-300 mb-8">
+                    Let's discuss how we can transform your digital presence with innovative solutions.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="/quotation" class="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-pink-600 to-rose-600 text-white rounded-xl font-semibold hover:shadow-lg hover:shadow-pink-500/50 transition-all duration-300 hover:-translate-y-1">
+                        Start Your Project
+                        <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                        </svg>
+                    </a>
+                    <a href="/case-studies" class="inline-flex items-center justify-center px-8 py-4 bg-transparent border-2 border-white text-white rounded-xl font-semibold hover:bg-white hover:text-slate-900 transition-all duration-300">
+                        View More Case Studies
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <%- include('../../partials/footer.ejs') %>
+</body>
+</html>

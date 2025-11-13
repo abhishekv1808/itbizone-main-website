@@ -1,0 +1,295 @@
+<%- include('../../partials/head.ejs') %>
+
+<body class="bg-gray-50">
+    <%- include('../../partials/navbar.ejs') %>
+
+    <main class="pt-16">
+        
+        <!-- Hero Section -->
+        <section class="bg-gradient-to-br from-red-600 via-rose-500 to-red-700 py-20 md:py-32 relative overflow-hidden">
+            <div class="absolute inset-0 bg-black/20"></div>
+            <div class="absolute inset-0">
+                <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-white/10 rounded-full blur-3xl"></div>
+                <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-white/10 rounded-full blur-3xl"></div>
+            </div>
+
+            <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="max-w-4xl">
+                    <a href="/case-studies" class="inline-flex items-center text-white/80 hover:text-white mb-6 transition-colors">
+                        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                        </svg>
+                        Back to Case Studies
+                    </a>
+                    <div class="inline-flex items-center px-4 py-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full mb-6">
+                        <span class="text-white text-sm font-medium">Food Delivery Platform</span>
+                    </div>
+                    <h1 class="text-4xl md:text-6xl font-bold text-white mb-6">
+                        Zomato: Delivering Excellence
+                    </h1>
+                    <p class="text-xl text-white/90 mb-8">
+                        India's top food discovery and delivery platform serving millions daily with real-time tracking, personalized recommendations, and seamless ordering experience.
+                    </p>
+                    <div class="grid grid-cols-3 gap-6">
+                        <div class="bg-white/10 backdrop-blur-sm rounded-xl p-4">
+                            <div class="text-3xl font-bold text-white">40%</div>
+                            <div class="text-white/80 text-sm">Faster Delivery</div>
+                        </div>
+                        <div class="bg-white/10 backdrop-blur-sm rounded-xl p-4">
+                            <div class="text-3xl font-bold text-white">25%</div>
+                            <div class="text-white/80 text-sm">Higher Conversion</div>
+                        </div>
+                        <div class="bg-white/10 backdrop-blur-sm rounded-xl p-4">
+                            <div class="text-3xl font-bold text-white">Millions</div>
+                            <div class="text-white/80 text-sm">Daily Orders</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Overview -->
+        <section class="py-16 bg-white">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex items-center mb-6">
+                    <div class="w-12 h-1 bg-red-600 mr-4"></div>
+                    <h2 class="text-3xl font-bold text-gray-900">Overview</h2>
+                </div>
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Zomato is India's top food discovery and delivery platform with millions of daily users, restaurants, and delivery partners. 
+                    The platform has transformed how people order food, offering everything from restaurant discovery and reviews to fast, reliable 
+                    delivery with real-time tracking. Zomato connects food lovers with their favorite restaurants and enables businesses to reach 
+                    millions of hungry customers through a seamless digital platform.
+                </p>
+            </div>
+        </section>
+
+        <!-- Client Goals -->
+        <section class="py-16 bg-gray-50">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex items-center mb-8">
+                    <div class="w-12 h-1 bg-red-600 mr-4"></div>
+                    <h2 class="text-3xl font-bold text-gray-900">Client Goals</h2>
+                </div>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-200">
+                        <div class="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center mb-4">
+                            <svg class="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Fast Food Ordering</h3>
+                        <p class="text-gray-600">Offer a fast, reliable food ordering experience with quick menu browsing and seamless checkout.</p>
+                    </div>
+                    <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-200">
+                        <div class="w-12 h-12 bg-orange-100 rounded-xl flex items-center justify-center mb-4">
+                            <svg class="w-6 h-6 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Restaurant Discovery</h3>
+                        <p class="text-gray-600">Provide detailed restaurant listings with photos, reviews, ratings, and cuisine filters.</p>
+                    </div>
+                    <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-200">
+                        <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-4">
+                            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Real-Time Tracking</h3>
+                        <p class="text-gray-600">Enable real-time order tracking so customers know exactly when their food will arrive.</p>
+                    </div>
+                    <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-200">
+                        <div class="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center mb-4">
+                            <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Improve Retention</h3>
+                        <p class="text-gray-600">Create engaging features and personalization to keep users coming back for more orders.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Challenges -->
+        <section class="py-16 bg-white">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex items-center mb-8">
+                    <div class="w-12 h-1 bg-red-600 mr-4"></div>
+                    <h2 class="text-3xl font-bold text-gray-900">Challenges</h2>
+                </div>
+                <div class="space-y-4">
+                    <div class="flex items-start bg-gray-50 rounded-xl p-6">
+                        <div class="w-8 h-8 bg-red-600 rounded-full flex items-center justify-center flex-shrink-0 mr-4">
+                            <span class="text-white font-bold">1</span>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold text-gray-900 mb-2">Handling Peak Load</h3>
+                            <p class="text-gray-600">Managing massive traffic spikes during lunch and dinner hours without performance degradation.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start bg-gray-50 rounded-xl p-6">
+                        <div class="w-8 h-8 bg-red-600 rounded-full flex items-center justify-center flex-shrink-0 mr-4">
+                            <span class="text-white font-bold">2</span>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold text-gray-900 mb-2">Accurate Mapping & Delivery Assignment</h3>
+                            <p class="text-gray-600">Implementing intelligent delivery partner assignment and route optimization for fastest delivery.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start bg-gray-50 rounded-xl p-6">
+                        <div class="w-8 h-8 bg-red-600 rounded-full flex items-center justify-center flex-shrink-0 mr-4">
+                            <span class="text-white font-bold">3</span>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold text-gray-900 mb-2">Dynamic Menus & Pricing</h3>
+                            <p class="text-gray-600">Displaying real-time menu updates, pricing changes, and availability across thousands of restaurants.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Solution -->
+        <section class="py-16 bg-gradient-to-br from-gray-50 to-gray-100">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex items-center mb-8">
+                    <div class="w-12 h-1 bg-red-600 mr-4"></div>
+                    <h2 class="text-3xl font-bold text-gray-900">Our Solution</h2>
+                </div>
+                
+                <div class="bg-white rounded-2xl p-8 shadow-lg mb-8">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Strategic Analysis</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <svg class="w-6 h-6 text-red-600 mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                            <p class="text-gray-700">Users needed faster load time for menus to reduce friction in ordering process.</p>
+                        </div>
+                        <div class="flex items-start">
+                            <svg class="w-6 h-6 text-red-600 mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                            <p class="text-gray-700">Real-time data (delivery ETA, order updates) was critical for customer satisfaction.</p>
+                        </div>
+                        <div class="flex items-start">
+                            <svg class="w-6 h-6 text-red-600 mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                            <p class="text-gray-700">Smart recommendation engine boosts conversions by suggesting relevant restaurants and dishes.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl p-8 shadow-lg">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6">Implementation Approach</h3>
+                    <div class="space-y-6">
+                        <div class="border-l-4 border-red-600 pl-6">
+                            <h4 class="text-xl font-bold text-gray-900 mb-2">API-Based Modular Architecture</h4>
+                            <p class="text-gray-700">Built scalable microservices for restaurants, orders, delivery, and payments ensuring high availability.</p>
+                        </div>
+                        <div class="border-l-4 border-orange-600 pl-6">
+                            <h4 class="text-xl font-bold text-gray-900 mb-2">Real-Time Driver Tracking</h4>
+                            <p class="text-gray-700">Implemented GPS-based tracking system with live updates and intelligent route optimization algorithms.</p>
+                        </div>
+                        <div class="border-l-4 border-blue-600 pl-6">
+                            <h4 class="text-xl font-bold text-gray-900 mb-2">Optimized Menu Rendering</h4>
+                            <p class="text-gray-700">Created fast-loading menu system with image optimization, lazy loading, and smart caching strategies.</p>
+                        </div>
+                        <div class="border-l-4 border-purple-600 pl-6">
+                            <h4 class="text-xl font-bold text-gray-900 mb-2">Personalized Restaurant Suggestions</h4>
+                            <p class="text-gray-700">AI-powered recommendation engine analyzing order history, preferences, and trending restaurants.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Results -->
+        <section class="py-16 bg-white">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex items-center mb-8">
+                    <div class="w-12 h-1 bg-red-600 mr-4"></div>
+                    <h2 class="text-3xl font-bold text-gray-900">Results & Impact</h2>
+                </div>
+                <div class="grid md:grid-cols-3 gap-6 mb-8">
+                    <div class="bg-gradient-to-br from-red-50 to-red-100 rounded-2xl p-8 text-center">
+                        <div class="text-5xl font-bold text-red-600 mb-2">40%</div>
+                        <div class="text-gray-700 font-semibold">Reduction in Delivery Time</div>
+                        <p class="text-sm text-gray-600 mt-2">Optimized routing and partner assignment</p>
+                    </div>
+                    <div class="bg-gradient-to-br from-orange-50 to-orange-100 rounded-2xl p-8 text-center">
+                        <div class="text-5xl font-bold text-orange-600 mb-2">25%</div>
+                        <div class="text-gray-700 font-semibold">Higher New User Conversion</div>
+                        <p class="text-sm text-gray-600 mt-2">Improved onboarding and first-time experience</p>
+                    </div>
+                    <div class="bg-gradient-to-br from-yellow-50 to-yellow-100 rounded-2xl p-8 text-center">
+                        <div class="text-5xl font-bold text-yellow-600 mb-2">Millions</div>
+                        <div class="text-gray-700 font-semibold">Daily Orders</div>
+                        <p class="text-sm text-gray-600 mt-2">Seamless delivery experience at scale</p>
+                    </div>
+                </div>
+                
+                <div class="bg-gradient-to-r from-red-600 to-rose-600 rounded-2xl p-8 text-white">
+                    <h3 class="text-2xl font-bold mb-4">Key Achievements</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 mr-3 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>Built intelligent delivery partner matching system reducing wait times</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 mr-3 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>Implemented real-time order tracking giving customers complete visibility</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 mr-3 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>Created personalized recommendations increasing average order value</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 mr-3 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>Scaled platform infrastructure to handle millions of concurrent orders</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
+                    Ready to Transform Your Food Delivery Business?
+                </h2>
+                <p class="text-xl text-gray-300 mb-8">
+                    Let's build a platform that delights customers and scales effortlessly.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="/quotation" class="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-red-600 to-rose-600 text-white rounded-xl font-semibold hover:shadow-lg hover:shadow-red-500/50 transition-all duration-300 hover:-translate-y-1">
+                        Start Your Project
+                        <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                        </svg>
+                    </a>
+                    <a href="/case-studies" class="inline-flex items-center justify-center px-8 py-4 bg-transparent border-2 border-white text-white rounded-xl font-semibold hover:bg-white hover:text-slate-900 transition-all duration-300">
+                        View More Case Studies
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <%- include('../../partials/footer.ejs') %>
+</body>
+</html>

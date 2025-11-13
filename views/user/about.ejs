@@ -1,0 +1,268 @@
+<%- include('../partials/head.ejs') %>
+
+    <body>
+        <%- include('../partials/navbar.ejs') %>
+            <main class="pt-16">
+                <!-- Hero Section - Enhanced Simple & Clean -->
+                <section class="relative py-20 md:py-28 lg:py-32 bg-black overflow-hidden" id="aboutHero">
+                    
+                    <!-- Enhanced Subtle Background -->
+                    <div class="absolute inset-0">
+                        <div class="absolute bg-blue-600/10 rounded-full top-1/4 right-1/4 w-96 h-96 blur-3xl animate-pulse"></div>
+                        <div class="absolute bg-cyan-600/10 rounded-full bottom-1/4 left-1/4 w-96 h-96 blur-3xl animate-pulse" style="animation-delay: 1s;"></div>
+                        <div class="absolute bg-purple-600/5 rounded-full top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] blur-3xl"></div>
+                    </div>
+
+                    <!-- Grid Pattern -->
+                    <div class="absolute inset-0 opacity-5">
+                        <div class="absolute inset-0" style="background-image: linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px); background-size: 50px 50px;"></div>
+                    </div>
+
+                    <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                        <!-- Enhanced Badge -->
+                        <div class="inline-flex items-center gap-2 px-5 py-2.5 mb-8 border border-blue-500/30 rounded-full bg-gradient-to-r from-blue-500/10 to-cyan-500/10 backdrop-blur-sm hover:border-blue-400/50 transition-all duration-300 animate-fade-in">
+                            <span class="relative flex h-2 w-2">
+                                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
+                                <span class="relative inline-flex rounded-full h-2 w-2 bg-cyan-400"></span>
+                            </span>
+                            <span class="text-xs font-semibold text-gray-300 tracking-wide uppercase">About ITBIZONE</span>
+                        </div>
+
+                        <!-- Main Heading with Animation -->
+                        <h1 class="text-2xl md:text-6xl font-bold text-white mb-6 animate-fade-in-up">
+                            Empowering Businesses Through Digital Innovation
+                        </h1>
+
+                        <!-- Enhanced Description -->
+                        <p class="font-light text-xs md:text-xl lg:text-lg text-gray-300 mb-14 max-w-3xl mx-auto animate-fade-in-up" style="animation-delay: 0.2s;">
+                            We are a passionate team of digital experts dedicated to delivering innovative solutions that help businesses thrive in the digital era.
+                        </p>
+
+
+                    </div>
+                </section>
+
+                <!-- Development Related Images Section -->
+                <section class="bg-white  py-8 md:py-12 lg:py-16">
+                    <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+                        <div class="text-center mb-6 md:mb-8 lg:mb-12">
+                            <h2 class="text-xl md:text-2xl lg:text-3xl font-bold text-gray-900 mb-3 md:mb-4">Development in
+                                Action</h2>
+                            <p class="text-xs md:text-sm lg:text-base text-gray-600 text-xs md:text-sm lg:text-base  max-w-2xl mx-auto">A glimpse into the
+                                world of web and digital development at ITBIZONE.</p>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 md:p-4 md:gap-6 lg:gap-8">
+                            <div class="rounded-2xl overflow-hidden shadow-lg bg-gray-50 ">
+                                <img src="/images/webdev image.png" alt="Web Development"
+                                    class="w-full h-40 md:h-44 lg:h-48 object-cover">
+                                <div class="p-3 md:p-4">
+                                    <h3 class="font-semibold text-gray-900 text-sm md:text-base mb-2">Modern Web Development
+                                    </h3>
+                                    <p class="text-gray-600 text-xs md:text-sm lg:text-base text-xs md:text-sm">Building responsive, scalable,
+                                        and robust web applications.</p>
+                                </div>
+                            </div>
+                            <div class="rounded-2xl overflow-hidden shadow-lg bg-gray-50 ">
+                                <img src="/images/website-development.png" alt="Website Project"
+                                    class="w-full h-40 md:h-44 lg:h-48 object-cover">
+                                <div class="p-3 md:p-4">
+                                    <h3 class="font-semibold text-gray-900 text-sm md:text-base mb-2">Website Projects</h3>
+                                    <p class="text-gray-600 text-xs md:text-sm lg:text-base text-xs md:text-sm">Delivering custom websites
+                                        tailored to client needs.</p>
+                                </div>
+                            </div>
+                            <div class="rounded-2xl overflow-hidden shadow-lg bg-gray-50 ">
+                                <img src="/images/digital-marketing.png" alt="Digital Marketing"
+                                    class="w-full h-40 md:h-44 lg:h-48 object-cover">
+                                <div class="p-3 md:p-4">
+                                    <h3 class="font-semibold text-gray-900 text-sm md:text-base mb-2">Digital Marketing</h3>
+                                    <p class="text-gray-600 text-xs md:text-sm lg:text-base text-xs md:text-sm">Promoting brands and services
+                                        through digital channels.</p>
+                                </div>
+                            </div>
+                            <div class="rounded-2xl overflow-hidden shadow-lg bg-gray-50 ">
+                                <img src="/images/digital-happy-clients.png" alt="Happy Clients"
+                                    class="w-full h-40 md:h-44 lg:h-48 object-cover">
+                                <div class="p-3 md:p-4">
+                                    <h3 class="font-semibold text-gray-900 text-sm md:text-base mb-2">Client Success</h3>
+                                    <p class="text-gray-600 text-xs md:text-sm lg:text-base text-xs md:text-sm">Celebrating successful digital
+                                        transformations with our clients.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Our Story & Mission -->
+                <section class="bg-gray-50  py-10 md:py-16 lg:py-20">
+                    <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-6 md:gap-8 lg:gap-12 items-center">
+                        <div>
+                            <h2 class="text-lg md:text-xl lg:text-2xl font-bold text-gray-900 mb-3 md:mb-4">Our Story</h2>
+                            <p class="text-gray-600 text-xs md:text-sm lg:text-base text-xs md:text-sm lg:text-base mb-4 md:mb-6">
+                                Founded by a group of tech enthusiasts, ITBIZONE started with a vision to make
+                                world-class digital services accessible to businesses of all sizes. Over the years,
+                                we've grown into a full-service digital agency, trusted by clients across industries for
+                                our expertise, reliability, and results-driven approach.
+                            </p>
+                            <h2 class="text-lg md:text-xl lg:text-2xl font-bold text-gray-900 mb-3 md:mb-4">Our Mission</h2>
+                            <p class="text-gray-600 text-xs md:text-sm lg:text-base ">
+                                To empower organizations with innovative digital solutions that drive growth,
+                                efficiency, and customer engagement. We believe in building long-term partnerships and
+                                delivering measurable value through every project.
+                            </p>
+                        </div>
+                        <div class="flex justify-center">
+                            <img src="/images/social-media-logo.png" alt="ITBIZONE Team"
+                                class="w-48 h-48 md:w-64 md:h-64 lg:w-80 lg:h-80 object-contain rounded-2xl shadow-xl bg-white p-4">
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Our Values -->
+                <section class="bg-white  py-10 md:py-16 lg:py-20">
+                    <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+                        <div class="text-center mb-8 md:mb-12 lg:mb-16">
+                            <h2 class="text-3xl md:text-4xl font-bold text-gray-900  md:mb-6 mb-3">Our Core
+                                Values</h2>
+                            <p class="text-xs md:text-sm lg:text-base text-gray-600 text-xs md:text-sm lg:text-base  max-w-2xl mx-auto">
+                                We are guided by a set of core values that shape our culture, our work, and our
+                                relationships with clients.
+                            </p>
+                        </div>
+                        <div class="grid md:grid-cols-2 grid-cols-2 lg:grid-cols-4 gap-3 md:p-4 md:gap-6 lg:gap-8">
+                            <div
+                                class="bg-gray-50  rounded-2xl p-3 md:p-4 md:p-6 lg:p-8 text-center shadow hover:shadow-lg transition-shadow duration-300">
+                                <div
+                                    class="w-10 h-10 md:w-12 md:h-12 lg:w-14 lg:h-14 mx-auto mb-4 flex items-center justify-center bg-blue-100  rounded-full">
+                                    <svg class="w-5 h-5 md:w-6 md:h-6 lg:w-7 lg:h-7 text-blue-600 " fill="none"
+                                        stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M13 16h-1v-4h-1m4 0h-1v-4h-1m4 0h-1v-4h-1m4 0h-1v-4h-1"></path>
+                                    </svg>
+                                </div>
+                                <h3 class="text-base md:text-lg lg:text-xl font-bold text-gray-900 mb-2">Innovation</h3>
+                                <p class="text-gray-600 text-xs md:text-sm lg:text-base text-xs md:text-sm">We embrace new ideas and
+                                    technologies to deliver creative, future-ready solutions.</p>
+                            </div>
+                            <div
+                                class="bg-gray-50  rounded-2xl p-3 md:p-4 md:p-6 lg:p-8 text-center shadow hover:shadow-lg transition-shadow duration-300">
+                                <div
+                                    class="w-10 h-10 md:w-12 md:h-12 lg:w-14 lg:h-14 mx-auto mb-4 flex items-center justify-center bg-green-100  rounded-full">
+                                    <svg class="w-5 h-5 md:w-6 md:h-6 lg:w-7 lg:h-7 text-green-600 " fill="none"
+                                        stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                </div>
+                                <h3 class="text-base md:text-lg lg:text-xl font-bold text-gray-900 mb-2">Integrity</h3>
+                                <p class="text-gray-600 text-xs md:text-sm lg:text-base text-xs md:text-sm">We act with honesty, transparency,
+                                    and accountability in everything we do.</p>
+                            </div>
+                            <div
+                                class="bg-gray-50  rounded-2xl p-3 md:p-4 md:p-6 lg:p-8 text-center shadow hover:shadow-lg transition-shadow duration-300">
+                                <div
+                                    class="w-10 h-10 md:w-12 md:h-12 lg:w-14 lg:h-14 mx-auto mb-4 flex items-center justify-center bg-purple-100  rounded-full">
+                                    <svg class="w-5 h-5 md:w-6 md:h-6 lg:w-7 lg:h-7 text-purple-600 " fill="none"
+                                        stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                    </svg>
+                                </div>
+                                <h3 class="text-base md:text-lg lg:text-xl font-bold text-gray-900 mb-2">Excellence</h3>
+                                <p class="text-gray-600 text-xs md:text-sm lg:text-base text-xs md:text-sm">We strive for the highest standards
+                                    in our work and deliver outstanding results.</p>
+                            </div>
+                            <div
+                                class="bg-gray-50  rounded-2xl p-3 md:p-4 md:p-6 lg:p-8 text-center shadow hover:shadow-lg transition-shadow duration-300">
+                                <div
+                                    class="w-10 h-10 md:w-12 md:h-12 lg:w-14 lg:h-14 mx-auto mb-4 flex items-center justify-center bg-orange-100  rounded-full">
+                                    <svg class="w-5 h-5 md:w-6 md:h-6 lg:w-7 lg:h-7 text-orange-600 " fill="none"
+                                        stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M12 4v16m8-8H4"></path>
+                                    </svg>
+                                </div>
+                                <h3 class="text-base md:text-lg lg:text-xl font-bold text-gray-900 mb-2">Collaboration</h3>
+                                <p class="text-gray-600 text-xs md:text-sm lg:text-base text-xs md:text-sm">We believe in teamwork and open
+                                    communication to achieve shared success.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Meet the Team -->
+                <section class="bg-gray-50  py-10 md:py-16 lg:py-20">
+                    <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+                        <div class="text-center mb-8 md:mb-12 lg:mb-16">
+                            <h2 class="text-3xl md:text-4xl font-bold text-gray-900  md:mb-6 mb-3">Meet Our Team
+                            </h2>
+                            <p class="text-xs md:text-sm lg:text-base text-gray-600 text-xs md:text-sm lg:text-base  max-w-2xl mx-auto">
+                                Our diverse team of designers, developers, strategists, and project managers brings
+                                together a wealth of experience and creativity to every project.
+                            </p>
+                        </div>
+                        <div class="grid md:grid-cols-2  lg:grid-cols-4 gap-3 md:p-4 md:gap-6 lg:gap-8">
+                            <div class="bg-white  rounded-2xl p-3 md:p-4 md:p-6 lg:p-8 text-center shadow-lg">
+                                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Abhishek Verma"
+                                    class="w-16 h-16 md:w-18 md:h-18 lg:w-20 lg:h-20 mx-auto rounded-full mb-4 object-cover bg-gray-100 ">
+                                <h3 class="text-sm md:text-base lg:text-lg font-bold text-gray-900 mb-1">Madhu Huliyar</h3>
+                                <p class="text-gray-600 text-xs md:text-sm lg:text-base text-xs md:text-sm mb-2">Managing Director</p>
+                                <p class="text-gray-500 text-xs">Visionary leader with a passion for
+                                    technology and business growth.</p>
+                            </div>
+                            <div class="bg-white  rounded-2xl p-3 md:p-4 md:p-6 lg:p-8 text-center shadow-lg">
+                                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Priya Sharma"
+                                    class="w-16 h-16 md:w-18 md:h-18 lg:w-20 lg:h-20 mx-auto rounded-full mb-4 object-cover bg-gray-100 ">
+                                <h3 class="text-sm md:text-base lg:text-lg font-bold text-gray-900 mb-1">Abhishek Venkatesh</h3>
+                                <p class="text-gray-600 text-xs md:text-sm lg:text-base text-xs md:text-sm mb-2">Director & CEO</p>
+                                <p class="text-gray-500 text-xs">Creative mind behind our stunning
+                                    visuals and user experiences.</p>
+                            </div>
+                            <div class="bg-white  rounded-2xl p-3 md:p-4 md:p-6 lg:p-8 text-center shadow-lg">
+                                <img src="https://randomuser.me/api/portraits/men/85.jpg" alt="Rahul Singh"
+                                    class="w-16 h-16 md:w-18 md:h-18 lg:w-20 lg:h-20 mx-auto rounded-full mb-4 object-cover bg-gray-100 ">
+                                <h3 class="text-sm md:text-base lg:text-lg font-bold text-gray-900 mb-1">Rahul Singh</h3>
+                                <p class="text-gray-600 text-xs md:text-sm lg:text-base text-xs md:text-sm mb-2">Senior Developer</p>
+                                <p class="text-gray-500 text-xs">Expert in building robust, scalable,
+                                    and secure digital solutions.</p>
+                            </div>
+                            <div class="bg-white  rounded-2xl p-3 md:p-4 md:p-6 lg:p-8 text-center shadow-lg">
+                                <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Sneha Patel"
+                                    class="w-16 h-16 md:w-18 md:h-18 lg:w-20 lg:h-20 mx-auto rounded-full mb-4 object-cover bg-gray-100 ">
+                                <h3 class="text-sm md:text-base lg:text-lg font-bold text-gray-900 mb-1">Sneha Patel</h3>
+                                <p class="text-gray-600 text-xs md:text-sm lg:text-base text-xs md:text-sm mb-2">Digital Marketing Strategist
+                                </p>
+                                <p class="text-gray-500 text-xs">Drives growth for our clients
+                                    through data-driven marketing strategies.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Call to Action -->
+                <section class="bg-main py-10 md:py-16 lg:py-20">
+                    <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                        <h2 class="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-4 md:mb-6">
+                            Ready to Work With a Team That Cares About Your Success?
+                        </h2>
+                        <p class="text-xs md:text-sm lg:text-base text-blue-100 mb-6 md:mb-8 max-w-3xl mx-auto">
+                            Let's discuss your project and see how ITBIZONE can help you achieve your digital goals.
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-3 md:p-4 justify-center items-center">
+                            <a href="/contact"
+                                class="bg-white primary px-4 py-2 md:text-sm text-xs md:px-6 md:py-3 lg:px-8 lg:py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-300 inline-flex items-center">
+                                Contact Us
+                                <svg class="w-4 h-4 md:w-5 md:h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+            </main>
+            <%- include('../partials/footer.ejs') %>
+    </body>
+
+    </html>

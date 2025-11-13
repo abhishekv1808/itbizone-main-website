@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head') %>
+    <style>
+        body {
+            background: #f5f5f5;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        .quotation-container {
+            max-width: 900px;
+            margin: 2rem auto;
+            background: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .quotation-header {
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+            color: white;
+            padding: 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .quotation-header h1 {
+            margin: 0;
+            font-size: 2rem;
+            font-weight: 700;
+        }
+
+        .quotation-actions {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .btn {
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-download {
+            background: #3b82f6;
+            color: white;
+        }
+
+        .btn-download:hover {
+            background: #2563eb;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+        }
+
+        .btn-print {
+            background: #10b981;
+            color: white;
+        }
+
+        .btn-print:hover {
+            background: #059669;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+        }
+
+        .quotation-content {
+            padding: 2rem;
+        }
+
+        .quotation-top {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 2px solid #e2e8f0;
+        }
+
+        .company-info h3,
+        .quotation-info h3 {
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #64748b;
+            margin-bottom: 0.75rem;
+        }
+
+        .company-info p,
+        .quotation-info p {
+            margin: 0.25rem 0;
+            color: #1e293b;
+            font-size: 0.95rem;
+        }
+
+        .quotation-info .quotation-number {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #3b82f6;
+            margin-bottom: 0.5rem;
+        }
+
+        .quotation-info .date-info {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+        }
+
+        .date-info div {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .date-info label {
+            font-weight: 600;
+            color: #64748b;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+        }
+
+        .date-info value {
+            color: #1e293b;
+            margin-top: 0.25rem;
+        }
+
+        .client-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background: #f8fafc;
+            border-radius: 6px;
+        }
+
+        .client-section h4 {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #64748b;
+            margin-bottom: 0.75rem;
+            margin-top: 0;
+        }
+
+        .client-section p {
+            margin: 0.25rem 0;
+            color: #1e293b;
+            font-size: 0.95rem;
+        }
+
+        .services-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+        }
+
+        .services-table thead {
+            background: #1e293b;
+            color: white;
+        }
+
+        .services-table th {
+            padding: 1rem;
+            text-align: left;
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .services-table td {
+            padding: 1rem;
+            border-bottom: 1px solid #e2e8f0;
+            color: #1e293b;
+        }
+
+        .services-table tbody tr:hover {
+            background: #f8fafc;
+        }
+
+        .service-name {
+            font-weight: 600;
+            color: #0f172a;
+        }
+
+        .service-category {
+            font-size: 0.85rem;
+            color: #64748b;
+            margin-top: 0.25rem;
+        }
+
+        .text-right {
+            text-align: right;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .pricing-summary {
+            display: flex;
+            justify-content: flex-end;
+            margin: 2rem 0;
+        }
+
+        .summary-box {
+            width: 100%;
+            max-width: 400px;
+            border: 2px solid #e2e8f0;
+            border-radius: 6px;
+            overflow: hidden;
+        }
+
+        .summary-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 1rem 1.5rem;
+            border-bottom: 1px solid #e2e8f0;
+            font-size: 0.95rem;
+        }
+
+        .summary-row.total {
+            background: #1e293b;
+            color: white;
+            border-bottom: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+
+        .summary-row label {
+            font-weight: 600;
+        }
+
+        .summary-row value {
+            color: inherit;
+        }
+
+        .summary-row.discount value {
+            color: #10b981;
+        }
+
+        .terms-section {
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 2px solid #e2e8f0;
+        }
+
+        .terms-section h4 {
+            font-size: 0.9rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #1e293b;
+            margin-bottom: 0.75rem;
+        }
+
+        .terms-section p {
+            font-size: 0.85rem;
+            color: #64748b;
+            line-height: 1.6;
+            margin: 0.5rem 0;
+        }
+
+        .terms-section ol {
+            margin: 0.5rem 0;
+            padding-left: 1.5rem;
+        }
+
+        .terms-section li {
+            font-size: 0.85rem;
+            color: #64748b;
+            line-height: 1.6;
+            margin-bottom: 0.25rem;
+        }
+
+        .quotation-footer {
+            background: #f8fafc;
+            padding: 1.5rem 2rem;
+            text-align: center;
+            color: #64748b;
+            font-size: 0.85rem;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 0.35rem 0.75rem;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-top: 0.5rem;
+        }
+
+        .badge-draft {
+            background: #fef3c7;
+            color: #b45309;
+        }
+
+        .badge-sent {
+            background: #dbeafe;
+            color: #0369a1;
+        }
+
+        .badge-accepted {
+            background: #dcfce7;
+            color: #15803d;
+        }
+
+        @media print {
+            body {
+                background: white;
+            }
+            
+            .quotation-actions {
+                display: none;
+            }
+            
+            .quotation-container {
+                box-shadow: none;
+                margin: 0;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .quotation-header {
+                flex-direction: column;
+                gap: 1rem;
+                text-align: center;
+            }
+
+            .quotation-actions {
+                width: 100%;
+                flex-direction: column;
+            }
+
+            .quotation-actions .btn {
+                flex: 1;
+            }
+
+            .quotation-top {
+                grid-template-columns: 1fr;
+            }
+
+            .client-section {
+                grid-template-columns: 1fr;
+            }
+
+            .services-table {
+                font-size: 0.9rem;
+            }
+
+            .services-table th,
+            .services-table td {
+                padding: 0.75rem;
+            }
+
+            .pricing-summary {
+                justify-content: flex-start;
+            }
+        }
+    </style>
+</head>
+<body>
+    <%- include('../partials/navbar') %>
+
+    <div class="quotation-container">
+        <!-- Header with Actions -->
+        <div class="quotation-header">
+            <div>
+                <h1>📋 Quotation</h1>
+                <span class="badge" id="status-badge">
+                    <%= quotation.status.toUpperCase() %>
+                </span>
+            </div>
+            <div class="quotation-actions">
+                <button class="btn btn-download" onclick="downloadPDF()">📥 Download PDF</button>
+                <button class="btn btn-print" onclick="window.print()">🖨️ Print</button>
+            </div>
+        </div>
+
+        <!-- Quotation Content -->
+        <div class="quotation-content">
+            <!-- Top Section: Company & Quotation Info -->
+            <div class="quotation-top">
+                <div class="company-info">
+                    <h3>From</h3>
+                    <p><strong><%= company.name %></strong></p>
+                    <p><%= company.address %></p>
+                    <p><%= company.city %>, <%= company.state %> <%= company.pin %></p>
+                    <p>📧 <%= company.email %></p>
+                    <p>📱 <%= company.phone %></p>
+                    <p>GST: <%= company.gst %></p>
+                </div>
+                <div class="quotation-info">
+                    <div class="quotation-number"><%= quotation.quotationNumber %></div>
+                    <p><strong>Series #:</strong> <%= quotation.series %></p>
+                    <p><strong>Status:</strong> <span style="color: #3b82f6; font-weight: 600;"><%= quotation.status.toUpperCase() %></span></p>
+                    <div class="date-info">
+                        <div>
+                            <label>Issued Date</label>
+                            <value><%= formattedDate %></value>
+                        </div>
+                        <div>
+                            <label>Valid Until</label>
+                            <value><%= formattedExpiry %></value>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Client Section -->
+            <div class="client-section">
+                <div>
+                    <h4>Bill To</h4>
+                    <p><strong><%= quotation.clientDetails.fullName %></strong></p>
+                    <% if(quotation.clientDetails.company) { %>
+                        <p><%= quotation.clientDetails.company %></p>
+                    <% } %>
+                    <% if(quotation.clientDetails.address) { %>
+                        <p><%= quotation.clientDetails.address %></p>
+                    <% } %>
+                    <p><%= quotation.clientDetails.email %></p>
+                    <% if(quotation.clientDetails.phone) { %>
+                        <p><%= quotation.clientDetails.phone %></p>
+                    <% } %>
+                </div>
+                <div>
+                    <h4>Ship To</h4>
+                    <p><strong><%= quotation.clientDetails.fullName %></strong></p>
+                    <% if(quotation.clientDetails.company) { %>
+                        <p><%= quotation.clientDetails.company %></p>
+                    <% } %>
+                    <% if(quotation.clientDetails.address) { %>
+                        <p><%= quotation.clientDetails.address %></p>
+                    <% } %>
+                </div>
+            </div>
+
+            <!-- Services Table -->
+            <table class="services-table">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Service / Item</th>
+                        <th class="text-right">Price</th>
+                        <th class="text-center">Qty</th>
+                        <th class="text-right">Amount</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% quotation.services.forEach((service, index) => { %>
+                        <tr>
+                            <td><%= index + 1 %></td>
+                            <td>
+                                <div class="service-name"><%= service.name %></div>
+                                <div class="service-category"><%= service.category %></div>
+                            </td>
+                            <td class="text-right">₹<%= service.price.toLocaleString('en-IN') %></td>
+                            <td class="text-center">1</td>
+                            <td class="text-right"><strong>₹<%= service.price.toLocaleString('en-IN') %></strong></td>
+                        </tr>
+                    <% }); %>
+                </tbody>
+            </table>
+
+            <!-- Pricing Summary -->
+            <div class="pricing-summary">
+                <div class="summary-box">
+                    <div class="summary-row">
+                        <label>Subtotal:</label>
+                        <value>₹<%= quotation.subtotal.toLocaleString('en-IN') %></value>
+                    </div>
+                    <div class="summary-row discount">
+                        <label>Discount (<%= quotation.discountPercentage %>%):</label>
+                        <value>-₹<%= quotation.discount.toLocaleString('en-IN') %></value>
+                    </div>
+                    <div class="summary-row total">
+                        <label>Total:</label>
+                        <value>₹<%= quotation.total.toLocaleString('en-IN') %></value>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Terms & Conditions -->
+            <div class="terms-section">
+                <h4>Terms & Conditions:</h4>
+                <ol>
+                    <li>Services once sold cannot be taken back or exchanged.</li>
+                    <li>We are not the manufacturers, company will stand for warranty as per their terms and conditions.</li>
+                    <li>Interest @24% p.a. will be charged for undiscounted bills beyond 15 days.</li>
+                    <li>Subject to local Jurisdiction.</li>
+                </ol>
+                <p><strong>Thank you for your business!</strong></p>
+            </div>
+
+            <!-- Notes -->
+            <% if(quotation.notes) { %>
+                <div style="margin-top: 1.5rem; padding: 1rem; background: #f8fafc; border-left: 4px solid #3b82f6; border-radius: 4px;">
+                    <strong style="color: #1e293b; font-size: 0.9rem;">Notes:</strong>
+                    <p style="margin: 0.5rem 0 0 0; color: #64748b; font-size: 0.9rem;"><%= quotation.notes %></p>
+                </div>
+            <% } %>
+        </div>
+
+        <!-- Footer -->
+        <div class="quotation-footer">
+            <p>This is a digitally signed quotation. © <%= new Date().getFullYear() %> ITBIZONE Technologies. All rights reserved.</p>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script>
+        function downloadPDF() {
+            const element = document.querySelector('.quotation-container');
+            const quotationNumber = '<%= quotation.quotationNumber %>';
+            
+            const options = {
+                margin: [10, 10, 10, 10],
+                filename: `${quotationNumber}.pdf`,
+                image: { type: 'jpeg', quality: 0.98 },
+                html2canvas: { scale: 2 },
+                jsPDF: { orientation: 'portrait', unit: 'mm', format: 'a4' }
+            };
+
+            // Clone the element to remove print-hidden elements
+            const clonedElement = element.cloneNode(true);
+            clonedElement.style.background = 'white';
+            
+            html2pdf().set(options).from(clonedElement).save();
+        }
+    </script>
+</body>
+</html>
